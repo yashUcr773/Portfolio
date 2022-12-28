@@ -19,6 +19,11 @@
     src: url('../assets/Fonts/Dosis/static/Dosis-Light.ttf') format('truetype'),
 }
 
+@font-face {
+    font-family: 'Higher-Jump';
+    src: url('../assets/Fonts/higher-jump/Higher\ Jump.ttf') format('truetype'),
+}
+
 // Define colors
 
 // Primary background colors
@@ -34,4 +39,3 @@ $text_color_2: #FF7F51;
 $text_color_3: #CE4257;
 $text_color_4: #FF7F51;
 $text_color_5: #FF9B54;
-

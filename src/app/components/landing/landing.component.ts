@@ -10,11 +10,9 @@ export class LandingComponent implements OnInit {
     constructor(
     ) { }
 
-    greeting: string = 'Hi,~ I am Yash.~ Software Developer in the past,~ ML Engineer in the future.'
-
     ngOnInit() {
         this.animate_canvas()
-        this.animate_greeting()
+        this.animate_introduction_greeting()
     }
 
     async delay(time: number) {
@@ -28,8 +26,8 @@ export class LandingComponent implements OnInit {
     }
 
 
-    async animate_greeting() {
-        let span = document.getElementById('greeting');
+    async animate_introduction_greeting() {
+        let span = document.getElementById('introduction_greeting');
 
         if (span == null) {
             return;
@@ -39,35 +37,16 @@ export class LandingComponent implements OnInit {
 
         let text_elements: any = span.getElementsByClassName('text_element');
 
-
         let element: any;
         for (element of Array.from(text_elements)) {
 
             // remove hide class
             element.classList.remove('hide');
-            // // add text in class
-            // element.classList.add('text_in');
 
-            // setTimeout(() => {
+            // add text in class
+            element.classList.add('text_in');
 
-            //     // remove text in class
-            //     element.classList.remove('text_in');
-
-            //     // add hover class
-            //     // element.classList.add('text_hover');
-
-            // }, 90);
-
-            // element.addEventListener("mouseover", toggleRubberBand);
-            // function toggleRubberBand(e: any) {
-            //     console.log(e)
-            //     e.target.classList.add("text_hover");
-            //     setTimeout(() => {
-            //         e.target.classList.remove("text_hover");
-            //     }, 300)
-            // }
-
-            // await this.delay(100)
+            await this.delay(100)
 
             element.addEventListener("mouseover", addRubberBand);
             element.addEventListener("animationend", removeRubberBand);
@@ -75,6 +54,7 @@ export class LandingComponent implements OnInit {
                 e.target.classList.add("text_hover");
             }
             function removeRubberBand(e: any) {
+                e.target.classList.remove('text_in');
                 e.target.classList.remove("text_hover");
             }
         }
@@ -113,13 +93,13 @@ export class LandingComponent implements OnInit {
             ctx.fillStyle = gradient;
             ctx.fill();
 
-            ctx.beginPath();
-            ctx.arc(light.x, light.y, 20, 0, 2 * Math.PI);
-            gradient = ctx.createRadialGradient(light.x, light.y, 0, light.x, light.y, 5);
-            gradient.addColorStop(0, "#fff");
-            gradient.addColorStop(1, "#3b4654");
-            ctx.fillStyle = gradient;
-            ctx.fill();
+            // ctx.beginPath();
+            // ctx.arc(light.x, light.y, 20, 0, 2 * Math.PI);
+            // gradient = ctx.createRadialGradient(light.x, light.y, 0, light.x, light.y, 5);
+            // gradient.addColorStop(0, "#fff");
+            // gradient.addColorStop(1, "#3b4654");
+            // ctx.fillStyle = gradient;
+            // ctx.fill();
         }
 
 
@@ -149,6 +129,11 @@ export class LandingComponent implements OnInit {
         }
 
         window.onresize = resize;
+        let x:any = document.querySelector('.introduction')
+        x.onmousemove = function (e: any) {
+            light.x = e.offsetX == undefined ? e.layerX : e.offsetX;
+            light.y = e.offsetY == undefined ? e.layerY : e.offsetY;
+        }
         canv.onmousemove = function (e: any) {
             light.x = e.offsetX == undefined ? e.layerX : e.offsetX;
             light.y = e.offsetY == undefined ? e.layerY : e.offsetY;
