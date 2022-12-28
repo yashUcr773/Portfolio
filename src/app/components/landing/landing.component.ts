@@ -89,7 +89,7 @@ export class LandingComponent implements OnInit {
             ctx.arc(light.x, light.y, 1000, 0, 2 * Math.PI);
             var gradient = ctx.createRadialGradient(light.x, light.y, 0, light.x, light.y, 1000);
             gradient.addColorStop(0, "#3b4654");
-            gradient.addColorStop(1, "#2c343f");
+            gradient.addColorStop(1, "#012417");
             ctx.fillStyle = gradient;
             ctx.fill();
 
@@ -129,14 +129,14 @@ export class LandingComponent implements OnInit {
         }
 
         window.onresize = resize;
-        let x:any = document.querySelector('.introduction')
+        let x:any = document.querySelector('.landing_section')
         x.onmousemove = function (e: any) {
-            light.x = e.offsetX == undefined ? e.layerX : e.offsetX;
-            light.y = e.offsetY == undefined ? e.layerY : e.offsetY;
+            light.x = e.pageX;
+            light.y = e.pageY;
         }
         canv.onmousemove = function (e: any) {
-            light.x = e.offsetX == undefined ? e.layerX : e.offsetX;
-            light.y = e.offsetY == undefined ? e.layerY : e.offsetY;
+            light.x = e.pageX;
+            light.y = e.pageY;
         }
 
 
@@ -271,7 +271,7 @@ class Box {
             this.ctx.lineTo(points[n].startX, points[n].startY);
             this.ctx.lineTo(points[n].endX, points[n].endY);
             this.ctx.lineTo(points[i].endX, points[i].endY);
-            this.ctx.fillStyle = "#2c343f";
+            this.ctx.fillStyle = "#012417";
             this.ctx.fill();
         };
     }
