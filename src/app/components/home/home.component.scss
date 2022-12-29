@@ -107,15 +107,17 @@
         align-items: flex-start;
         min-height: 100vh;
         height: 100vh;
+        border: 2px solid green;
+        
+        .section_div {
+            width: 100%;
+            height: calc(100% - 40px);
+            margin: auto;
+            margin-top: 52px;
+        }
 
         &.landing_section {
             background-color: $primary_background_color_1;
-            .landing_div {
-                width: 100%;
-                height: calc(100% - 40px);
-                margin: auto;
-                margin-top: 52px;
-            }
         }
 
         &.about_section {
