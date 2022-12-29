@@ -1,0 +1,10 @@
+# Node Dependency directory
+node_modules
+
+.angular
+.vscode
+.editorconfig
+
+
+
+
