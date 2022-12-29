@@ -49,10 +49,13 @@ export class AnimatedMatrixComponent implements OnInit {
 
 		// Setting up the draw function
 		let draw = () => {
+			// TODO: Update color here in case of theme change 
 			ctx.fillStyle = 'rgba(0, 0, 0, .1)';
 			ctx.fillRect(0, 0, canvas.width, canvas.height);
 			for (var i = 0; i < drops.length; i++) {
 				var text = this.letters[Math.floor(Math.random() * this.letters.length)];
+				
+				// TODO: Update color here in case of theme change 
 				ctx.fillStyle = '#00ff00';
 				ctx.fillText(text, i * this.fontSize, drops[i] * this.fontSize);
 				drops[i]++;

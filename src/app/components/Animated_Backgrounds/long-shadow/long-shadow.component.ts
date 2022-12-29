@@ -223,6 +223,8 @@ class Box {
 			this.ctx.lineTo(points[n].startX, points[n].startY);
 			this.ctx.lineTo(points[n].endX, points[n].endY);
 			this.ctx.lineTo(points[i].endX, points[i].endY);
+			
+			// TODO: Update color here in case of theme change 
 			this.ctx.fillStyle = "#012417";
 			this.ctx.fill();
 		};
