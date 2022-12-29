@@ -10,6 +10,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { LandingComponent } from './components/landing/landing.component';
+import { LongShadowComponent } from './components/Animated_Backgrounds/long-shadow/long-shadow.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LandingComponent } from './components/landing/landing.component';
     ContactComponent,
     ExperienceComponent,
     ProjectsComponent,
-    LandingComponent
+    LandingComponent,
+    LongShadowComponent,
   ],
   imports: [
     BrowserModule,
