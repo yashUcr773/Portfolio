@@ -8,7 +8,7 @@
     backdrop-filter: blur(10px);
 
     .nav {
-        border: 2px solid red;
+        height: 72px;
         display: flex;
         justify-content: space-between;
 
@@ -21,6 +21,9 @@
         .navlinks {
             display: flex;
             flex-direction: row;
+            padding: 8px;
+            padding-right: 16px;
+        
 
             .add-sep {
                 border-right: 2px solid rgb(67, 64, 64);
@@ -28,11 +31,10 @@
 
             .link-style {
                 color: $text_color_1;
-                padding: 4px;
+                padding: 8px;
                 font-size: 24px;
                 text-decoration: none;
-                margin: 4px;
-                padding-right: 8px;
+                margin: auto;
             }
 
             :hover {
@@ -45,7 +47,7 @@
 .sidebar {
     color: $text_color_3;
 
-    padding: 16px;
+    padding: 26px;
     position: fixed;
     bottom: 0;
     background-color: $primary_background_color_1;
@@ -113,7 +115,6 @@
                 height: calc(100% - 40px);
                 margin: auto;
                 margin-top: 52px;
-                // border: 2px solid yellow;
             }
         }
 
