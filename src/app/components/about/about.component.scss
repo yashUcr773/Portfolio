@@ -1,0 +1,45 @@
+@import "../../_common.scss";
+
+.main_about_content {
+    width: 100%;
+    height: 100%;
+
+    // #myChart {
+    //     width: calc(100% - 200px);
+    //     height: calc(100% - 76px);
+    //     position: absolute;
+    // }
+
+    .about_content_content {
+        width: calc(100% - 200px);
+        height: calc(100% - 76px);
+        position: absolute;
+        margin-top: 20px;
+
+        .about_heading {
+
+            $rotation_amt: -12;
+            $font_size: 48px;
+            $shadow: 4px;
+
+            display: grid;
+            height: fit-content;
+            width: fit-content;
+            margin: 0;
+            overflow: hidden;
+
+            p {
+                transform: skew(#{$rotation_amt}deg) rotate(#{$rotation_amt}deg);
+                grid-area: text;
+                font-family: "Oswald-bold";
+                font-size: $font_size;
+                margin: 0;
+                padding: 30px;
+                color: #1d9099;
+                text-shadow: #{$shadow} #{$shadow} 0 #e79c10,
+                -#{$shadow} -#{$shadow} 0 #d53a33;
+            }
+        }
+    }
+
+}

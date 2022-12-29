@@ -1,6 +1,6 @@
 @import "../../_common.scss";
 
-.main_content {
+.main_landing_content {
 
     width: 100%;
     height: 100%;
@@ -14,54 +14,54 @@
         margin-top: 20px;
     }
 
-}
+    .landing_content_container {
+        width: calc(100% - 200px);
+        height: calc(100% - 76px);
+        position: absolute;
+        margin-top: 20px;
 
-.content_container {
-    width: calc(100% - 200px);
-    height: calc(100% - 76px);
-    position: absolute;
-    margin-top: 20px;
+        .introduction {
+            margin: 48px;
+            margin: 48px;
+            width: fit-content;
+            height: fit-content;
 
-    .introduction {
-        margin: 48px;
-        margin: 48px;
-        width: fit-content;
-        height: fit-content;
+            #introduction_greeting {
 
-        #introduction_greeting {
+                .span_line {
 
-            .span_line {
+                    .text_element {
+                        font-family: Higher-Jump;
+                        display: inline-block;
+                        font-size: 32px;
+                        padding: 2px;
+                        margin: 0px;
+                        cursor: pointer;
+                        color: $text_color_1;
 
-                .text_element {
-                    font-family: Higher-Jump;
-                    display: inline-block;
-                    font-size: 32px;
-                    padding: 2px;
-                    margin: 0px;
-                    cursor: pointer;
-                    color: $text_color_1;
+                        &.seperator {
+                            margin: 0px 8px;
+                        }
 
-                    &.seperator {
-                        margin: 0px 8px;
-                    }
+                        &.text_in {
+                            color: blue;
+                            animation: bounce-in 1.5s alternate ease-out;
+                        }
 
-                    &.text_in {
-                        color: blue;
-                        animation: bounce-in 1s alternate ease-out;
-                    }
+                        &.text_hover {
+                            color: green;
+                            animation: rubberband 1.5s alternate ease-out;
+                        }
 
-                    &.text_hover {
-                        color: green;
-                        animation: rubberband 1s alternate ease-out;
-                    }
-
-                    &.hide {
-                        display: none;
+                        &.hide {
+                            display: none;
+                        }
                     }
                 }
             }
         }
     }
+
 }
 
 @keyframes rubberband {
