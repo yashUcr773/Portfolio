@@ -11,6 +11,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { ProjectsComponent } from './components/projects/projects.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { LongShadowComponent } from './components/Animated_Backgrounds/long-shadow/long-shadow.component';
+import { AnimatedMatrixComponent } from './components/Animated_Backgrounds/animated-matrix/animated-matrix.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { LongShadowComponent } from './components/Animated_Backgrounds/long-shad
     ProjectsComponent,
     LandingComponent,
     LongShadowComponent,
+    AnimatedMatrixComponent,
   ],
   imports: [
     BrowserModule,
