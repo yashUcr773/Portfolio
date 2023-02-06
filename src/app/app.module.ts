@@ -3,15 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
-import { LogoComponent } from './components/logo/logo.component';
-import { AboutComponent } from './components/about/about.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { ExperienceComponent } from './components/experience/experience.component';
-import { ProjectsComponent } from './components/projects/projects.component';
-import { LandingComponent } from './components/landing/landing.component';
-import { LongShadowComponent } from './components/Animated_Backgrounds/long-shadow/long-shadow.component';
-import { AnimatedMatrixComponent } from './components/Animated_Backgrounds/animated-matrix/animated-matrix.component';
+import { AboutComponent } from './old-version/components/about/about.component';
+import { AnimatedMatrixComponent } from './old-version/components/Animated_Backgrounds/animated-matrix/animated-matrix.component';
+import { LongShadowComponent } from './old-version/components/Animated_Backgrounds/long-shadow/long-shadow.component';
+import { ContactComponent } from './old-version/components/contact/contact.component';
+import { ExperienceComponent } from './old-version/components/experience/experience.component';
+import { HomeComponent } from './old-version/components/home/home.component';
+import { LandingComponent } from './old-version/components/landing/landing.component';
+import { LogoComponent } from './old-version/components/logo/logo.component';
+import { ProjectsComponent } from './old-version/components/projects/projects.component';
 import { OldVersionComponent } from './old-version/old-version.component';
 
 @NgModule({
