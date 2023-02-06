@@ -12,6 +12,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { LongShadowComponent } from './components/Animated_Backgrounds/long-shadow/long-shadow.component';
 import { AnimatedMatrixComponent } from './components/Animated_Backgrounds/animated-matrix/animated-matrix.component';
+import { OldVersionComponent } from './old-version/old-version.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { AnimatedMatrixComponent } from './components/Animated_Backgrounds/anima
     LandingComponent,
     LongShadowComponent,
     AnimatedMatrixComponent,
+    OldVersionComponent,
   ],
   imports: [
     BrowserModule,
