@@ -1,12 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
-// Add default font family to document
+html,
 body {
     font-family: Dosis, cursive !important;
     margin: 0;
     padding: 0;
+    color: red;
+
+}
+
+body {
+    background-image: linear-gradient(to right top, #4bfce1, #3fdfc2, #32c2a5, #25a689, #178b6f, #107f64, #077359, #00684e, #00684e, #00684e, #00684e, #00684e);
+
 }

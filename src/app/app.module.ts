@@ -13,6 +13,13 @@ import { LandingComponent } from './old-version/components/landing/landing.compo
 import { LogoComponent } from './old-version/components/logo/logo.component';
 import { ProjectsComponent } from './old-version/components/projects/projects.component';
 import { OldVersionComponent } from './old-version/old-version.component';
+import { V2HomeComponent } from './v2/v2-home/v2-home.component';
+import { V2AboutComponent } from './v2/v2-about/v2-about.component';
+import { V2ContactComponent } from './v2/v2-contact/v2-contact.component';
+import { V2ExperienceComponent } from './v2/v2-experience/v2-experience.component';
+import { V2ProjectsComponent } from './v2/v2-projects/v2-projects.component';
+import { V2HeroComponent } from './v2/v2-hero/v2-hero.component';
+import { V2FooterComponent } from './v2/v2-footer/v2-footer.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +34,13 @@ import { OldVersionComponent } from './old-version/old-version.component';
     LongShadowComponent,
     AnimatedMatrixComponent,
     OldVersionComponent,
+    V2HomeComponent,
+    V2AboutComponent,
+    V2ContactComponent,
+    V2ExperienceComponent,
+    V2ProjectsComponent,
+    V2HeroComponent,
+    V2FooterComponent,
   ],
   imports: [
     BrowserModule,
