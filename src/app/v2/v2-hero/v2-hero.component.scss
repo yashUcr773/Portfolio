@@ -5,23 +5,112 @@
 
     .main-container {
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
-        border: 2px solid yellow;
-        width: calc(100% - 240px);
+        width: fit-content;
         margin: auto;
+        flex-direction: column;
+        @media (min-width: 992px) {
+            flex-direction: row;
+            width: calc(100% - 240px);
+
+        }
 
         .left-info-container {
-            border: 2px solid red;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            .info-container {
+                display: flex;
+                flex-direction: column;
+
+                .header {
+                    font-size: 32px;
+                    &.name {
+                        font-size: 64px;
+                        font-family: Zeyada;
+                    }
+                }
+    
+                .sub-header {
+                    font-size: 24px;
+                }
+    
+                .slidingVertical {
+                    height: 72px;
+                    width: 400px;
+                    .slide {
+                        animation: topToBottom 9s linear infinite 0s;
+                        -ms-animation: topToBottom 9s linear infinite 0s;
+                        -webkit-animation: topToBottom 9s linear infinite 0s;
+                        color: white;
+                        opacity: 0;
+                        overflow: hidden;
+                        position: absolute;
+    
+                        &:nth-child(2) {
+                            animation-delay: 3s;
+                            -ms-animation-delay: 3s;
+                            -webkit-animation-delay: 3s;
+                        }
+    
+                        &:nth-child(3) {
+                            animation-delay: 6s;
+                            -ms-animation-delay: 6s;
+                            -webkit-animation-delay: 6s;
+                        }
+                    }
+                }
+            }
+
+            .call-to-action-container {
+                
+            }
+
+
         }
 
         .right-image-container {
-            border: 2px solid red;
 
-            img {
-                width: 300px;
-                height: 300px;
+            .svg {
+                width: 400px;
+                height: 400px;
             }
         }
+    }
+}
+
+
+@keyframes topToBottom {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 0;
+        -webkit-transform: translateY(-50px);
+    }
+
+    10% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+    }
+
+    25% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+    }
+
+    30% {
+        opacity: 0;
+        -webkit-transform: translateY(50px);
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
     }
 }

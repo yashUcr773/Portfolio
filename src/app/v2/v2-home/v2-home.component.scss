@@ -13,6 +13,7 @@ $ham-menu-transition-delay: 500ms;
         line-height: 1;
         font-size: 16px;
         background: none;
+        cursor: pointer;
 
 
         @media (min-width: 800px) {
@@ -48,7 +49,6 @@ $ham-menu-transition-delay: 500ms;
                 margin: 8px 12px;
             }
 
-            cursor: pointer;
             background-image: linear-gradient(to right,
                 #54b3d6,
                 #54b3d6 50%,

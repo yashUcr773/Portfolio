@@ -18,6 +18,18 @@ body {
 }
 
 body {
-    background-image: linear-gradient(to right top, #4bfce1, #3fdfc2, #32c2a5, #25a689, #178b6f, #107f64, #077359, #00684e, #00684e, #00684e, #00684e, #00684e);
+    background: #fef6e4;
+    // background: linear-gradient(72deg, rgba(118, 193, 12, 1) 0%, rgba(0, 133, 13, 1) 100%);
+    background: radial-gradient(ellipse farthest-corner at center bottom, #69d2fb 0%, #20438E 100%) center bottom / 100% fixed;
 
+    .btn {
+        margin: 2px;
+        padding: 8px 4px;
+        border: 0;
+        letter-spacing: 2px;
+        line-height: 1;
+        font-size: 16px;
+        background: none;
+        cursor: pointer;
+    }
 }
