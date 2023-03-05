@@ -103,6 +103,25 @@
             }
         }
     }
+
+    &.about-svg {
+        svg {
+            width: 300px;
+            height: 300px;
+
+            @media (min-width: 992px) {
+                width: 500px;
+                height: 500px;
+            }
+        }
+    }
+
+    &.divider-svg {
+        svg {
+            width: 500px;
+            height: 500px;
+        }
+    }
 }
 
 .trans {

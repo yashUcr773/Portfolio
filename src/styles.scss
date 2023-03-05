@@ -32,4 +32,55 @@ body {
         background: none;
         cursor: pointer;
     }
+
+
+}
+
+
+
+.section-heading {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 2em;
+    margin: 1em auto;
+    text-align: center;
+    border-bottom: 2px solid red;
+    padding-bottom: 20px;
+    width: 75%;
+
+    @media (min-width: 420px) {
+        width: 50%;
+    }
+
+    @media (min-width: 600px) {
+        border: none;
+        padding: 0;
+        width: 100%;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: relative;
+        border-top: 2px solid red;
+
+        vertical-align: middle;
+        width: 20%;
+        margin-bottom: 0.15em;
+        overflow: hidden;
+
+        display: none;
+
+        @media (min-width: 600px) {
+            display: inline-block;
+        }
+    }
+
+    &::before {
+        right: 0.5em;
+    }
+
+    &::after {
+        left: 0.5em;
+    }
 }
