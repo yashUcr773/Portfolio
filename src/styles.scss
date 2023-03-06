@@ -18,9 +18,12 @@ body {
 }
 
 body {
-    background: #fef6e4;
-    // background: linear-gradient(72deg, rgba(118, 193, 12, 1) 0%, rgba(0, 133, 13, 1) 100%);
-    background: radial-gradient(ellipse farthest-corner at center bottom, #69d2fb 0%, #20438E 100%) center bottom / 100% fixed;
+    background-image: linear-gradient(
+        -20deg,
+        #ddd6f3 0%,
+        #faaca8 100%,
+        #faaca8 100%
+      );
 
     .btn {
         margin: 2px;

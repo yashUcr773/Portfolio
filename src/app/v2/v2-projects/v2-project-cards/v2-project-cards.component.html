@@ -1,0 +1,16 @@
+<div class="card-container">
+    <div class="card-desc">
+        <div class="card-bg-image image-url" style='background: url("{{cardObject.imgSrc}}") center center;'></div>
+        <div class="card-title">{{cardObject.title}}</div>
+        <div class="card-content-desc">{{cardObject.desc}}</div>
+        <div class="dark-bg"></div>
+        <div class="link-buttons">
+            <div class="link-buttons-container">
+                <img class="link link-github" src="../../../../assets/github_white.svg"
+                    (click)="launchGithub(cardObject.github_link)">
+                <img class="link link-expand" src="../../../../assets/new_tab_white.svg"
+                    (click)="launchNewTab(cardObject.newtab_link)">
+            </div>
+        </div>
+    </div>
+</div>

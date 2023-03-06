@@ -21,6 +21,7 @@ import { V2ProjectsComponent } from './v2/v2-projects/v2-projects.component';
 import { V2HeroComponent } from './v2/v2-hero/v2-hero.component';
 import { V2FooterComponent } from './v2/v2-footer/v2-footer.component';
 import { V2SvgsComponent } from './v2/v2-svgs/v2-svgs.component';
+import { V2ProjectCardsComponent } from './v2/v2-projects/v2-project-cards/v2-project-cards.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { V2SvgsComponent } from './v2/v2-svgs/v2-svgs.component';
     V2HeroComponent,
     V2FooterComponent,
     V2SvgsComponent,
+    V2ProjectCardsComponent,
   ],
   imports: [
     BrowserModule,
