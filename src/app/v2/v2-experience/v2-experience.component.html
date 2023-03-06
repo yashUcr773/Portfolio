@@ -9,57 +9,11 @@
         <div class="info-container">
 
             <div class="container">
-                <div class="timeline-block">
-                    <div class="timeline-img">
-                    </div>
 
-                    <div class="timeline-content">
 
-                        <div class="timeline-header">Compro Technologies</div>
-
-                        <div class="timeline-sub-header">
-                            <span class="timeline-sub-header-title">
-                                <i class="fa fa-certificate" aria-hidden="true"></i>
-                                Full Stack Developer
-                            </span>
-                            <span class="timeline-sub-header-date">
-                                <i class="fa fa-calendar-o" aria-hidden="true"></i>
-                                July 2019 - July 2022
-                            </span>
-                        </div>
-
-                        <div class="timeline-content-body">
-                            <ul>
-                                <li>
-                                    Worked alongside the client and team to bring the designs,
-                                    to life and build next generation e-learning solutions.
-                                </li>
-                                <li>
-                                    Worked on several in-house libraries to increase productivity and efficiency.
-                                </li>
-                                <li>
-                                    Created Server-side encryption and client side decryption lifecycle to secure
-                                    sensitive data.
-                                </li>
-                            </ul>
-
-                        </div>
-
-                        <div class="timeline-sub-header">
-                            <span class="timeline-sub-header-title">
-                                Technology Stack Used
-                            </span>
-                            <ul class="timeline-badges">
-                                <li>RxDB</li>
-                                <li>Express</li>
-                                <li>Angular 1</li>
-                                <li>Angular 5+</li>
-                                <li>Node</li>
-                                <li>Electron</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <ng-template ngFor let-experienceCard [ngForOf]="experienceCards" let-k="index">
+                    <app-v2-experience-cards [experienceCard]="experienceCard" [childIndex]=k></app-v2-experience-cards>
+                </ng-template>
 
 
             </div>
