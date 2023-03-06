@@ -1,0 +1,25 @@
+<div class="experience-container">
+
+    <div class="experience-heading section-heading">
+        Experience
+    </div>
+
+    <div class="content-container">
+
+        <div class="info-container">
+
+            <div class="container">
+
+
+                <ng-template ngFor let-experienceCard [ngForOf]="experienceCards" let-k="index">
+                    <app-v2-experience-cards [experienceCard]="experienceCard" [childIndex]=k></app-v2-experience-cards>
+                </ng-template>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
