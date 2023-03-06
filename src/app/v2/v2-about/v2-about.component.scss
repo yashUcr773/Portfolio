@@ -1,0 +1,30 @@
+.about-container {
+
+    width: 90%;
+    margin: auto 5%;
+
+
+    @media (min-width: 700px) {
+        width: 80%;
+        margin: auto 10%;
+
+    }
+
+    .content-container {
+        display: flex;
+        
+        flex-direction: column-reverse;
+        @media (min-width: 992px) {
+            flex-direction: row;
+        }
+
+        .info-container {
+            font-size: 20px;
+        }
+
+        .about-svg-container {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
