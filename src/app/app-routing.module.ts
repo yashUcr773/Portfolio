@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 import { OldVersionComponent } from './old-version/old-version.component';
+import { V2ComponentBaseComponent } from './v2/v2-component-base/v2-component-base.component';
 
 const routes: Routes = [
-  { path: '', component: AppComponent },
-  { path: '', redirectTo: '', pathMatch: 'full' },
-  { path: 'v1', component: OldVersionComponent }
+  { path: '', component: V2ComponentBaseComponent },
+  { path: 'old', component: OldVersionComponent },
+  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({
