@@ -1,0 +1,22 @@
+.projects-container {
+    .projects-heading {}
+
+    .content-container {
+        display: flex;
+        flex-direction: column;
+
+        .cards-container {
+            margin: 0 auto;
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+
+        .web-container {}
+
+        .machine-learning-container {}
+
+        .visual-dsa-container {}
+    }
+}

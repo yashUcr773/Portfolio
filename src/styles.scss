@@ -1,12 +1,89 @@
 /* You can add global styles to this file, and also import other style files */
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
-// Add default font family to document
+html,
 body {
     font-family: Dosis, cursive !important;
     margin: 0;
     padding: 0;
+    color: red;
+
+}
+
+body {
+    background-image: linear-gradient(
+        -20deg,
+        #ddd6f3 0%,
+        #faaca8 100%,
+        #faaca8 100%
+      );
+
+    .btn {
+        margin: 2px;
+        padding: 8px 4px;
+        border: 0;
+        letter-spacing: 2px;
+        line-height: 1;
+        font-size: 16px;
+        background: none;
+        cursor: pointer;
+    }
+
+
+}
+
+
+
+.section-heading {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 2em;
+    margin: 1em auto;
+    text-align: center;
+    border-bottom: 2px solid red;
+    padding-bottom: 20px;
+    width: 75%;
+
+    @media (min-width: 420px) {
+        width: 50%;
+    }
+
+    @media (min-width: 600px) {
+        border: none;
+        padding: 0;
+        width: 100%;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: relative;
+        border-top: 2px solid red;
+
+        vertical-align: middle;
+        width: 20%;
+        margin-bottom: 0.15em;
+        overflow: hidden;
+
+        display: none;
+
+        @media (min-width: 600px) {
+            display: inline-block;
+        }
+    }
+
+    &::before {
+        right: 0.5em;
+    }
+
+    &::after {
+        left: 0.5em;
+    }
 }
