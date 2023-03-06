@@ -332,6 +332,8 @@ $ham-menu-transition-delay: 500ms;
         opacity: 0;
         transition: all .3s;
         pointer-events: none;
+        z-index: 999;
+        position: relative;
 
         &.sidebarActive {
             opacity: 1;
@@ -490,6 +492,8 @@ $ham-menu-transition-delay: 500ms;
             &.sidebarActive {
                 display: block;
                 opacity: 1;
+                margin-top: -100px;
+                height: 150vh;
             }
         }
 

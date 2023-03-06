@@ -38,7 +38,7 @@ export class V2ExperienceComponent implements OnInit {
 			{
 				'type': 'work',
 				'header': 'HCL Technologies',
-				'designation': 'Summer Inter',
+				'designation': 'Summer Intern',
 				'tenure': 'June 2018 - July 2018',
 				'job_desc': [
 					'Documented functional requirements and created use case models for new features.',
