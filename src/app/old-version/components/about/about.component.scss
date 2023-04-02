@@ -19,7 +19,6 @@
         .about_heading {
 
             $font_size: 48px;
-            $shadow: 4px;
 
             display: grid;
             height: fit-content;
@@ -34,9 +33,8 @@
                 font-size: $font_size;
                 margin: 0;
                 padding: 30px;
-                color: #1d9099;
-                text-shadow: #{$shadow} #{$shadow} 0 #e79c10,
-                -#{$shadow} -#{$shadow} 0 #d53a33;
+                color: $text_color_2;
+                text-shadow: 4px 4px 0 #e79c10, -4px -4px 0 #d53a33;
             }
         }
 
@@ -124,14 +122,14 @@
                         display: block;
                         padding: .4em .4em .4em 2em;
                         margin: .5em 0;
-                        background: $primary_background_color_5;
-                        color: $text_color_3;
+                        background: #7DA97A;
+                        color: #CE4257;
                         text-decoration: none;
                         border-radius: .3em;
                         transition: .3s ease-out;
 
                         &:hover {
-                            background: $primary_background_color_4;
+                            background: #003520;
                         }
 
                         &:hover:before {
@@ -145,7 +143,7 @@
                             left: -1.3em;
                             top: 50%;
                             margin-top: -1.3em;
-                            background: $primary_background_color_5;
+                            background: #7DA97A;
                             height: 2em;
                             width: 2em;
                             line-height: 2em;

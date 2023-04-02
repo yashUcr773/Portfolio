@@ -30,7 +30,7 @@
             }
 
             .link-style {
-                color: $text_color_1;
+                color: #FF9B54;
                 padding: 8px;
                 font-size: 24px;
                 text-decoration: none;
@@ -38,14 +38,14 @@
             }
 
             :hover {
-                color: $text_color_2;
+                color: #FF7F51;
             }
         }
     }
 }
 
 .sidebar {
-    color: $text_color_3;
+    color: #CE4257;
 
     padding: 26px;
     position: fixed;
@@ -63,7 +63,7 @@
     }
 
     .line {
-        border-right: 4px dotted $text_color_2;
+        border-right: 4px dotted #FF7F51;
         height: 100px;
         width: 0px;
         margin: 8px auto;

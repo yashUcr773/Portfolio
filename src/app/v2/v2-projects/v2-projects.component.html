@@ -3,9 +3,9 @@
         Projects
     </div>
     <div class="content-container">
-        <p>Here are some of the selected projects I have worked.</p>
+        <p class="header">Here are some of the selected projects I have worked.</p>
         <div class="web-container">
-            <p>Selected Projects in the web-development domain.</p>
+            <p class="sub-header">Selected Projects in the web-development domain.</p>
 
             <div class="cards-container">
                 <ng-template ngFor let-cardObject [ngForOf]="webCards" let-k="index">
@@ -15,7 +15,7 @@
 
         </div>
         <div class="machine-learning-container">
-            <p>Selected Projects in the Artificial Intelligence domain.</p>
+            <p class="sub-header">Selected Projects in the Artificial Intelligence domain.</p>
 
             <div class="cards-container">
                 <ng-template ngFor let-cardObject [ngForOf]="MLCards" let-k="index">
@@ -25,7 +25,7 @@
 
         </div>
         <div class="visual-dsa-container">
-            <p>Visualize Datastructures and Algorithms.</p>
+            <p class="sub-header">Visualize Datastructures and Algorithms.</p>
             <div class="cards-container">
                 <ng-template ngFor let-cardObject [ngForOf]="DSACards" let-k="index">
                     <app-v2-project-cards [cardObject]="cardObject"></app-v2-project-cards>

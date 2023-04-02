@@ -1,17 +1,23 @@
 .card-container {
     position: relative;
     transition: 0.5s all;
-    min-width: 400px;
     min-height: 120px;
-    width: 440px;
-    height: 160px;
+    height: 320px;
     border: 2px solid black;
     padding: 0;
     color: white;
     margin: 20px;
     border-radius: 16px;
     font-size: 24px;
+    width: 300px;
+    min-width: 250px;
 
+    @media (min-width: 400px) {
+        width: 440px;
+        min-width: 400px;
+
+    }
+    
     .card-desc {
         transition: 0.5s all;
         position: absolute;

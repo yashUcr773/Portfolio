@@ -1,8 +1,8 @@
 <div class="timeline-block" [ngClass]="{'left': childIndex %2==0, 'right': childIndex%2==1}">
     <div class="timeline-img">
-        <img *ngIf="experienceCard.type == 'work'" src="../../../../assets/briefcase.svg" alt="work" class="work">
-        <img *ngIf="experienceCard.type == 'education'" src="../../../../assets/grad_cap.svg" alt="education"
-            class="education">
+        <img *ngIf="experienceCard.type == 'work'" src="../../../../assets/briefcase.svg" alt="work" class="work" title="Work">
+        <img *ngIf="experienceCard.type == 'education'" src="../../../../assets/grad_cap.svg" alt="Education"
+            class="education" title="Education">
     </div>
 
     <div class="timeline-content">
