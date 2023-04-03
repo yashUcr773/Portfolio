@@ -1,4 +1,4 @@
-@import "../../../_common.scss";
+@import "../../../_common_v2.scss";
 
 .header {
 
@@ -50,7 +50,7 @@
     padding: 26px;
     position: fixed;
     bottom: 0;
-    background-color: $primary_background_color_1;
+    background-color: $v2_primary_background_color_1;
     writing-mode: vertical-rl;
     display: flex;
 
@@ -116,23 +116,23 @@
         }
 
         &.landing_section {
-            background-color: $primary_background_color_1;
+            background-color: $v2_primary_background_color_1;
         }
 
         &.about_section {
-            background-color: $primary_background_color_1;
+            background-color: $v2_primary_background_color_1;
         }
 
         &.experience_section {
-            background-color: $primary_background_color_1;
+            background-color: $v2_primary_background_color_1;
         }
 
         &.projects_section {
-            background-color: $primary_background_color_1;
+            background-color: $v2_primary_background_color_1;
         }
 
         &.contact_section {
-            background-color: $primary_background_color_1;
+            background-color: $v2_primary_background_color_1;
         }
 
     }

@@ -1,4 +1,4 @@
-@import "../../../_common.scss";
+@import "../../../_common_v2.scss";
 
 .main_about_content {
     width: 100%;
@@ -33,7 +33,7 @@
                 font-size: $font_size;
                 margin: 0;
                 padding: 30px;
-                color: $text_color_2;
+                color: $v2_text_color_2;
                 text-shadow: 4px 4px 0 #e79c10, -4px -4px 0 #d53a33;
             }
         }

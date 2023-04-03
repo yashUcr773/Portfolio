@@ -1,4 +1,4 @@
-@import "../../_common.scss";
+@import "../../_common_v2.scss";
 
 
 .hero-container {
@@ -84,7 +84,7 @@
                     border: 0.125em solid #1A1A1A;
                     border-radius: 0.9375em;
                     box-sizing: border-box;
-                    color: $text_color_1;
+                    color: $v2_text_color_1;
                     cursor: pointer;
                     display: inline-block;
                     font-size: 16px;

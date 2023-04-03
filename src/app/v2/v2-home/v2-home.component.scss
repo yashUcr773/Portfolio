@@ -1,4 +1,4 @@
-@import "../../_common.scss";
+@import "../../_common_v2.scss";
 
 $ham-menu-transition-delay: 500ms;
 
@@ -14,7 +14,7 @@ $ham-menu-transition-delay: 500ms;
         font-size: 16px;
         background: none;
         cursor: pointer;
-        color: $text_color_1;
+        color: $v2_text_color_1;
 
         @media (min-width: 800px) {
             margin: 4px;
@@ -50,9 +50,9 @@ $ham-menu-transition-delay: 500ms;
             }
 
             background-image: linear-gradient(to right,
-            $text_color_2,
-            $text_color_2 50%,
-            $text_color_1 50%);
+            $v2_text_color_2,
+            $v2_text_color_2 50%,
+            $v2_text_color_1 50%);
             background-size: 200% 100%;
             background-position: -100%;
             display: inline-block;
@@ -63,7 +63,7 @@ $ham-menu-transition-delay: 500ms;
 
             &:before {
                 content: '';
-                background: $text_color_2;
+                background: $v2_text_color_2;
                 display: block;
                 position: absolute;
                 bottom: -3px;
@@ -112,7 +112,7 @@ $ham-menu-transition-delay: 500ms;
         .line {
             fill: none;
             transition: stroke-dasharray $ham-menu-transition-delay, stroke-dashoffset $ham-menu-transition-delay;
-            stroke: $text_color_1;
+            stroke: $v2_text_color_1;
             stroke-width: 5.5;
             stroke-linecap: round;
         }
@@ -260,7 +260,7 @@ $ham-menu-transition-delay: 500ms;
                     .btn-hire::after {
                         width: 120px;
                         background: red;
-                        color: $text_color_1;
+                        color: $v2_text_color_1;
                         box-shadow: 5px 4px 0px #00e6f6;
                         outline: transparent;
                         position: relative;
@@ -350,8 +350,8 @@ $ham-menu-transition-delay: 500ms;
             top: 0;
             left: -272px;
             z-index: 999;
-            background: $primary_background_color_1;
-            color: $text_color_1;
+            background: $v2_primary_background_color_1;
+            color: $v2_text_color_1;
             transition: all .3s;
             box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.5);
             text-align: left;
@@ -367,7 +367,7 @@ $ham-menu-transition-delay: 500ms;
                 top: 16px;
                 left: 16px;
                 transition: all 0.3s;
-                background: $primary_background_color_1;
+                background: $v2_primary_background_color_1;
                 border-radius: 8px;
                 text-align: center;
                 line-height: 48px;
@@ -376,7 +376,7 @@ $ham-menu-transition-delay: 500ms;
 
                 &:hover,
                 &:focus {
-                    background: $primary_background_color_1;
+                    background: $v2_primary_background_color_1;
                 }
 
                 svg {
@@ -467,7 +467,7 @@ $ham-menu-transition-delay: 500ms;
                                 z-index: 2;
                                 text-transform: uppercase;
                                 letter-spacing: 4.5px;
-                                color: $text_color_1;
+                                color: $v2_text_color_1;
                                 font-weight: bold;
                             }
                         }
@@ -496,7 +496,7 @@ $ham-menu-transition-delay: 500ms;
                 opacity: 0.5;
                 margin-top: -100px;
                 height: 150vh;
-                background-color: $primary_background_color_1;
+                background-color: $v2_primary_background_color_1;
             }
         }
 
