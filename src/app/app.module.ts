@@ -26,6 +26,12 @@ import { V2ExperienceCardsComponent } from './v2/v2-experience/v2-experience-car
 import { V2ComponentBaseComponent } from './v2/v2-component-base/v2-component-base.component';
 import { V3HomeComponent } from './v3/v3-home/v3-home.component';
 import { V3BaseComponent } from './v3/v3-base/v3-base.component';
+import { V3HeaderComponent } from './v3/v3-header/v3-header.component';
+import { V3HeroComponent } from './v3/v3-hero/v3-hero.component';
+import { V3ExperienceComponent } from './v3/v3-experience/v3-experience.component';
+import { V3ProjectsComponent } from './v3/v3-projects/v3-projects.component';
+import { V3FooterComponent } from './v3/v3-footer/v3-footer.component';
+import { V3AboutComponent } from './v3/v3-about/v3-about.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +59,12 @@ import { V3BaseComponent } from './v3/v3-base/v3-base.component';
     V2ComponentBaseComponent,
     V3HomeComponent,
     V3BaseComponent,
+    V3HeaderComponent,
+    V3HeroComponent,
+    V3ExperienceComponent,
+    V3FooterComponent,
+    V3AboutComponent,
+    V3ProjectsComponent,
   ],
   imports: [
     BrowserModule,
