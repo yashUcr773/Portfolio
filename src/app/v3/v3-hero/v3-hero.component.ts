@@ -13,9 +13,16 @@ export class V3HeroComponent implements OnInit  {
       typeSpeed: 50,
       loop: true,
       smartBackspace: true,
-      backSpeed: 50
+      backSpeed: 50,
+      shuffle: true,
+      showCursor: false
     });
     
+  }
+
+  createRange(number:any){
+    return new Array(number).fill(0)
+      .map((n, index) => index + 1);
   }
 
 }
