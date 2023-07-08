@@ -1,7 +1,7 @@
 .nav {
-    height: 50px;
+    height: fit-content;
     width: 100%;
-    background-color: #4d4d4d;
+    background-color: #0c4339;
     position: fixed;
     top: 0px;
     display: flex;
@@ -13,9 +13,9 @@
 
         .nav-title {
             display: inline-block;
-            font-size: 22px;
+            font-size: 24px;
             color: #fff;
-            padding: 10px 10px 10px 10px;
+            padding: 12px
         }
     }
 
@@ -24,18 +24,20 @@
     }
 
     .nav-links {
-        display: inline;
+        display: flex;
         float: right;
         font-size: 18px;
+        align-content: center;
+        flex-wrap: wrap;
 
         a {
             display: inline-block;
-            padding: 13px 10px 13px 10px;
+            padding: 12px;
             text-decoration: none;
             color: #efefef;
 
             &:hover {
-                background-color: rgba(0, 0, 0, 0.3);
+                background-color: #10594c;
             }
         }
     }
@@ -48,10 +50,10 @@
 @media (max-width:550px) {
     .nav {
         .nav-btn {
-            display: inline-block;
+            display: flex;
             position: absolute;
             right: 0px;
-            top: 0px;
+            padding: 6px;
 
             label {
                 display: inline-block;
@@ -76,7 +78,7 @@
             position: absolute;
             display: block;
             width: 100%;
-            background-color: #333;
+            background-color: #0c4339;
             height: 0px;
             transition: all 0.3s ease-in;
             overflow-y: hidden;
