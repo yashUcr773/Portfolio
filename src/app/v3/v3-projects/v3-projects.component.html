@@ -27,7 +27,7 @@
 
                 <div class="cards-container" data-aos="fade-up" data-aos-duration="4000" data-aos-easing="ease-in">
                     <ng-container *ngFor="let cardData of project_cards">
-                        <div class="card" *ngIf="display_cards == 'all' || display_cards == cardData.tags" data-aos="fade-left">
+                        <div class="card" *ngIf="display_cards == 'all' || display_cards == cardData.tags" [attr.data-aos]="cardData.fadeStyle">
                             <div class="card-image">
                                 <img src={{cardData.image}}>
                             </div>

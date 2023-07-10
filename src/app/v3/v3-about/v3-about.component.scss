@@ -1,0 +1,380 @@
+.about-wrapper {
+    width: 100%;
+    height: calc(100% - 50px);
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px;
+
+    .content {
+        height: 100%;
+        padding: 12px;
+        width: 100%;
+        z-index: 2;
+
+        @media (min-width:768px) {
+            width: 96%;
+        }
+
+        @media (min-width:1400px) {
+            width: 90%;
+        }
+
+        .about {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 12px;
+            margin-top: 24px;
+            gap: 64px;
+
+            @media (min-width:900px) {
+                margin-top: auto;
+                gap: 64px;
+
+            }
+
+            @media (min-width: 1000px) {
+                margin-top: auto;
+                gap: 128px;
+            }
+
+            .heading {
+                position: relative;
+                width: fit-content;
+                margin: auto;
+                padding: 16px 0px;
+
+                h1 {
+                    font-size: 36px;
+                    font-weight: 700;
+                    letter-spacing: 4px;
+                    text-transform: uppercase;
+                    margin-bottom: 0px;
+
+                    &:before {
+                        background-color: #27DEBF;
+                        content: '';
+                        display: block;
+                        height: 4px;
+                        width: 120px;
+                        margin-bottom: 8px;
+
+                    }
+
+                    &:after {
+                        background-color: #27DEBF;
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        height: 4px;
+                        width: 120px;
+                        margin-top: 8px;
+                    }
+                }
+            }
+
+            .body {
+
+                display: flex;
+                flex-direction: column;
+                gap: 56px;
+                justify-content: center;
+                align-items: center;
+
+                @media (min-width: 1000px) {
+                    flex-direction: row;
+                }
+
+                .left-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 48px;
+                    max-width: 480px;
+
+                    .information {
+                        p {
+                            font-size: 1.5em;
+                            margin: 1em;
+                        }
+                    }
+
+                    .socials {
+
+                        display: flex;
+                        flex-direction: row;
+                        gap: 16px;
+                        justify-content: center;
+                        align-items: center;
+                        flex-wrap: wrap;
+
+                        .social {
+
+                            width: fit-content;
+                            height: fit-content;
+
+                            .social-btn {
+                                width: 72px;
+                                height: 72px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border: none;
+                                background-color: transparent;
+                                position: relative;
+                                border-radius: 10px;
+                                cursor: pointer;
+                                transition: all .3s;
+                                margin: 0;
+                                padding: 0;
+
+                                .svgContainer {
+                                    width: 100%;
+                                    height: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    background-color: transparent;
+                                    backdrop-filter: blur(0px);
+                                    letter-spacing: 1px;
+                                    border-radius: 10px;
+                                    transition: all .3s;
+                                    margin: 0;
+                                    padding: 0;
+
+                                    svg {
+                                        height: 2.5em;
+                                    }
+                                }
+
+                                .background {
+                                    position: absolute;
+                                    content: "";
+                                    width: 100%;
+                                    height: 100%;
+                                    background: #f09433;
+                                    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+                                    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+                                    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+                                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+                                    z-index: -1;
+                                    border-radius: 10px;
+                                    pointer-events: none;
+                                    transition: all .3s;
+                                }
+
+                                &:hover {
+                                    .background {
+                                        transform: rotate(25deg);
+                                        transform-origin: bottom;
+                                    }
+
+                                    .svgContainer {
+                                        background-color: rgba(156, 156, 156, 0.466);
+                                        backdrop-filter: blur(8px);
+                                    }
+                                }
+
+                            }
+
+                            &.instagram {
+                                .social-btn {
+                                    .background {
+                                        background: #f09433;
+                                        background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+                                        background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+                                        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+                                        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+                                    }
+
+                                    .svgContainer {
+                                        svg {
+                                            fill: white;
+                                        }
+                                    }
+                                }
+
+                            }
+
+                            &.github {
+                                .social-btn {
+
+                                    .background {
+                                        background: black;
+                                    }
+
+                                    .svgContainer {
+                                        svg {
+                                            fill: white;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.twitter {
+                                .social-btn {
+
+                                    .background {
+                                        background: #03A9F4;
+                                    }
+
+                                    .svgContainer {
+                                        svg {
+                                            fill: white;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.linkedin {
+                                .social-btn {
+                                    .background {
+                                        background: #378fe9;
+                                    }
+                                }
+
+                                .svgContainer {
+                                    svg {
+                                        fill: white;
+                                    }
+                                }
+                            }
+
+                            &.discord {
+                                .social-btn {
+                                    .background {
+                                        background: #8c9eff
+                                    }
+                                }
+
+                                .svgContainer {
+                                    svg {
+                                        fill: white;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+                .right-container {
+
+                    .form-container {
+                        width: fit-content;
+                        min-width: 300px;
+                        padding: 36px;
+                        background: rgb(12, 67, 57);
+                        box-shadow: 0 16px 24px rgba(0, 0, 0, .6);
+                        border-radius: 12px;
+                        padding-bottom: 64px;
+
+                        @media (min-width: 475px) {
+                            min-width: 420px;
+
+                        }
+
+                        .contact-form {
+
+                            display: flex;
+                            flex-direction: column;
+                            position: relative;
+
+                            .form-heading {
+                                margin: auto;
+                                font-size: 2em;
+                                border-bottom: 2px solid white;
+                                padding: 2px 24px;
+                                margin-bottom: 16px;
+                            }
+
+                            .field {
+                                position: relative;
+
+                                .form-input {
+                                    width: 100%;
+                                    padding: 8px 4px;
+                                    font-size: 1em;
+                                    color: #fff;
+                                    margin-bottom: 28px;
+                                    border: none;
+                                    border-bottom: 1px solid #fff;
+                                    outline: none;
+                                    background: transparent;
+                                }
+
+
+                                label {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    padding: 12px 0;
+                                    font-size: 1em;
+                                    color: #fff;
+                                    pointer-events: none;
+                                    transition: 0.5s;
+                                }
+
+                                .form-input:focus~label,
+                                .form-input:valid~label {
+                                    top: -20px;
+                                    left: 0;
+                                    color: #bdb8b8;
+                                    font-size: 0.8em;
+                                }
+                            }
+
+                            a {
+                                padding: 12px 24px;
+                                color: #ffffff;
+                                font-size: 1.1em;
+                                text-decoration: none;
+                                text-transform: uppercase;
+                                overflow: hidden;
+                                transition: 0.5s;
+                                width: fit-content;
+                                margin: auto;
+
+                                &:hover {
+                                    background: #10594c;
+                                    color: #fff;
+                                    border-radius: 8px;
+                                }
+                            }
+
+                            .badge {
+                                position: absolute;
+                                bottom: -52px;
+                                right: -48px;
+                                background: black;
+                                display: flex;
+                                flex-direction: row;
+                                gap: 8px;
+                                color: white;
+                                align-items: center;
+                                justify-content: center;
+                                border-radius: 8px;
+
+                                svg {
+                                    width: 24px;
+                                    height: 24px;
+                                }
+
+                                .email {
+                                    letter-spacing: 3px;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
+        }
+    }
+}

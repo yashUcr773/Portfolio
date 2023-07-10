@@ -1,3 +1,5 @@
+@import "../../_common_v3.scss";
+
 .hero-wrapper {
     width: 100%;
     height: calc(100% - 50px);
@@ -60,6 +62,7 @@
                     .name {
                         font-size: 3em;
                         text-align: center;
+                        font-family: 'Montez';
                     }
 
                     .typed-container {
@@ -171,6 +174,82 @@
                     width: min(45%, 400px);
                 }
             }
+
+            .indicator {
+                position: absolute;
+                width: 28px;
+                height: 28px;
+                bottom: 80px;
+                display: none;
+
+                @media (min-width: 900px) {
+                    display: block
+                }
+
+                transform: rotate(45deg);
+
+                span {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    box-sizing: border-box;
+                    border: none;
+                    border-bottom: 3px solid #0c4339;
+                    border-right: 3px solid #0c4339;
+                    animation: animate 1s linear infinite;
+
+                    &:nth-child(1) {
+                        top: -30px;
+                        left: -30px;
+                        animation-delay: 0s;
+                    }
+
+                    &:nth-child(2) {
+                        top: -15px;
+                        left: -15px;
+                        animation-delay: 0.2s;
+                    }
+
+                    &:nth-child(3) {
+                        top: 0;
+                        left: 0;
+                        animation-delay: 0.4s;
+                    }
+
+                    &:nth-child(4) {
+                        top: 15px;
+                        left: 15px;
+                        animation-delay: 0.6s;
+                    }
+
+                    &:nth-child(5) {
+                        top: 30px;
+                        left: 30px;
+                        animation-delay: 0.8s;
+                    }
+                }
+
+                @keyframes animate {
+                    0% {
+                        border-color: #fff;
+                        transform: translate(0, 0);
+                    }
+
+                    20% {
+                        border-color: #fff;
+                        transform: translate(15px, 15px);
+                    }
+
+                    20.1%,
+                    100% {
+                        border-color: #0c4339;
+                    }
+                }
+            }
+
+
         }
     }
 }
