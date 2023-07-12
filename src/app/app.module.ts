@@ -32,7 +32,7 @@ import { V3HeroComponent } from './v3/v3-hero/v3-hero.component';
 import { V3ExperienceComponent } from './v3/v3-experience/v3-experience.component';
 import { V3ProjectsComponent } from './v3/v3-projects/v3-projects.component';
 import { V3FooterComponent } from './v3/v3-footer/v3-footer.component';
-import { V3AboutComponent } from './v3/v3-about/v3-about.component';
+import { V3ContactComponent } from './v3/v3-contact/v3-contact.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +64,7 @@ import { V3AboutComponent } from './v3/v3-about/v3-about.component';
     V3HeroComponent,
     V3ExperienceComponent,
     V3FooterComponent,
-    V3AboutComponent,
+    V3ContactComponent,
     V3ProjectsComponent,
   ],
   imports: [

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { V3AboutComponent } from './v3-about.component';
+import { V3ContactComponent } from './v3-contact.component';
 
 describe('V3AboutComponent', () => {
-  let component: V3AboutComponent;
-  let fixture: ComponentFixture<V3AboutComponent>;
+  let component: V3ContactComponent;
+  let fixture: ComponentFixture<V3ContactComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ V3AboutComponent ]
+      declarations: [ V3ContactComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(V3AboutComponent);
+    fixture = TestBed.createComponent(V3ContactComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
