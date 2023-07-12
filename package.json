@@ -2,14 +2,17 @@
   "name": "portfolio",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve --o",
+    "start:front": "ng serve --o",
+    "start:back": "nodemon server/server.js --watch",
+    "start": "concurrently \"npm run start:front\" \"npm run start:back\" ",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "serve": "node server/server.js",
+    "build:serve": "npm run build && npm run serve",
+    "serve:watch": "nodemon server/server.js --watch",
+    "build:serve:watch": "npm run build && npm run serve:watch"
   },
   "private": true,
-  "dependencies": {
+  "dependencies": { 
     "@angular/animations": "^15.0.0",
     "@angular/common": "^15.0.0",
     "@angular/compiler": "^15.0.0",
@@ -20,9 +23,13 @@
     "@angular/router": "^15.0.0",
     "@srexi/purecounterjs": "^1.5.0",
     "aos": "^2.3.4",
+    "body-parser": "^1.20.2",
     "bootstrap": "^5.3.0",
-    "tslib": "^2.3.0",
     "chart.js": "^4.1.1",
+    "concurrently": "^8.2.0",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "tslib": "^2.3.0",
     "typed.js": "^2.0.16",
     "zone.js": "~0.12.0"
   },
