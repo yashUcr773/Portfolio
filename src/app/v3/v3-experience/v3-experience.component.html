@@ -1,1 +1,88 @@
-<p>v3-experience works!</p>
+<div class="experience-wrapper">
+    <div class="content-container">
+        <div class="experience-content" id="experience">
+
+            <!-- https://codepen.io/vedadesigns/pen/GPxYZg -->
+            <div class="experience-title-section" data-aos="fade-up" data-aos-duration="4000" data-aos-easing="ease-in">
+                <div class="heading">
+                    <h1>About Me</h1>
+                </div>
+            </div>
+
+            <div class="experience-body">
+                <div class="info"> </div>
+                <div class="spheres">
+
+                    <div class="sphere1">
+                        <span class="word-cloud"></span>
+                    </div>
+
+                    <div class="sphere2">
+                        <span class="word-cloud"></span>
+                    </div>
+                </div>
+
+                <div class="work-experience-scene">
+
+                    <div class="scene-heading">
+                        <p>Experience</p>
+                    </div>
+
+
+                    <div class="scene-content-container">
+
+                        <div class="tabs-container">
+
+                            <ng-container *ngFor="let experienceData of experiences; let expIndex = index">
+
+                                <div class="tab tab-{{expIndex+1}}" [ngClass]="{'show': activeIndex == expIndex+1}">
+                                    <div class="header" (click)="updateActive(expIndex+1)">
+                                        <p>{{experienceData.Company}}</p>
+                                        <div class="icon" [ngClass]="{'show': activeIndex == expIndex+1}"></div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="title">
+                                            <p class="heading">{{experienceData.Company}}</p>
+                                            <div class="duration">
+                                                <span>{{experienceData.start}}</span>
+                                                <span>-</span>
+                                                <span>{{experienceData.end}}</span>
+                                            </div>
+                                        </div>
+                                        <div class="bullets">
+                                            <p class="bullets-heading">
+                                                {{experienceData.bulletsHeading}}
+                                            </p>
+                                            <ul>
+                                                <li *ngFor="let bullet of experienceData.bullets">{{bullet}}</li>
+                                            </ul>
+                                        </div>
+                                        <div class="techstack">
+                                            <span>{{experienceData.techHeading}}</span>
+                                            <div class="techbadges">
+                                                <div class="badges" *ngFor="let tech of experienceData.tech">{{tech}}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </ng-container>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

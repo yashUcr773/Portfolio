@@ -18,7 +18,8 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "allowedCommonJsDependencies": [
-              "aos"
+              "aos",
+              "TagCloud"
             ],
             "outputPath": "dist/",
             "index": "src/index.html",
@@ -56,24 +57,30 @@
                 }
               ],
               "outputHashing": "all",
-              "sourceMap": false,
-              "optimization": true,
-              "aot": true,
+              "sourceMap": true,
+              "optimization": {
+                "scripts": false,
+                "styles": false
+              },
+              "aot": false,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": false
             },
             "development": {
               "buildOptimizer": false,
-              "optimization": false,
+              "optimization": {
+                "scripts": false,
+                "styles": false
+              },
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
             }
           },
-          "defaultConfiguration": "production"
+          "defaultConfiguration": "development"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
