@@ -1,9 +1,9 @@
 <div class="projects-wrapper">
-    <div class="content">
-        <div class="projects" id="projects">
+    <div class="projects-content">
+        <div class="projects-content-container">
 
             <!-- https://codepen.io/vedadesigns/pen/GPxYZg -->
-            <div class="title-section" data-aos="fade-up" data-aos-duration="4000" data-aos-easing="ease-in">
+            <div class="projects-title-section" data-aos="fade-up" data-aos-duration="4000" data-aos-easing="ease-in">
                 <div class="heading">
                     <h1>Projects</h1>
                 </div>
@@ -12,7 +12,7 @@
                 </p>
             </div>
 
-            <div class="images-section">
+            <div class="projects-body">
                 <!-- https://codepen.io/TheBigHappyDay/pen/WNgYZKq -->
                 <div class="sorting-table" data-aos="fade-up" data-aos-duration="4000" data-aos-easing="ease-in">
                     <div class="links">
@@ -27,7 +27,8 @@
 
                 <div class="cards-container" data-aos="fade-up" data-aos-duration="4000" data-aos-easing="ease-in">
                     <ng-container *ngFor="let cardData of project_cards">
-                        <div class="card" *ngIf="display_cards == 'all' || display_cards == cardData.tags" [attr.data-aos]="cardData.fadeStyle">
+                        <div class="card" *ngIf="display_cards == 'all' || display_cards == cardData.tags"
+                            [attr.data-aos]="cardData.fadeStyle">
                             <div class="card-image">
                                 <img src={{cardData.image}}>
                             </div>

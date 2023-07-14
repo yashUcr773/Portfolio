@@ -1,12 +1,12 @@
-<div class="about-wrapper">
-    <div class="content">
-        <div class="about" id="about">
+<div class="contact-wrapper">
+    <div class="contact-content">
+        <div class="contact-content-container">
 
-            <div class="heading" data-aos="fade-up" data-aos-duration="4000">
+            <div class="contact-title-section" data-aos="fade-up" data-aos-duration="4000">
                 <h1>Get in Touch</h1>
             </div>
 
-            <div class="body">
+            <div class="contact-body">
 
                 <div class="left-container" data-aos="fade-right" data-aos-duration="4000">
                     <div class="information">
@@ -20,7 +20,7 @@
                     </div>
                     <div class="socials">
 
-                        <div class="social instagram">
+                        <div class="social instagram" (click)="openLink(socials_config.instagram)">
                             <button class="social-btn">
                                 <span class="svgContainer">
                                     <svg fill="white" class="svgIcon" viewBox="0 0 448 512"
@@ -34,7 +34,7 @@
                             </button>
                         </div>
 
-                        <div class="social github">
+                        <div class="social github" (click)="openLink(socials_config.github)">
                             <button class="social-btn">
                                 <span class="svgContainer">
                                     <svg class="cf-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="-2.5 0 19 19">
@@ -47,7 +47,7 @@
                             </button>
                         </div>
 
-                        <div class="social twitter">
+                        <div class="social twitter" (click)="openLink(socials_config.twitter)">
                             <button class="social-btn">
                                 <span class="svgContainer">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="twitter">
@@ -60,7 +60,7 @@
                             </button>
                         </div>
 
-                        <div class="social linkedin">
+                        <div class="social linkedin" (click)="openLink(socials_config.linkedin)">
                             <button class="social-btn">
                                 <span class="svgContainer">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -75,13 +75,29 @@
                             </button>
                         </div>
 
-                        <div class="social discord">
+                        <div class="social gmail" (click)="openLink(socials_config.gmail)">
                             <button class="social-btn">
                                 <span class="svgContainer">
-                                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="discord">
-                                        <path
-                                            d="M40,12c0,0-4.585-3.588-10-4l-0.488,0.976C34.408,10.174,36.654,11.891,39,14c-4.045-2.065-8.039-4-15-4s-10.955,1.935-15,4c2.346-2.109,5.018-4.015,9.488-5.024L18,8c-5.681,0.537-10,4-10,4s-5.121,7.425-6,22c5.162,5.953,13,6,13,6l1.639-2.185C13.857,36.848,10.715,35.121,8,32c3.238,2.45,8.125,5,16,5s12.762-2.55,16-5c-2.715,3.121-5.857,4.848-8.639,5.815L33,40c0,0,7.838-0.047,13-6C45.121,19.425,40,12,40,12z M17.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C21,28.209,19.433,30,17.5,30z M30.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C34,28.209,32.433,30,30.5,30z">
-                                        </path>
+                                    <svg height="2500" width="2500" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 49.4 512 399.4200000000001" class="gmail">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <g fill-rule="nonzero">
+                                                <path
+                                                    d="M34.91 448.818h81.454V251L0 163.727V413.91c0 19.287 15.622 34.91 34.91 34.91z"
+                                                    fill="#4285f4" />
+                                                <path
+                                                    d="M395.636 448.818h81.455c19.287 0 34.909-15.622 34.909-34.909V163.727L395.636 251z"
+                                                    fill="#34a853" />
+                                                <path
+                                                    d="M395.636 99.727V251L512 163.727v-46.545c0-43.142-49.25-67.782-83.782-41.891z"
+                                                    fill="#fbbc04" />
+                                            </g>
+                                            <path d="M116.364 251V99.727L256 204.455 395.636 99.727V251L256 355.727z"
+                                                fill="#ea4335" />
+                                            <path
+                                                d="M0 117.182v46.545L116.364 251V99.727L83.782 75.291C49.25 49.4 0 74.04 0 117.18z"
+                                                fill="#c5221f" fill-rule="nonzero" />
+                                        </g>
                                     </svg>
                                 </span>
                                 <span class="background"></span>
@@ -111,7 +127,7 @@
                             <a class="send">
                                 SEND
                             </a>
-                            <div class="badge">
+                            <div class="badge" (click)="openLink(socials_config.gmail)">
 
                                 <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
