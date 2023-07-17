@@ -1,0 +1,336 @@
+@import "../../_common_v3.scss";
+
+.footer {
+
+    width: 100%;
+    height: 100%;
+
+    .footer-content-container {
+        z-index: 1;
+        --footer-background: rgb(12, 67, 57);
+        position: relative;
+        overflow: hidden;
+        margin-top: 32px;
+
+        .bubbles {
+            margin-top: 200px;
+            background: var(--footer-background);
+            filter: url("#blob");
+            z-index: 2;
+            position: inherit;
+
+            .bubble {
+                position: absolute;
+                left: var(--position, 50%);
+                background: var(--footer-background);
+                border-radius: 100%;
+                -webkit-animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+                animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+                transform: translate(-50%, 100%);
+            }
+
+            @-webkit-keyframes bubble-size {
+
+                0%,
+                75% {
+                    width: var(--size, 4rem);
+                    height: var(--size, 4rem);
+                }
+
+                100% {
+                    width: 0rem;
+                    height: 0rem;
+                }
+            }
+
+            @keyframes bubble-size {
+
+                0%,
+                75% {
+                    width: var(--size, 4rem);
+                    height: var(--size, 4rem);
+                }
+
+                100% {
+                    width: 0rem;
+                    height: 0rem;
+                }
+            }
+
+            @-webkit-keyframes bubble-move {
+                0% {
+                    bottom: -4rem;
+                }
+
+                100% {
+                    bottom: var(--distance, 10rem);
+                }
+            }
+
+            @keyframes bubble-move {
+                0% {
+                    bottom: -4rem;
+                }
+
+                100% {
+                    bottom: var(--distance, 10rem);
+                }
+            }
+
+            @media screen and (max-width: 767px) {
+                .footer .content {
+                    padding: 0 1.5rem;
+                }
+
+                .footer .content .container {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                .content h2 {
+                    font-size: 1.5rem;
+                }
+
+                .content span {
+                    font-size: .813rem;
+                }
+
+                .footer__links {
+                    flex-direction: column;
+                    row-gap: 1.5rem;
+                }
+
+                .footer__socials {
+                    justify-self: flex-start;
+                }
+            }
+
+            @media screen and (max-width: 567px) {
+                .footer .content .container {
+                    grid-template-columns: repeat(1, 1fr);
+                    row-gap: 3.5rem;
+                }
+            }
+        }
+
+        .footer-content {
+            height: 100%;
+            width: 100%;
+            background: var(--footer-background);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 32px;
+            gap: 24px;
+            z-index: 10;
+            position: inherit;
+
+            @media (min-width:850px) {
+                flex-direction: row;
+                gap: 8px;
+            }
+
+            .content-item {
+                flex: 1 1 auto;
+            }
+
+            .left {
+                .logo-name {
+                    display: flex;
+                    justify-content: center;
+                    flex-flow: column;
+                    height: 100%;
+                    align-items: center;
+
+                    .logo {
+                        font-family: 'Montez';
+                        margin: 4px;
+                        padding: 4px;
+                        font-size: 48px;
+                    }
+
+                    .tag-line {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .center {
+                .copyright-info {
+                    display: flex;
+                    flex-direction: column;
+                    align-content: center;
+                    align-items: center;
+                    justify-content: flex-end;
+                    height: 100%;
+
+                    p {
+                        margin: 0px;
+                        padding: 4px;
+
+                        .heart {
+
+                            animation: beatingHeart 1s infinite;
+                            fill: rgb(255, 110, 110);
+
+                            @keyframes beatingHeart {
+                                0% {
+                                    transform: scale(1);
+                                }
+
+                                15% {
+                                    transform: scale(1.15);
+                                }
+
+                                30% {
+                                    transform: scale(1);
+                                }
+
+                                45% {
+                                    transform: scale(1.15);
+                                }
+
+                                60% {
+                                    transform: scale(1);
+                                }
+                            }
+
+                        }
+
+                        .angular {
+                            width: 32px;
+                            height: 32px;
+                            pointer-events: all;
+                            cursor: pointer;
+
+                            &>* {
+                                pointer-events: none;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .right {
+                display: flex;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+
+                .socials {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5em;
+
+                    .top {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 0.5em;
+                    }
+
+                    .bottom {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 0.5em;
+                    }
+
+                    .cards {
+                        width: 92px;
+                        height: 92px;
+                        outline: none;
+                        border: none;
+                        background: #10594c;
+                        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                        transition: .2s ease-in-out;
+
+                        &.card1 {
+                            border-radius: 92px 8px 8px 8px;
+
+                            .linkedin {
+                                margin-top: 1.5em;
+                                margin-left: 1.2em;
+                                fill: #378fe9;
+                            }
+
+                            &:hover {
+                                cursor: pointer;
+                                scale: 1.1;
+                                background-color: #378fe9;
+
+                                .linkedin {
+                                    fill: white;
+                                }
+                            }
+
+                        }
+
+                        &.card2 {
+                            border-radius: 8px 92px 8px 8px;
+
+                            .twitter {
+                                margin-top: 1.5em;
+                                margin-left: -.9em;
+                                fill: #03A9F4;
+                            }
+
+                            &:hover {
+                                cursor: pointer;
+                                scale: 1.1;
+                                background-color: #03A9F4;
+
+                                .twitter {
+                                    fill: white;
+                                }
+                            }
+                        }
+
+                        &.card3 {
+                            border-radius: 8px 8px 8px 92px;
+
+                            .github {
+                                margin-top: -.6em;
+                                margin-left: 1.2em;
+                            }
+
+                            &:hover {
+                                cursor: pointer;
+                                scale: 1.1;
+                                background-color: black;
+
+                                .github {
+                                    fill: white;
+                                }
+                            }
+                        }
+
+                        &.card4 {
+                            border-radius: 8px 8px 92px 8px;
+
+                            .gmail {
+                                margin-top: -.9em;
+                                margin-left: -1.2em;
+                                width: 24px;
+                                height: 24px;
+                            }
+
+                            &:hover {
+                                cursor: pointer;
+                                scale: 1.1;
+                                background-color: #E7E4D7;
+                            }
+                        }
+                    }
+                }
+
+
+            }
+        }
+
+        #external-link-button {
+            display: none;
+        }
+
+    }
+
+
+}

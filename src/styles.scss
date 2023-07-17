@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./app/_common_v3.scss";
+
 
 * {
     box-sizing: border-box;
@@ -6,6 +8,7 @@
 
 html {
     scroll-behavior: smooth;
+
 }
 
 html,
@@ -13,18 +16,12 @@ body {
     font-family: Dosis, cursive !important;
     margin: 0;
     padding: 0;
-    color: red;
-
+    background-color: $v2_primary_background_color_1;
+    color: $v2_text_color_1;
+    letter-spacing: 0.8px;
 }
 
 body {
-    background-image: linear-gradient(
-        -20deg,
-        #ddd6f3 0%,
-        #faaca8 100%,
-        #faaca8 100%
-      );
-
     .btn {
         margin: 2px;
         padding: 8px 4px;
@@ -36,7 +33,9 @@ body {
         cursor: pointer;
     }
 
-
+    p {
+        margin: 0;
+    }
 }
 
 
