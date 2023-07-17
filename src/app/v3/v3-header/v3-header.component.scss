@@ -10,6 +10,7 @@
 
     .nav-header {
         display: inline;
+        cursor: pointer;
 
         .nav-title {
             display: inline-block;
@@ -21,6 +22,10 @@
 
     .nav-btn {
         display: none;
+        cursor: pointer;
+        span {
+            cursor: pointer;
+        }
     }
 
     .nav-links {
@@ -35,6 +40,7 @@
             padding: 12px;
             text-decoration: none;
             color: #efefef;
+            cursor: pointer;
 
             &:hover {
                 background-color: #10594c;
@@ -44,6 +50,8 @@
 
     #nav-check {
         display: none;
+        cursor: pointer;
+
     }
 }
 
