@@ -1,0 +1,35 @@
+<section class="component-section hero" id="hero-section">
+    <app-v3-header></app-v3-header>
+    <app-v3-hero></app-v3-hero>
+</section>
+
+<section class="component-section" id="projects-section">
+    <app-v3-projects></app-v3-projects>
+</section>
+
+<section class="component-section" id="experience-section">
+    <app-v3-experience></app-v3-experience>
+</section>
+
+<section class="component-section" id="contact-section">
+    <app-v3-contact></app-v3-contact>
+</section>
+
+<section class="component-section footer" id="footer-section">
+    <app-v3-footer></app-v3-footer>
+</section>
+
+<div id="snackbar">
+    <span class="text" id="snackbar-text"></span>
+    <div class="progress">
+        <div class="progress-value"></div>
+    </div>
+</div>
+
+<section id="buttonToTop" class="back-to-top" (click)="backToTop()">
+    <svg class="icon__arrow-up" viewBox="0 0 24 24">
+        <title>Back to top</title>
+        <path
+            d="M18.71,11.71a1,1,0,0,1-1.42,0L13,7.41V19a1,1,0,0,1-2,0V7.41l-4.29,4.3a1,1,0,0,1-1.42-1.42l6-6a1,1,0,0,1,1.42,0l6,6A1,1,0,0,1,18.71,11.71Z" />
+    </svg>
+</section>
