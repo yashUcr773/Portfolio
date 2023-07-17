@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { socials_config } from '../../../../config/socials';
-import { AppHelperService } from '../services/app-helper.service';
+import { AppHelperService } from '../../services/app-helper.service';
 
 @Component({
   selector: 'app-v3-footer',

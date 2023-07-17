@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Typed from 'typed.js';
-import { AppHelperService } from '../services/app-helper.service';
+import { AppHelperService } from '../../services/app-helper.service';
 import { socials_config } from 'config/socials';
 
 @Component({

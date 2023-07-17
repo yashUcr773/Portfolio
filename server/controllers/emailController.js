@@ -37,7 +37,7 @@ async function _send(req) {
     const transporter = _getTransporter();
     const info = await transporter.sendMail({
         from: '"Portfolio Contact 👻 <Portfolio@gmail.com>"',
-        to: "yagga004@ucr.edu",
+        to: process.env.SMTP_EMAIL_USER,
         subject: "Portfolio Message",
         html: "<h1>From : " + req.body.name + " / " + req.body.email + "</h1>" + "<p>Message : " + req.body.message + " </p>",
     });

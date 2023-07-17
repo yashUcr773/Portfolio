@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import TagCloud from 'TagCloud';
-import { AppHelperService } from '../services/app-helper.service';
+import { AppHelperService } from '../../services/app-helper.service';
 
 @Component({
   selector: 'app-v3-experience',
