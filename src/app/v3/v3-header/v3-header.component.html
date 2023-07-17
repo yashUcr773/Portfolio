@@ -4,7 +4,7 @@
     <!-- TODO_LATER_AS_IMPROVEMENT -->
     <!-- dropdown is toggled by checkbox. Change to JS later -->
     <input type="checkbox" id="nav-check">
-    <div class="nav-header">
+    <div class="nav-header" (click)="goto('hero')">
         <div class="nav-title">
             Yash
         </div>
@@ -21,11 +21,10 @@
     </div>
 
     <div class="nav-links">
-        <a>Projects</a>
-        <a>About</a>
-        <a>Experience</a>
-        <a>Contact</a>
-        <a>Resume</a>
+        <a (click)="goto('projects')" title="See My Projects">Projects</a>
+        <a (click)="goto('experience')" title="Know About Me">About</a>
+        <a (click)="goto('contact')" title="Contact Me">Contact</a>
+        <a (click)="launchLink(socials_config.resume)" title="See My Resume">Resume</a>
     </div>
 </div>
 

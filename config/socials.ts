@@ -5,7 +5,8 @@ export const socials_config: socials = {
     'twitter': 'https://twitter.com/YLHINC',
     'instagram': 'https://www.instagram.com/yash_ylh/',
     'facebook': 'https://www.facebook.com/yashagg',
-    'gmail': 'mailto:yash.aggarwal.8618@gmail.com'
+    'gmail': 'mailto:yash.aggarwal.8618@gmail.com',
+    'resume': 'https://d26phrkqcbbdz6.cloudfront.net/Resume/Yash_resume.pdf'
 }
 
 interface socials {
@@ -13,6 +14,7 @@ interface socials {
     github: string;
     twitter: string;
     instagram: string;
-    facebook: any;
-    gmail: any;
+    facebook: string;
+    gmail: string;
+    resume: string;
 }

@@ -31,20 +31,20 @@
                 <div class="hero-btn">
 
                     <!-- https://uiverse.io/niat786/swift-bullfrog-83 -->
-                    <button class="hire"> Contact Me
+                    <button class="hire" (click)="goto('contact')" title="Contact Me"> Contact Me
                     </button>
 
-                    <button class="res"> Resume
+                    <button class="res" (click)="launchLink(socials_config.resume)" title="See my Resume"> Resume
                     </button>
                 </div>
             </div>
 
             <div class="hero-image" data-aos="fade-left">
                 <!-- <img src="../../../assets/hero.svg" alt="Hero Image"> -->
-                <img src="../../../assets/aye me.png" alt="Hero Image">
+                <img src="../../../assets/aye me 2.png" alt="Hero Image">
             </div>
 
-            <div class="indicator">
+            <div class="indicator" (click)="goto('projects')">
                 <span></span>
                 <span></span>
                 <span></span>
