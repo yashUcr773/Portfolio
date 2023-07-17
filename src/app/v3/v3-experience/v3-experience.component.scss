@@ -79,20 +79,86 @@
             flex-direction: column;
             align-items: center;
 
-            .info {}
+            .body-content-container {
 
-            .spheres {
-                .tagcloud {
-                    font-family: 'Poppins', sans-serif;
-                    font-size: 20px;
-                    margin: auto;
-                    width: 50%;
+                width: 100%;
+
+                .info {
+                    display: flex;
+                    flex-direction: column;
+                    background-color: #0E1B2B;
+                    margin: 8px;
+                    padding: 16px;
+                    border-radius: 16px;
+                    font-size: 1.4em;
+
+                    p {
+                        margin: 4px;
+                        padding: 4px;
+                    }
                 }
 
-                .tagcloud--item:hover {
-                    color: #36454F;
+                .spheres-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+
+                    .scene-heading {
+                        font-size: 2em;
+                        margin: 8px;
+                        padding: 16px;
+                    }
+
+                    .spheres {
+
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-around;
+
+
+                        .sphere1 {
+                            display: none;
+
+                            @media (min-width:1000px) {
+                                display: block;
+                            }
+                        }
+
+
+                        .sphere2 {
+                            display: none;
+
+                            @media (min-width:1000px) {
+                                display: block;
+                            }
+                        }
+
+
+                        .sphere3 {
+                            display: block;
+
+                            @media (min-width:1000px) {
+                                display: none;
+                            }
+                        }
+
+
+                        .tagcloud {
+                            font-size: 20px;
+
+                            @media (min-width: 1000px) {
+                                font-size: 24px;
+                            }
+                        }
+
+                    }
                 }
             }
+
+
 
             .work-experience-scene {
                 display: flex;
@@ -210,17 +276,20 @@
                                     display: flex;
                                     flex-direction: column;
                                     justify-content: flex-start;
-                                    font-size: 1em;
+                                    font-size: 1.1em;
 
-                                    @media (min-width: 500px) {
+                                    @media (min-width: 700px) {
                                         font-size: 1.2em;
                                         flex-direction: row;
                                         justify-content: space-between;
                                     }
 
                                     .heading {
-                                        cursor: pointer;
-                                        text-decoration: underline;
+
+                                        span {
+                                            cursor: pointer;
+                                            text-decoration: underline;
+                                        }
                                     }
 
                                     .duration {

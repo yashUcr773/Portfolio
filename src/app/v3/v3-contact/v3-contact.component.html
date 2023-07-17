@@ -2,13 +2,13 @@
     <div class="contact-content">
         <div class="contact-content-container">
 
-            <div class="contact-title-section" data-aos="fade-up" data-aos-duration="4000">
+            <div class="contact-title-section" data-aos="fade-up">
                 <h1>Get in Touch</h1>
             </div>
 
             <div class="contact-body">
 
-                <div class="left-container" data-aos="fade-right" data-aos-duration="4000">
+                <div class="left-container" data-aos="fade-right">
                     <div class="information">
                         <p>
                             Do you have a question or a proposal? Or would you simply like to say hello?
@@ -20,7 +20,7 @@
                     </div>
                     <div class="socials">
 
-                        <div class="social instagram" (click)="openLink(socials_config.instagram)">
+                        <div class="social instagram" title="Instagram" (click)="openLink(socials_config.instagram)">
                             <button class="social-btn">
                                 <span class="svgContainer">
                                     <svg fill="white" class="svgIcon" viewBox="0 0 448 512"
@@ -34,7 +34,7 @@
                             </button>
                         </div>
 
-                        <div class="social github" (click)="openLink(socials_config.github)">
+                        <div class="social github" title="Github" (click)="openLink(socials_config.github)">
                             <button class="social-btn">
                                 <span class="svgContainer">
                                     <svg class="cf-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="-2.5 0 19 19">
@@ -47,7 +47,7 @@
                             </button>
                         </div>
 
-                        <div class="social twitter" (click)="openLink(socials_config.twitter)">
+                        <div class="social twitter" title="Twitter" (click)="openLink(socials_config.twitter)">
                             <button class="social-btn">
                                 <span class="svgContainer">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="twitter">
@@ -60,7 +60,7 @@
                             </button>
                         </div>
 
-                        <div class="social linkedin" (click)="openLink(socials_config.linkedin)">
+                        <div class="social linkedin" title="Linkedin" (click)="openLink(socials_config.linkedin)">
                             <button class="social-btn">
                                 <span class="svgContainer">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -75,7 +75,7 @@
                             </button>
                         </div>
 
-                        <div class="social gmail" (click)="openLink(socials_config.gmail)">
+                        <div class="social gmail" title="Gmail" (click)="openLink(socials_config.gmail)">
                             <button class="social-btn">
                                 <span class="svgContainer">
                                     <svg height="2500" width="2500" xmlns="http://www.w3.org/2000/svg"
@@ -107,27 +107,32 @@
                     </div>
                 </div>
 
-                <div class="right-container" data-aos="fade-left" data-aos-duration="4000">
+                <div class="right-container" data-aos="fade-left">
                     <div class="form-container">
                         <form class="contact-form">
                             <p class="form-heading">Contact</p>
                             <div class="field name">
-                                <input class='form-input' type="text" required id="contact-name">
-                                <label for="ontact-name">Username</label>
+                                <input class='form-input' type="text" required id="contact-name"
+                                    (change)="onchange('contact-name')">
+                                <label for="contact-name">Name</label>
                             </div>
+                            <span class="error" *ngIf="nameChanged">Name is required!</span>
                             <div class="field email">
-                                <input class='form-input' type="text" required id="contact-email">
-                                <label for="ontact-email">Password</label>
+                                <input class='form-input' type="text" required id="contact-email"
+                                    (change)="onchange('contact-email')">
+                                <label for="contact-email">Email</label>
                             </div>
+                            <span class="error" *ngIf="emailChanged">Email is required!</span>
                             <div class="field message">
                                 <textarea class='form-input textarea' type="text" required rows="3" placeholder=""
-                                    id="contact-textarea"></textarea>
-                                <label for="ontact-textarea">Message</label>
+                                    id="contact-textarea" (change)="onchange('contact-textarea')"></textarea>
+                                <label for="contact-textarea">Message</label>
                             </div>
-                            <a class="send">
+                            <span class="error" *ngIf="textareaChanged">Message is required!</span>
+                            <a class="send" (click)="sendMail()">
                                 SEND
                             </a>
-                            <div class="badge" (click)="openLink(socials_config.gmail)">
+                            <div class="badge" title= "Mail me" (click)="openLink(socials_config.gmail)">
 
                                 <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">

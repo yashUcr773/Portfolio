@@ -329,6 +329,33 @@
                                 color: #bdb8b8;
                                 font-size: 0.8em;
                             }
+
+
+                        }
+
+                        .error {
+                            color: red;
+                            position: relative;
+                            margin-left: 42px;
+                            margin-top: -16px;
+                            margin-bottom: 16px;
+                            font-size: 1em;
+                            font-weight: 600;
+
+                            &::before {
+                                display: block;
+                                position: absolute;
+                                content: "!";
+                                border-radius: 50%;
+                                border: 1px solid red;
+                                width: 28px;
+                                height: 28px;
+                                line-height: 26px;
+                                text-align: center;
+                                color: red;
+                                left: -36px;
+                                font-weight: 700;
+                            }
                         }
 
                         a {

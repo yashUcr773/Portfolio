@@ -34,6 +34,7 @@ import { V3ProjectsComponent } from './v3/v3-projects/v3-projects.component';
 import { V3FooterComponent } from './v3/v3-footer/v3-footer.component';
 import { V3ContactComponent } from './v3/v3-contact/v3-contact.component';
 import { AppHelperService } from './v3/services/app-helper.service';
+import { SnackbarService } from './v3/services/snackbar-service';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,7 @@ import { AppHelperService } from './v3/services/app-helper.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [AppHelperService],
+  providers: [AppHelperService, SnackbarService],
   bootstrap: [AppComponent
   ]
 })

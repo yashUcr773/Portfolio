@@ -1,0 +1,160 @@
+.component-section {
+    overflow: hidden;
+
+    &.hero {
+        min-height: 100vh;
+    }
+}
+
+
+#snackbar {
+    visibility: hidden;
+    text-align: center;
+    border-radius: 8px;
+    max-width: 50%;
+    width: fit-content;
+    min-width: 200px;
+    padding: 4px;
+    position: fixed;
+    z-index: 5;
+    left: 50%;
+    bottom: 32px;
+    background: #10594c;
+    font-size: 1.25em;
+    transform: translateX(-50%);
+
+    &.success {
+        background: #10594c;
+
+    }
+
+    &.error {
+        background: #8B0000;
+
+    }
+
+    &.show {
+        visibility: visible !important;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 4.5s;
+        animation: fadein 0.5s, fadeout 0.5s 4.5s;
+
+        .progress {
+            .progress-value {
+                animation: load 4.5s normal forwards;
+            }
+        }
+    }
+
+    .text {
+        padding: 8px 12px;
+        display: block;
+    }
+
+    .progress {
+        background: rgba(255, 255, 255, 0.1);
+        justify-content: flex-start;
+        border-radius: 100px;
+        align-items: center;
+        height: 4px;
+        width: 100%;
+
+        .progress-value {
+            box-shadow: 0 10px 40px -10px #fff;
+            border-radius: 100px;
+            background: #fff;
+            height: 4px;
+            width: 0;
+        }
+    }
+
+
+    @-webkit-keyframes fadein {
+        from {
+            bottom: 0;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 32px;
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadein {
+        from {
+            bottom: 0;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 32px;
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes fadeout {
+        from {
+            bottom: 32px;
+            opacity: 1;
+        }
+
+        to {
+            bottom: 0;
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeout {
+        from {
+            bottom: 32px;
+            opacity: 1;
+        }
+
+        to {
+            bottom: 0;
+            opacity: 0;
+        }
+    }
+
+    @keyframes load {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 100%;
+        }
+    }
+}
+
+.back-to-top {
+    background-color: #2d6d2e;
+    cursor: pointer;
+    width: 56px;
+    height: 56px;
+    z-index: 999;
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 100%;
+    box-shadow: 0 4px 16px 0 rgba(black, 0.4);
+
+    &:hover {
+        background-color: lighten(#2d6d2e, 12%);
+    }
+
+    &:active {
+        box-shadow: none;
+        background-color: darken(#2d6d2e, 12%);
+    }
+
+    svg.icon__arrow-up {
+        fill: white;
+        width: 32px;
+        height: 32px;
+    }
+}

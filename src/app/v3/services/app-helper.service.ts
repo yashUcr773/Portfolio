@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { constants } from 'config/constants';
 
 @Injectable()
 export class AppHelperService {
@@ -13,6 +14,10 @@ export class AppHelperService {
     generateRandomNumbers(low: number, high: number) {
         const randomNumber = (Math.random() * (high - low + 1)) + low;
         return randomNumber;
+    }
+
+    getURLPrefix() {
+        return constants.apiBaseURL;
     }
 
 }

@@ -173,6 +173,10 @@
                 @media (min-width:700px) {
                     width: min(45%, 400px);
                 }
+
+                img {
+                    width: 100%;
+                }
             }
 
             .indicator {

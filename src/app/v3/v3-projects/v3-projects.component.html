@@ -3,7 +3,7 @@
         <div class="projects-content-container">
 
             <!-- https://codepen.io/vedadesigns/pen/GPxYZg -->
-            <div class="projects-title-section" data-aos="fade-up" data-aos-duration="4000" data-aos-easing="ease-in">
+            <div class="projects-title-section" data-aos="fade-up">
                 <div class="heading">
                     <h1>Projects</h1>
                 </div>
@@ -14,7 +14,7 @@
 
             <div class="projects-body">
                 <!-- https://codepen.io/TheBigHappyDay/pen/WNgYZKq -->
-                <div class="sorting-table" data-aos="fade-up" data-aos-duration="4000" data-aos-easing="ease-in">
+                <div class="sorting-table" data-aos="fade-up">
                     <div class="links">
                         <a (click)="filterCards('all')" [ngClass]="{ 'selected': display_cards == 'all' }">All</a>
                         <a (click)="filterCards('web')" [ngClass]="{ 'selected': display_cards == 'web' }">Web</a>
@@ -25,7 +25,7 @@
                 </div>
 
 
-                <div class="cards-container" data-aos="fade-up" data-aos-duration="4000" data-aos-easing="ease-in">
+                <div class="cards-container" data-aos="fade-up">
                     <ng-container *ngFor="let cardData of project_cards">
                         <div class="card" *ngIf="display_cards == 'all' || display_cards == cardData.tags"
                             [attr.data-aos]="cardData.fadeStyle">
