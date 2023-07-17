@@ -1,0 +1,57 @@
+<div class="hero-wrapper">
+    <div class="hero-content">
+        <div class="hero-content-container">
+
+            <div class="hero-text-container" data-aos="fade-right">
+
+                <div class="hero-text">
+                    <p class="greeting">Hello! I'm</p>
+                    <p class="name">Yash Aggarwal</p>
+                    <div id="typed-strings">
+                        <p>Software Developer.</p>
+                        <p>Front End Developer.</p>
+                        <p>Full Stack Developer.</p>
+                        <p>Student.</p>
+                        <p>Artificial Intelligence Enthusiast.</p>
+                        <p>Machine Learning Engineer.</p>
+                    </div>
+                    <div class="typed-container">
+                        <p id="typed"></p>
+                        <div id="cursor"></div>
+                    </div>
+                    <p class="intro">
+                        A Full-stack web developer and software engineer with a keen interest in machine learning and
+                        generative AI. I thrive on designing complex solutions in a simple and elegant manner. With a
+                        passion for creating innovative and user-friendly experiences, I bring a unique blend of
+                        technical expertise and creativity to my projects.
+                    </p>
+
+                </div>
+
+                <div class="hero-btn">
+
+                    <!-- https://uiverse.io/niat786/swift-bullfrog-83 -->
+                    <button class="hire" (click)="goto('contact')" title="Contact Me"> Contact Me
+                    </button>
+
+                    <button class="res" (click)="launchLink(socials_config.resume)" title="See my Resume"> Resume
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-image" data-aos="fade-left">
+                <img src="../../../assets/hero_image_me.png" alt="Hero Image">
+            </div>
+
+            <div class="indicator" (click)="goto('projects')">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+
+    </div>
+</div>
