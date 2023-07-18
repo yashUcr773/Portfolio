@@ -25,18 +25,6 @@ function getFiles(directoryPath) {
     });
 }
 
-console.log(process.env)
-
-console.log('--------')
-getFiles(path.join(__dirname))
-console.log('--------')
-getFiles(path.join(__dirname, '../'))
-console.log('--------')
-getFiles(path.join(__dirname, '../dist'))
-console.log('--------')
-getFiles(path.join(__dirname, '../dist/index.html'))
-console.log('--------')
-
 
 // using cors
 app.use(cors())
@@ -51,9 +39,9 @@ require('./routes/routes-handler')(app)
 console.log(__dirname)
 
 // Serve the static files from the Angular app
-app.use(express.static(path.join(__dirname, '../dist')));
+app.use(express.static(path.join(__dirname, '../')));
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../dist/index.html'));
+    res.sendFile(path.join(__dirname, '../index.html'));
 });
 
 // Start the server
