@@ -6,26 +6,6 @@ const cors = require('cors')
 const app = express();
 const port = process.env.PORT || 3000;
 
-const fs = require('fs');
-//joining path of directory 
-
-function getFiles(directoryPath) {
-
-    //passsing directoryPath and callback function
-    fs.readdir(directoryPath, function (err, files) {
-        //handling error
-        if (err) {
-            return console.log('Unable to scan directory: ' + err);
-        }
-        //listing all files using forEach
-        files.forEach(function (file) {
-            // Do whatever you want to do with the file
-            console.log(file);
-        });
-    });
-}
-
-
 // using cors
 app.use(cors())
 
@@ -36,12 +16,10 @@ app.use(bodyParser.json());
 // Define your backend routes here
 require('./routes/routes-handler')(app)
 
-console.log(__dirname)
-
 // Serve the static files from the Angular app
-app.use(express.static(path.join(__dirname, '../')));
+app.use(express.static(path.join(__dirname, '../dist')));
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../src/index.html'));
+    res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
 // Start the server
