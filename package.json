@@ -4,8 +4,8 @@
     "scripts": {
         "start:front": "ng serve --o",
         "start:back": "nodemon server/server.js --watch",
-        "start": "node server/server.js",
-        "start:app": "concurrently \"npm run start:front\" \"npm run start:back\" ",
+        "start:prod": "NODE_ENV=production && node server/server.js",
+        "start": "concurrently \"npm run start:front\" \"npm run start:back\" ",
         "build": "ng build",
         "serve": "node server/server.js",
         "build:serve": "npm run build && npm run serve",
