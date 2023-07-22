@@ -1,23 +1,7 @@
 // Declare some custom fonts
 @font-face {
-    font-family: 'Merriweather';
-    src: url('../assets/Fonts/Merriweather/Merriweather-Regular.ttf') format('truetype'),
-}
-
-@font-face {
-    font-family: 'Montez';
-    src: url('../assets/Fonts/montez/Montez-Regular.ttf') format('truetype'),
-}
-
-// Declare some custom fonts
-@font-face {
-    font-family: 'Merriweather';
-    src: url('../assets/Fonts/Merriweather/Merriweather-Regular.ttf') format('truetype'),
-}
-
-@font-face {
-    font-family: 'Merriweather-light';
-    src: url('../assets/Fonts/Merriweather/Merriweather-Light.ttf') format('truetype'),
+    font-family: 'Caranda';
+    src: url('../assets/Fonts/caranda/Caranda.ttf') format('truetype'),
 }
 
 @font-face {
@@ -25,31 +9,18 @@
     src: url('../assets/Fonts/Dosis/static/Dosis-Regular.ttf') format('truetype'),
 }
 
-@font-face {
-    font-family: 'Dosis-light';
-    src: url('../assets/Fonts/Dosis/static/Dosis-Light.ttf') format('truetype'),
-}
-
-@font-face {
-    font-family: 'Higher-Jump';
-    src: url('../assets/Fonts/higher-jump/Higher\ Jump.ttf') format('truetype'),
-}
-
-@font-face {
-    font-family: 'Oswald-bold';
-    src: url('../assets/Fonts/Oswald/Oswald-Bold.ttf') format('truetype'),
-}
-
-@font-face {
-    font-family: 'Zeyada';
-    src: url('../assets/Fonts/Zeyada/Zeyada-Regular.ttf') format('truetype'),
-}
-
 // Define colors
 
 // Primary background colors
 $v2_primary_background_color_1: #0E1B2B;
+$v2_secondary_background_color_1: #0E1B2B;
 
 // Primary text colors
 $v2_text_color_1: #FFFFFF;
-$v2_text_color_2: #1d9099;
+
+$v2_main_color_1: #FFFFFF;
+$v2_main_color_1_darken: #FFFFFF;
+$v2_main_color_1_lighten: #FFFFFF;
+
+$v2_font_family_general: #FFFFFF;
+$v2_font_family_name: #FFFFFF;

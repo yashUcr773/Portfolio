@@ -26,7 +26,14 @@ export class V3FooterComponent implements OnInit {
 
     setBubbles() {
 
-        let totalBubbles = Math.min(window.innerWidth / 3, 100);
+        let totalBubbles = window.innerWidth / 3;
+
+        if (totalBubbles < 100) {
+            totalBubbles = 100
+        } else if (totalBubbles > 500) {
+            totalBubbles = 500
+        }
+
         let bubbles: any = document.querySelector('.bubbles');
         if (bubbles) {
             for (let i = 0; i < totalBubbles; i += 1) {

@@ -92,6 +92,8 @@
                         width: fit-content;
                         display: flex;
                         margin: 16px;
+                        flex-wrap: wrap;
+                        justify-content: center;
 
                         a {
                             float: left;
@@ -100,6 +102,7 @@
                             text-align: center;
                             padding: 14px 16px;
                             text-decoration: none;
+                            border-radius: 8px;
 
                             &:hover,
                             &.selected {

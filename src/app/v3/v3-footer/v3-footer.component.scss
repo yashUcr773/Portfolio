@@ -143,10 +143,50 @@
                     align-items: center;
 
                     .logo {
-                        font-family: 'Montez';
-                        margin: 4px;
-                        padding: 4px;
-                        font-size: 48px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        @media (min-width:600px) {
+                            flex-direction: row;
+                        }
+
+                        .logo-img {
+                            .svg-logo-circle {
+                                stroke-dashoffset: 0px;
+                                stroke-width: 2px;
+                                width: 56px;
+                                height: 56px;
+                                margin: 12px 16px;
+
+                                .logo-circle {
+                                    stroke: white;
+                                    fill: #758C71;
+                                    stroke-width: 6px;
+                                    stroke-dasharray: 571px;
+                                }
+
+                                .logo-name {
+                                    fill: white;
+                                    stroke: white;
+                                    stroke-dasharray: 650px;
+                                    transform: translate(30%, 22%);
+                                }
+
+                            }
+                        }
+
+                        .name {
+
+                            font-family: "Caranda";
+                            margin: 12px;
+                            padding: 7px;
+                            font-size: 48px;
+                            line-height: 96px;
+                            margin-bottom: 0px;
+                            padding-bottom: 0px;
+                        }
                     }
 
                     .tag-line {
