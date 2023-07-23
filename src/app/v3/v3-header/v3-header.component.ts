@@ -12,8 +12,9 @@ export class V3HeaderComponent implements OnInit {
 
     socials_config = socials_config;
     hamburgerActive = false;
+    modeChecked = false;
     constructor(private appHelperService: AppHelperService) {
-
+        // check and apply theme check from local storage
     }
 
     ngOnInit(): void {
@@ -52,6 +53,16 @@ export class V3HeaderComponent implements OnInit {
             document.querySelector('body')?.classList.add('sidebarActive')
         }
 
+    }
+
+    changeMode(event: any) {
+        this.modeChecked = !this.modeChecked;
+    }
+
+    applyTheme(theme: 'light' | 'dark') {
+
+        // apply theme
+        // set in localstorage
     }
 
 }
