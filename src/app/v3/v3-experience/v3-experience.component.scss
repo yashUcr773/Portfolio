@@ -50,7 +50,7 @@
                     margin-bottom: 0px;
 
                     &:before {
-                        background-color: $v2_text_heading_underline;
+                        background-color: var(--v2_text_heading_underline);
                         content: '';
                         display: block;
                         height: 4px;
@@ -60,7 +60,7 @@
                     }
 
                     &:after {
-                        background-color: $v2_text_heading_underline;
+                        background-color: var(--v2_text_heading_underline);
                         content: '';
                         display: block;
                         position: absolute;
@@ -99,14 +99,14 @@
 
                 /* Handle */
                 ::-webkit-scrollbar-thumb {
-                    background: $v2_primary_background_color_1_darken;
+                    background: var(--v2_primary_background_color_1_darken);
                     border-radius: 12px;
                 }
 
                 .info {
                     display: flex;
                     flex-direction: column;
-                    background-color: $v2_primary_background_color_1;
+                    background-color: var(--v2_primary_background_color_1);
                     margin: 8px;
                     margin-top: 64px;
                     border-radius: 16px;
@@ -153,10 +153,10 @@
                             margin: 8px;
                             cursor: pointer;
                             border-radius: 16px;
-                            border: 2px solid $v2_primary_background_color_1_darken;
+                            border: 2px solid var(--v2_primary_background_color_1_darken);
 
                             &:hover {
-                                background: $v2_primary_background_color_1_darken;
+                                background: var(--v2_primary_background_color_1_darken);
                             }
 
                             &.show {
@@ -258,7 +258,7 @@
                                 justify-content: space-between;
                                 align-items: center;
                                 padding: 16px;
-                                background: $v2_main_color_1_lighten;
+                                background: var(--v2_main_color_1_lighten);
                                 border-radius: 8px;
                                 box-shadow: -8px -8px 16px -4px rgba(0, 0, 0, 0.75);
 
@@ -282,7 +282,7 @@
                                             display: block;
                                             width: 0px;
                                             height: 0px;
-                                            border-bottom: solid 2px $v2_text_color_1;
+                                            border-bottom: solid 2px var(--v2_text_color_1);
                                             position: absolute;
                                             bottom: 11px;
                                             transform: rotate(90deg);
@@ -294,7 +294,7 @@
                                         display: block;
                                         width: 24px;
                                         height: 0px;
-                                        border-bottom: solid 2px $v2_text_color_1;
+                                        border-bottom: solid 2px var(--v2_text_color_1);
                                         position: absolute;
                                         bottom: 11px;
                                         transform: rotate(90deg);
@@ -306,7 +306,7 @@
                                         display: block;
                                         width: 24px;
                                         height: 0px;
-                                        border-bottom: solid 2px $v2_text_color_1;
+                                        border-bottom: solid 2px var(--v2_text_color_1);
                                         position: absolute;
                                         bottom: 11px;
                                     }
@@ -329,7 +329,7 @@
                                 opacity: 0;
                                 width: 96%;
                                 margin: auto;
-                                background: $v2_main_color_1;
+                                background: var(--v2_main_color_1);
                                 transition: all 0.2s;
                                 border-bottom-left-radius: 8px;
                                 border-bottom-right-radius: 8px;
@@ -387,7 +387,7 @@
                                                 height: 0;
                                                 border-left: 5px solid transparent;
                                                 border-right: 5px solid transparent;
-                                                border-bottom: 10px solid $v2_text_color_1;
+                                                border-bottom: 10px solid var(--v2_text_color_1);
                                                 transform: rotate(90deg);
                                             }
                                         }
@@ -410,7 +410,7 @@
                                         margin: 16px 0px;
 
                                         .badges {
-                                            background-color: $v2_main_color_1_darken;
+                                            background-color: var(--v2_main_color_1_darken);
                                             font-size: 1.1em;
                                             border-radius: 2em;
                                             font-weight: 400;

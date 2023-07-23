@@ -8,7 +8,6 @@
 
 html {
     scroll-behavior: smooth;
-
 }
 
 html,
@@ -16,11 +15,68 @@ body {
     font-family: $v2_font_family_general !important;
     margin: 0;
     padding: 0;
-    background-color: $v2_primary_background_color_1;
-    color: $v2_text_color_1;
-    letter-spacing: 0.8px;
+    background-color: var(--v2_primary_background_color_1);
+    color: var(--v2_text_color_1);
 }
 
+// apply theme styles
+body {
+    &.theme-light {
+
+        // background colors
+        --v2_primary_background_color_1: #0E1B2B;
+        --v2_primary_background_color_1_darken: #263240;
+        --v2_primary_background_star_color: #c49952;
+
+        // text colors
+        --v2_text_color_1: #FFFFFF;
+        --v2_text_color_1_darken: #cccccc;
+        --v2_text_heading_underline: #27DEBF;
+
+        // theme colors
+        --v2_main_color_1: #0c4339;
+        --v2_main_color_1_lighten: #10594c;
+        --v2_main_color_1_lighter_than_lighter: #9eb4b0;
+        --v2_main_color_1_darken: #082f28;
+
+    }
+
+    &.theme-dark {
+        // background colors
+        --v2_primary_background_color_1: #0E1B2B;
+        --v2_primary_background_color_1_darken: #263240;
+        --v2_primary_background_star_color: #c49952;
+
+        // text colors
+        --v2_text_color_1: #FFFFFF;
+        --v2_text_color_1_darken: #cccccc;
+        --v2_text_heading_underline: #27DEBF;
+
+        // theme colors
+        --v2_main_color_1: #0c4339;
+        --v2_main_color_1_lighten: #10594c;
+        --v2_main_color_1_lighter_than_lighter: #9eb4b0;
+        --v2_main_color_1_darken: #082f28;
+
+    }
+
+    &.theme-common {
+
+        // third party icon colors
+        --v2_twitter_blue: #03A9F4;
+        --v2_linkedin_blue: #378fe9;
+        --v2_gmail_wheat: #E7E4D7;
+
+        // error success colors
+        --v2_error_red: #8B0000;
+        --v2_heart_red: #ff6e6e;
+
+        // logo colors
+        --v2_logo_background: #758C71;
+    }
+}
+
+// apply generic styles
 body {
     p {
         margin: 0;

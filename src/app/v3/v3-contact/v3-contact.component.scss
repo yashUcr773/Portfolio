@@ -57,7 +57,7 @@
                     margin-bottom: 0px;
 
                     &:before {
-                        background-color: $v2_text_heading_underline;
+                        background-color: var(--v2_text_heading_underline);
                         content: '';
                         display: block;
                         height: 4px;
@@ -67,7 +67,7 @@
                     }
 
                     &:after {
-                        background-color: $v2_text_heading_underline;
+                        background-color: var(--v2_text_heading_underline);
                         content: '';
                         display: block;
                         position: absolute;
@@ -222,7 +222,7 @@
                                 .social-btn {
 
                                     .background {
-                                        background: $v2_twitter_blue;
+                                        background: var(--v2_twitter_blue);
                                     }
 
                                     .svgContainer {
@@ -236,7 +236,7 @@
                             &.linkedin {
                                 .social-btn {
                                     .background {
-                                        background: $v2_linkedin_blue;
+                                        background: var(--v2_linkedin_blue);
                                     }
                                 }
 
@@ -250,7 +250,7 @@
                             &.gmail {
                                 .social-btn {
                                     .background {
-                                        background: $v2_gmail_wheat;
+                                        background: var(--v2_gmail_wheat);
                                     }
                                 }
 
@@ -273,7 +273,7 @@
                     width: fit-content;
                     min-width: 300px;
                     padding: 36px;
-                    background: $v2_main_color_1;
+                    background: var(--v2_main_color_1);
                     box-shadow: 0 16px 24px rgba(0, 0, 0, .6);
                     border-radius: 12px;
                     padding-bottom: 64px;
@@ -292,7 +292,7 @@
                         .form-heading {
                             margin: auto;
                             font-size: 2em;
-                            border-bottom: 2px solid $v2_text_color_1;
+                            border-bottom: 2px solid var(--v2_text_color_1);
                             padding: 2px 24px;
                             margin-bottom: 16px;
                         }
@@ -304,10 +304,10 @@
                                 width: 100%;
                                 padding: 8px 4px;
                                 font-size: 1em;
-                                color: $v2_text_color_1;
+                                color: var(--v2_text_color_1);
                                 margin-bottom: 28px;
                                 border: none;
-                                border-bottom: 1px solid $v2_text_color_1;
+                                border-bottom: 1px solid var(--v2_text_color_1);
                                 outline: none;
                                 background: transparent;
                             }
@@ -319,7 +319,7 @@
                                 left: 0;
                                 padding: 12px 0;
                                 font-size: 1em;
-                                color: $v2_text_color_1;
+                                color: var(--v2_text_color_1);
                                 pointer-events: none;
                                 transition: 0.5s;
                             }
@@ -328,7 +328,7 @@
                             .form-input:valid~label {
                                 top: -20px;
                                 left: 0;
-                                color: $v2_text_color_1_darken;
+                                color: var(--v2_text_color_1_darken);
                                 font-size: 0.8em;
                             }
 
@@ -336,7 +336,7 @@
                         }
 
                         .error {
-                            color: $v2_error_red;
+                            color: var(--v2_error_red);
                             position: relative;
                             margin-left: 42px;
                             margin-top: -16px;
@@ -349,12 +349,12 @@
                                 position: absolute;
                                 content: "!";
                                 border-radius: 50%;
-                                border: 1px solid $v2_error_red;
+                                border: 1px solid var(--v2_error_red);
                                 width: 28px;
                                 height: 28px;
                                 line-height: 26px;
                                 text-align: center;
-                                color: $v2_error_red;
+                                color: var(--v2_error_red);
                                 left: -36px;
                                 font-weight: 700;
                             }
@@ -362,7 +362,7 @@
 
                         a {
                             padding: 12px 24px;
-                            color: $v2_text_color_1;
+                            color: var(--v2_text_color_1);
                             font-size: 1.1em;
                             text-decoration: none;
                             text-transform: uppercase;
@@ -373,8 +373,8 @@
                             cursor: pointer;
 
                             &:hover {
-                                background: $v2_main_color_1_darken;
-                                color: $v2_text_color_1;
+                                background: var(--v2_main_color_1_darken);
+                                color: var(--v2_text_color_1);
                                 border-radius: 8px;
                             }
                         }
@@ -387,7 +387,7 @@
                             display: flex;
                             flex-direction: row;
                             gap: 8px;
-                            color: $v2_text_color_1;
+                            color: var(--v2_text_color_1);
                             align-items: center;
                             justify-content: center;
                             border-radius: 8px;
@@ -396,10 +396,10 @@
                             svg {
                                 width: 24px;
                                 height: 24px;
-                                fill: $v2_text_color_1;
+                                fill: var(--v2_text_color_1);
 
                                 path {
-                                    stroke: $v2_text_color_1;
+                                    stroke: var(--v2_text_color_1);
                                 }
                             }
 

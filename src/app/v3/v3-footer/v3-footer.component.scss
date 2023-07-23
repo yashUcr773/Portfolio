@@ -13,7 +13,7 @@
 
         .bubbles {
             margin-top: 200px;
-            background: $v2_main_color_1;
+            background: var(--v2_main_color_1);
             filter: url("#blob");
             z-index: 2;
             position: inherit;
@@ -21,7 +21,7 @@
             .bubble {
                 position: absolute;
                 left: var(--position, 50%);
-                background: $v2_main_color_1;
+                background: var(--v2_main_color_1);
                 border-radius: 100%;
                 -webkit-animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
                 animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
@@ -115,7 +115,7 @@
         .footer-content {
             height: 100%;
             width: 100%;
-            background: $v2_main_color_1;
+            background: var(--v2_main_color_1);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -160,15 +160,15 @@
                                 margin: 12px 16px;
 
                                 .logo-circle {
-                                    stroke: $v2_text_color_1;
-                                    fill: $v2_logo_background;
+                                    stroke: var(--v2_text_color_1);
+                                    fill: var(--v2_logo_background);
                                     stroke-width: 6px;
                                     stroke-dasharray: 571px;
                                 }
 
                                 .logo-name {
-                                    fill: $v2_text_color_1;
-                                    stroke: $v2_text_color_1;
+                                    fill: var(--v2_text_color_1);
+                                    stroke: var(--v2_text_color_1);
                                     stroke-dasharray: 650px;
                                     transform: translate(30%, 22%);
                                 }
@@ -210,7 +210,7 @@
                         .heart {
 
                             animation: beatingHeart 1s infinite;
-                            fill: $v2_heart_red;
+                            fill: var(--v2_heart_red);
 
                             @keyframes beatingHeart {
                                 0% {
@@ -279,7 +279,7 @@
                         height: 92px;
                         outline: none;
                         border: none;
-                        background: $v2_main_color_1_lighten;
+                        background: var(--v2_main_color_1_lighten);
                         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
                         transition: .2s ease-in-out;
 
@@ -289,13 +289,13 @@
                             .linkedin {
                                 margin-top: 1.5em;
                                 margin-left: 1.2em;
-                                fill: $v2_linkedin_blue;
+                                fill: var(--v2_linkedin_blue);
                             }
 
                             &:hover {
                                 cursor: pointer;
                                 scale: 1.1;
-                                background-color: $v2_linkedin_blue;
+                                background-color: var(--v2_linkedin_blue);
 
                                 .linkedin {
                                     fill: white;
@@ -310,13 +310,13 @@
                             .twitter {
                                 margin-top: 1.5em;
                                 margin-left: -.9em;
-                                fill: $v2_twitter_blue;
+                                fill: var(--v2_twitter_blue);
                             }
 
                             &:hover {
                                 cursor: pointer;
                                 scale: 1.1;
-                                background-color: $v2_twitter_blue;
+                                background-color: var(--v2_twitter_blue);
 
                                 .twitter {
                                     fill: white;
@@ -356,7 +356,7 @@
                             &:hover {
                                 cursor: pointer;
                                 scale: 1.1;
-                                background-color: $v2_gmail_wheat;
+                                background-color: var(--v2_gmail_wheat);
                             }
                         }
                     }

@@ -14,7 +14,7 @@ export class V3HeaderComponent implements OnInit {
     hamburgerActive = false;
     modeChecked = false;
     constructor(private appHelperService: AppHelperService) {
-        // check and apply theme check from local storage
+        this.checkAndApplyTheme()
     }
 
     ngOnInit(): void {
@@ -55,14 +55,33 @@ export class V3HeaderComponent implements OnInit {
 
     }
 
-    changeMode(event: any) {
+    checkAndApplyTheme() {
+
+        let dark = false;
+        let lsTheme = localStorage.getItem('theme');
+
+        if (lsTheme == 'dark') {
+            dark = true;
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            dark = true;
+        }
+
+        this.modeChecked = dark;
+        this.applyTheme(this.modeChecked ? 'light' : 'dark');
+    }
+
+    toggleTheme(event: any) {
         this.modeChecked = !this.modeChecked;
+        this.applyTheme(this.modeChecked ? 'light' : 'dark')
     }
 
     applyTheme(theme: 'light' | 'dark') {
 
-        // apply theme
-        // set in localstorage
+        document.querySelector('body')?.classList.remove('theme-light');
+        document.querySelector('body')?.classList.remove('theme-dark');
+        document.querySelector('body')?.classList.add('theme-' + theme);
+        localStorage.setItem('theme', theme);
+
     }
 
 }

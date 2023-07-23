@@ -5,7 +5,7 @@
     z-index: 1001;
     width: 100%;
     height: 100vh;
-    background: $v2_primary_background_color_1;
+    background: var(--v2_primary_background_color_1);
     animation: hide-loader 0.5s ease 3.5s forwards;
     opacity: 1;
 
@@ -36,7 +36,7 @@
                 }
 
                 path {
-                    stroke: $v2_text_color_1;
+                    stroke: var(--v2_text_color_1);
                 }
 
                 path:nth-child(1) {
@@ -69,7 +69,7 @@
                     }
 
                     to {
-                        fill: $v2_text_color_1;
+                        fill: var(--v2_text_color_1);
                     }
                 }
 
@@ -83,7 +83,7 @@
 
             .svg-logo-circle {
                 .logo-circle {
-                    stroke: $v2_logo_background;
+                    stroke: var(--v2_logo_background);
                     stroke-dasharray: 571px;
                     stroke-dashoffset: 571px;
                     animation: line-anim-logo1 3s ease-in-out forwards;
@@ -91,7 +91,7 @@
                 }
 
                 .logo-name {
-                    stroke: $v2_text_color_1;
+                    stroke: var(--v2_text_color_1);
                     stroke-dasharray: 650px;
                     stroke-dashoffset: 650px;
                     transform: translate(30%, 22%);
@@ -105,7 +105,7 @@
                     }
 
                     to {
-                        fill: $v2_logo_background;
+                        fill: var(--v2_logo_background);
                         stroke-dashoffset: 0px;
                     }
                 }
@@ -116,7 +116,7 @@
                     }
 
                     to {
-                        fill: $v2_text_color_1;
+                        fill: var(--v2_text_color_1);
                         stroke-dashoffset: 0px;
                     }
                 }
@@ -164,17 +164,17 @@
     z-index: 5;
     left: 50%;
     bottom: 32px;
-    background: $v2_main_color_1_lighten;
+    background: var(--v2_main_color_1_lighten);
     font-size: 1.25em;
     transform: translateX(-50%);
 
     &.success {
-        background: $v2_main_color_1_lighten;
+        background: var(--v2_main_color_1_lighten);
 
     }
 
     &.error {
-        background: $v2_error_red;
+        background: var(--v2_error_red);
 
     }
 
@@ -204,9 +204,9 @@
         width: 100%;
 
         .progress-value {
-            box-shadow: 0 10px 40px -10px $v2_text_color_1;
+            box-shadow: 0 10px 40px -10px var(--v2_text_color_1);
             border-radius: 100px;
-            background: $v2_text_color_1;
+            background: var(--v2_text_color_1);
             height: 4px;
             width: 0;
         }
@@ -273,7 +273,7 @@
 }
 
 .back-to-top {
-    background-color: $v2_main_color_1;
+    background-color: var(--v2_main_color_1);
     cursor: pointer;
     width: 56px;
     height: 56px;
@@ -289,16 +289,16 @@
     box-shadow: 0 4px 16px 0 rgba(#000, 0.4);
 
     &:hover {
-        background-color: $v2_main_color_1_lighten;
+        background-color: var(--v2_main_color_1_lighten);
     }
 
     &:active {
         box-shadow: none;
-        background-color: $v2_main_color_1_lighten;
+        background-color: var(--v2_main_color_1_lighten);
     }
 
     svg.icon__arrow-up {
-        fill: $v2_text_color_1;
+        fill: var(--v2_text_color_1);
         width: 32px;
         height: 32px;
     }

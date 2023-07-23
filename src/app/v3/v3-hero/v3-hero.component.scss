@@ -83,7 +83,7 @@
 
                         /* blinking cursor */
                         #cursor {
-                            background: $v2_text_color_1;
+                            background: var(--v2_text_color_1);
                             line-height: 20px;
                             margin-left: 6px;
                             animation: blink 1s infinite;
@@ -92,15 +92,15 @@
 
                             @keyframes blink {
                                 0% {
-                                    background: $v2_primary_background_color_1;
+                                    background: var(--v2_primary_background_color_1);
                                 }
 
                                 50% {
-                                    background: $v2_text_color_1;
+                                    background: var(--v2_text_color_1);
                                 }
 
                                 100% {
-                                    background: $v2_primary_background_color_1;
+                                    background: var(--v2_primary_background_color_1);
                                 }
                             }
                         }
@@ -126,13 +126,13 @@
                         width: 144px;
                         font-weight: 600;
                         padding: 0 1.2rem;
-                        color: $v2_text_color_1;
+                        color: var(--v2_text_color_1);
                         border: none;
-                        background: $v2_main_color_1;
+                        background: var(--v2_main_color_1);
                         opacity: 1;
 
                         &:hover {
-                            background: $v2_main_color_1_lighten;
+                            background: var(--v2_main_color_1_lighten);
                         }
                     }
 
@@ -145,11 +145,11 @@
                         font-size: 18px;
                         letter-spacing: 1px;
                         text-decoration: none;
-                        color: $v2_text_color_1;
+                        color: var(--v2_text_color_1);
                         background: transparent;
                         cursor: pointer;
                         transition: ease-out 0.5s;
-                        border: 2px solid $v2_main_color_1;
+                        border: 2px solid var(--v2_main_color_1);
                         border-radius: 10px;
 
                         &:active {
@@ -157,7 +157,7 @@
                         }
 
                         &:hover {
-                            box-shadow: inset 0 -100px 0 0 $v2_main_color_1;
+                            box-shadow: inset 0 -100px 0 0 var(--v2_main_color_1);
                         }
 
                     }
@@ -169,7 +169,7 @@
             .hero-image {
                 width: 300px;
                 margin: 12px;
-                background-color: $v2_primary_background_color_1;
+                background-color: var(--v2_primary_background_color_1);
                 border-radius: 32px;
 
                 @media (min-width:700px) {
@@ -208,8 +208,8 @@
                     height: 28px;
                     box-sizing: border-box;
                     border: none;
-                    border-bottom: 3px solid $v2_main_color_1;
-                    border-right: 3px solid $v2_main_color_1;
+                    border-bottom: 3px solid var(--v2_main_color_1);
+                    border-right: 3px solid var(--v2_main_color_1);
                     animation: animate 1s linear infinite;
                     pointer-events: none;
 
@@ -246,18 +246,18 @@
 
                 @keyframes animate {
                     0% {
-                        border-color: $v2_text_color_1;
+                        border-color: var(--v2_text_color_1);
                         transform: translate(0, 0);
                     }
 
                     20% {
-                        border-color: $v2_text_color_1;
+                        border-color: var(--v2_text_color_1);
                         transform: translate(15px, 15px);
                     }
 
                     20.1%,
                     100% {
-                        border-color: $v2_main_color_1;
+                        border-color: var(--v2_main_color_1);
                     }
                 }
             }
