@@ -5,10 +5,12 @@ import { constants } from 'config/constants';
 export class AppHelperService {
 
     launchLink(url: string) {
-        let link: any = document.querySelector('#external-link-button');
-        link.target = '_blank';
-        link.href = url;
-        link.click();
+        let link = document.querySelector('#external-link-button') as HTMLAnchorElement;
+        if (link) {
+            link.target = '_blank';
+            link.href = url;
+            link.click();
+        }
     }
 
     generateRandomNumbers(low: number, high: number) {

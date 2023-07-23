@@ -34,10 +34,10 @@ export class V3FooterComponent implements OnInit {
             totalBubbles = 500
         }
 
-        let bubbles: any = document.querySelector('.bubbles');
+        let bubbles = document.querySelector('.bubbles') as HTMLElement;
         if (bubbles) {
             for (let i = 0; i < totalBubbles; i += 1) {
-                let bubble: any = document.createElement('div');
+                let bubble = document.createElement('div');
                 let style = '--size: ' + this.generateRandomNumbers(1, 10, 'rem') + ';';
                 style += ' --distance: ' + this.generateRandomNumbers(4, 12, 'rem') + ';';
                 style += ' --position: ' + this.generateRandomNumbers(-10, 110, '%') + ';';
