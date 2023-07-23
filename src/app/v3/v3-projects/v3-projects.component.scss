@@ -104,7 +104,8 @@
                             text-align: center;
                             padding: 14px 16px;
                             text-decoration: none;
-                            border-radius: 8px;
+                            flex: 1 1 auto;
+                            cursor: pointer;
 
                             &:hover,
                             &.selected {
@@ -181,7 +182,7 @@
                                 color: black;
 
                                 &:hover {
-                                    color: $v2_main_color_1_lighten;
+                                    color: $v2_main_color_1_lighter_than_lighter;
                                 }
                             }
                         }
