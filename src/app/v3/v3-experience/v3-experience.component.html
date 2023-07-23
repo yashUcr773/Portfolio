@@ -13,68 +13,90 @@
 
                 <div class="body-content-container">
 
-                    <div class="info" data-aos="fade-up">
-                        <p>
-                            The cusp of art and technology has always fascinated me, and I've never been afraid to jump
-                            in
-                            and give it a go. Whether designing and developing mobile apps, websites, transforming
-                            websites
-                            into multi-OS desktop apps, or delving into AI models, I enjoy exploring the convergence of
-                            creativity and technology.
-                        </p>
-                        <p>
-                            With over 5 years of experience in software development, my focus has been creating
-                            cross-platform, scalable, and interactive content. Throughout my career, I have honed my
-                            skills
-                            in crafting engaging user experiences that seamlessly adapt to different devices and
-                            platforms.
-                            However, I don't like to define myself solely by the work I've done. Proper growth comes
-                            from
-                            the work I aspire to do. While skills can be taught and acquired, one's personality and
-                            drive
-                            are inherent. Therefore, I strive to keep learning, continuously challenge myself, and
-                            engage in
-                            exciting projects that have a meaningful impact.
-                        </p>
-                        <p>
-                            Writing code is not just a job for me; it's a passion. I am constantly immersed in the
-                            process
-                            of building something new, something that pushes the boundaries of what technology can
-                            achieve.
-                            I can conjure a working product from nothing, speak the language of 0s and 1s, and talk to
-                            the
-                            overlord Linux servers to host the product. The satisfaction I derive from seeing my ideas
-                            come
-                            to life through lines of code is immeasurable.
-                        </p>
-                        <p>
-                            My educational background includes a bachelor's degree in Information Technology, which
-                            provided
-                            me with a solid foundation in computer science principles. To further enhance my expertise,
-                            I
-                            pursued a master's degree in Computer Science. These academic pursuits have equipped me with
-                            a
-                            comprehensive understanding of advanced concepts and techniques in the field.
-                        </p>
-                        <p>
-                            Currently based in California, I am fortunate to be surrounded by a vibrant tech community
-                            that
-                            fosters innovation and encourages collaboration. Being part of this dynamic environment
-                            fuels my
-                            enthusiasm for staying at the forefront of technological advancements.
-                        </p>
-                        <p>
-                            Beyond technical skills, I value the importance of effective communication and
-                            collaboration.
-                            Throughout my professional journey, I have had the opportunity to work in cross-functional
-                            teams, where I learned the significance of effective teamwork and leveraging diverse
-                            perspectives to create superior solutions.
-                        </p>
-                        <p>While I am proud of my accomplishments, I recognize that there is always room for growth. I
-                            embrace challenges as opportunities for personal and professional development. I actively
-                            seek
-                            out new technologies, frameworks, and methodologies to expand my skill set and ensure I am
-                            well-equipped to tackle the industry's evolving demands.</p>
+                    <div class="info" data-aos="fade-up" [ngClass]="{'expand' : expandInfo}">
+                        <div class="info-container" [ngClass]="{'show' : expandInfo}">
+
+                            <p id="first-info-node">
+                                The cusp of art and technology has always fascinated me, and I've never been afraid to
+                                jump
+                                in
+                                and give it a go. Whether designing and developing mobile apps, websites, transforming
+                                websites
+                                into multi-OS desktop apps, or delving into AI models, I enjoy exploring the convergence
+                                of
+                                creativity and technology.
+                            </p>
+                            <p class='info-node' [ngClass]="{'show' : expandInfo}">
+                                With over 5 years of experience in software development, my focus has been creating
+                                cross-platform, scalable, and interactive content. Throughout my career, I have honed my
+                                skills
+                                in crafting engaging user experiences that seamlessly adapt to different devices and
+                                platforms.
+                                However, I don't like to define myself solely by the work I've done. Proper growth comes
+                                from
+                                the work I aspire to do. While skills can be taught and acquired, one's personality and
+                                drive
+                                are inherent. Therefore, I strive to keep learning, continuously challenge myself, and
+                                engage in
+                                exciting projects that have a meaningful impact.
+                            </p>
+                            <p class='info-node' [ngClass]="{'show' : expandInfo}">
+                                Writing code is not just a job for me; it's a passion. I am constantly immersed in the
+                                process
+                                of building something new, something that pushes the boundaries of what technology can
+                                achieve.
+                                I can conjure a working product from nothing, speak the language of 0s and 1s, and talk
+                                to
+                                the
+                                overlord Linux servers to host the product. The satisfaction I derive from seeing my
+                                ideas
+                                come
+                                to life through lines of code is immeasurable.
+                            </p>
+                            <p class='info-node' [ngClass]="{'show' : expandInfo}">
+                                My educational background includes a bachelor's degree in Information Technology, which
+                                provided
+                                me with a solid foundation in computer science principles. To further enhance my
+                                expertise,
+                                I
+                                pursued a master's degree in Computer Science. These academic pursuits have equipped me
+                                with
+                                a
+                                comprehensive understanding of advanced concepts and techniques in the field.
+                            </p>
+                            <p class='info-node' [ngClass]="{'show' : expandInfo}">
+                                Currently based in California, I am fortunate to be surrounded by a vibrant tech
+                                community
+                                that
+                                fosters innovation and encourages collaboration. Being part of this dynamic environment
+                                fuels my
+                                enthusiasm for staying at the forefront of technological advancements.
+                            </p>
+                            <p class='info-node' [ngClass]="{'show' : expandInfo}">
+                                Beyond technical skills, I value the importance of effective communication and
+                                collaboration.
+                                Throughout my professional journey, I have had the opportunity to work in
+                                cross-functional
+                                teams, where I learned the significance of effective teamwork and leveraging diverse
+                                perspectives to create superior solutions.
+                            </p>
+                            <p class='info-node' [ngClass]="{'show' : expandInfo}">
+                                While I am proud of my accomplishments, I recognize that there is always room for
+                                growth.
+                                I
+                                embrace challenges as opportunities for personal and professional development. I
+                                actively
+                                seek
+                                out new technologies, frameworks, and methodologies to expand my skill set and ensure I
+                                am
+                                well-equipped to tackle the industry's evolving demands.
+                            </p>
+                        </div>
+
+                        <div class="see-more" (click)="toggleExpandInfo()">
+                            <p class='expandCollapsebutton' [ngClass]="{'show' : !expandInfo}">See more</p>
+                            <p class='expandCollapsebutton' [ngClass]="{'show' : expandInfo}">See less</p>
+                        </div>
                     </div>
 
                     <div class="spheres-container" data-aos="fade-up">

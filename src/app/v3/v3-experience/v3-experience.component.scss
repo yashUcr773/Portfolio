@@ -109,20 +109,60 @@
                     background-color: $v2_primary_background_color_1;
                     margin: 8px;
                     margin-top: 64px;
-                    padding: 24px;
                     border-radius: 16px;
                     font-size: 1.4em;
                     box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.2);
-                    height: 52vh;
-                    overflow: hidden;
-                    overflow-y: scroll;
 
+                    .info-container {
+                        margin: 64px 32px;
+                        margin-bottom: 16px;
+                        padding: 8px;
+                        overflow: hidden;
+                        overflow-y: auto;
+                        height: 20vh;
+                        transition: 0.3s;
 
+                        &.show {
+                            height: 40vh;
+                        }
 
-                    p {
-                        margin: 8px;
-                        padding: 12px;
-                        letter-spacing: 2px;
+                        p {
+                            margin: 8px;
+                            padding: 12px;
+                            letter-spacing: 2px;
+                            display: none;
+
+                            &:nth-child(1) {
+                                display: block;
+                            }
+
+                            &.show {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    .see-more {
+                        display: flex;
+                        justify-content: flex-end;
+                        width: 100%;
+
+                        p {
+                            display: none;
+                            padding: 4px 20px;
+                            margin: 8px;
+                            cursor: pointer;
+                            border-radius: 16px;
+                            border: 2px solid $v2_primary_background_color_1_darken;
+
+                            &:hover {
+                                background: $v2_primary_background_color_1_darken;
+                            }
+
+                            &.show {
+                                display: flex;
+                            }
+                        }
                     }
                 }
 
