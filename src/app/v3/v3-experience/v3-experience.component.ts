@@ -8,7 +8,9 @@ import { AppHelperService } from '../../services/app-helper.service';
     styleUrls: ['./v3-experience.component.scss']
 })
 export class V3ExperienceComponent implements OnInit {
-    activeIndex = 0;
+    activeIndex: {
+        [propertyName: string]: boolean;
+    } = {};
     experiences: experience[] = [];
     expandInfo = false;
 
@@ -76,9 +78,11 @@ export class V3ExperienceComponent implements OnInit {
     }
 
     updateActive(id: number) {
-
-        this.activeIndex = this.activeIndex == id ? 0 : id;
-
+        if (this.activeIndex[id] == undefined) {
+            this.activeIndex[id] = true;
+        } else {
+            this.activeIndex[id] = !this.activeIndex[id];
+        }
     }
 
     initExperiences() {

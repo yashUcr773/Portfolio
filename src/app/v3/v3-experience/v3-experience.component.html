@@ -118,9 +118,6 @@
 
                 </div>
 
-
-
-
                 <div class="work-experience-scene">
 
                     <div class="scene-heading">
@@ -133,10 +130,11 @@
 
                             <ng-container *ngFor="let experienceData of experiences; let expIndex = index">
 
-                                <div class="tab tab-{{expIndex+1}}" [ngClass]="{'show': activeIndex == expIndex+1}">
+                                <div class="tab tab-{{expIndex+1}}"
+                                    [ngClass]="{'show': activeIndex[expIndex+1] == true}">
                                     <div class="header" (click)="updateActive(expIndex+1)">
                                         <p>{{experienceData.Company}}</p>
-                                        <div class="icon" [ngClass]="{'show': activeIndex == expIndex+1}"></div>
+                                        <div class="icon" [ngClass]="{'show': activeIndex[expIndex+1] == true}"></div>
                                     </div>
                                     <div class="content">
                                         <div class="title">
