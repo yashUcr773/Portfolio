@@ -29,7 +29,7 @@ export class V3HeroComponent implements OnInit {
 
     }
 
-    createRange(number: any) {
+    createRange(number: number) {
         return new Array(number).fill(0)
             .map((n, index) => index + 1);
     }

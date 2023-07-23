@@ -1,3 +1,148 @@
+@import "../../_common_v3.scss";
+
+.startup-loader {
+    position: fixed;
+    z-index: 1001;
+    width: 100%;
+    height: 100vh;
+    background: var(--v2_primary_background_color_1);
+    animation: hide-loader 0.5s ease 3.5s forwards;
+    opacity: 1;
+
+    .loader-container {
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 32px;
+        animation: hide-loader-container 1s ease 3.5s forwards;
+
+        .name {
+            display: flex;
+            flex-direction: row;
+            gap: 32px;
+            align-items: center;
+            justify-content: center;
+
+            .svg-logo-name {
+                animation: logo-fill 1s ease-in-out forwards 2.5s;
+
+                display: none;
+
+                @media (min-width:700px) {
+                    display: block;
+                }
+
+                path {
+                    stroke: var(--v2_text_color_1);
+                }
+
+                path:nth-child(1) {
+                    stroke-dasharray: 456px;
+                    stroke-dashoffset: 456px;
+                    animation: line-anim 2s ease-in-out forwards 0.1s;
+                }
+
+                path:nth-child(2) {
+                    stroke-dasharray: 616px;
+                    stroke-dashoffset: 616px;
+                    animation: line-anim 2s ease-in-out forwards 0.4s;
+                }
+
+                path:nth-child(3) {
+                    stroke-dasharray: 455px;
+                    stroke-dashoffset: 455px;
+                    animation: line-anim 2s ease-in-out forwards 0.7s;
+                }
+
+                path:nth-child(4) {
+                    stroke-dasharray: 720px;
+                    stroke-dashoffset: 720px;
+                    animation: line-anim 2s ease-in-out forwards 1s;
+                }
+
+                @keyframes logo-fill {
+                    from {
+                        fill: transparent;
+                    }
+
+                    to {
+                        fill: var(--v2_text_color_1);
+                    }
+                }
+
+                @keyframes line-anim {
+                    to {
+                        stroke-dashoffset: 0px;
+                    }
+                }
+
+            }
+
+            .svg-logo-circle {
+                .logo-circle {
+                    stroke: var(--v2_logo_background);
+                    stroke-dasharray: 571px;
+                    stroke-dashoffset: 571px;
+                    animation: line-anim-logo1 3s ease-in-out forwards;
+                    stroke-width: 2px;
+                }
+
+                .logo-name {
+                    stroke: var(--v2_text_color_1);
+                    stroke-dasharray: 650px;
+                    stroke-dashoffset: 650px;
+                    transform: translate(30%, 22%);
+                    animation: line-anim-logo2 3s ease-in-out forwards;
+                    stroke-width: 2px;
+                }
+
+                @keyframes line-anim-logo1 {
+                    from {
+                        fill: transparent;
+                    }
+
+                    to {
+                        fill: var(--v2_logo_background);
+                        stroke-dashoffset: 0px;
+                    }
+                }
+
+                @keyframes line-anim-logo2 {
+                    from {
+                        fill: transparent;
+                    }
+
+                    to {
+                        fill: var(--v2_text_color_1);
+                        stroke-dashoffset: 0px;
+                    }
+                }
+            }
+
+
+        }
+
+        @keyframes hide-loader-container {
+            to {
+                top: 0%;
+            }
+        }
+
+    }
+
+    @keyframes hide-loader {
+        to {
+            opacity: 0;
+            display: none;
+            pointer-events: none;
+
+        }
+    }
+}
+
 .component-section {
     overflow: hidden;
 
@@ -19,17 +164,17 @@
     z-index: 5;
     left: 50%;
     bottom: 32px;
-    background: #10594c;
+    background: var(--v2_main_color_1_lighten);
     font-size: 1.25em;
     transform: translateX(-50%);
 
     &.success {
-        background: #10594c;
+        background: var(--v2_main_color_1_lighten);
 
     }
 
     &.error {
-        background: #8B0000;
+        background: var(--v2_error_red);
 
     }
 
@@ -59,9 +204,9 @@
         width: 100%;
 
         .progress-value {
-            box-shadow: 0 10px 40px -10px #fff;
+            box-shadow: 0 10px 40px -10px var(--v2_text_color_1);
             border-radius: 100px;
-            background: #fff;
+            background: var(--v2_text_color_1);
             height: 4px;
             width: 0;
         }
@@ -128,7 +273,7 @@
 }
 
 .back-to-top {
-    background-color: #2d6d2e;
+    background-color: var(--v2_main_color_1);
     cursor: pointer;
     width: 56px;
     height: 56px;
@@ -141,19 +286,19 @@
     justify-content: center;
     border: 0;
     border-radius: 100%;
-    box-shadow: 0 4px 16px 0 rgba(black, 0.4);
+    box-shadow: 0 4px 16px 0 rgba(#000, 0.4);
 
     &:hover {
-        background-color: lighten(#2d6d2e, 12%);
+        background-color: var(--v2_main_color_1_lighten);
     }
 
     &:active {
         box-shadow: none;
-        background-color: darken(#2d6d2e, 12%);
+        background-color: var(--v2_main_color_1_lighten);
     }
 
     svg.icon__arrow-up {
-        fill: white;
+        fill: var(--v2_text_color_1);
         width: 32px;
         height: 32px;
     }
