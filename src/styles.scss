@@ -25,4 +25,10 @@ body {
     p {
         margin: 0;
     }
+
+    overflow: auto;
+
+    &.sidebarActive {
+        overflow: hidden;
+    }
 }

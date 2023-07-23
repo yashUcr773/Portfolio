@@ -1,10 +1,6 @@
-<!-- credits: https://codepen.io/jo_Geek/pen/xgbaEr -->
-<div class="nav">
+<div class="header-container">
 
-    <!-- TODO_LATER_AS_IMPROVEMENT -->
-    <!-- dropdown is toggled by checkbox. Change to JS later -->
-    <input type="checkbox" id="nav-check">
-    <div class="nav-header" (click)="goto('hero')">
+    <div class="left">
         <div class="nav-title">
             <svg class='svg-logo-circle' width="184" height="184" viewBox="0 0 184 184" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -16,23 +12,38 @@
         </div>
     </div>
 
-    <!-- TODO_LATER_AS_IMPROVEMENT -->
-    <!-- Hamberger menu animations -->
-    <div class="nav-btn">
-        <label for="nav-check">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
+    <div class="right">
+        <div class="links-container">
+
+            <div class="nav-links">
+                <a (click)="goto('projects')" title="See My Projects">Projects</a>
+                <a (click)="goto('experience')" title="Know About Me">About</a>
+                <a (click)="goto('contact')" title="Contact Me">Contact</a>
+                <a (click)="launchLink(socials_config.resume)" title="See My Resume">Resume</a>
+            </div>
+
+            <div class="menu-toggle-button">
+                <div class="hamburger" [ngClass]="{'active' : hamburgerActive}" (click)="toggleHamburger()">
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="sidebar" [ngClass]="{'active' : hamburgerActive}">
+                <div class="links">
+                    <a (click)="goto('projects')" title="See My Projects">Projects</a>
+                    <a (click)="goto('experience')" title="Know About Me">About</a>
+                    <a (click)="goto('contact')" title="Contact Me">Contact</a>
+                    <a (click)="launchLink(socials_config.resume)" title="See My Resume">Resume</a>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="nav-links">
-        <a (click)="goto('projects')" title="See My Projects">Projects</a>
-        <a (click)="goto('experience')" title="Know About Me">About</a>
-        <a (click)="goto('contact')" title="Contact Me">Contact</a>
-        <a (click)="launchLink(socials_config.resume)" title="See My Resume">Resume</a>
-    </div>
 </div>
+
+
 
 <!-- https://codepen.io/riley-pearce/pen/OJWPjZM?fbclid=IwAR2HwzINeVhFg7-YQvFDV8Teh-IH6akXO9RY3uMTapRobDt-R9fJ6-GIMkY -->
 <div class="background">
