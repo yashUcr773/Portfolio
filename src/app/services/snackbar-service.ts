@@ -17,23 +17,27 @@ export class SnackbarService {
             return
         }
 
-        let snack: any = this.snackQueue.shift();
-        let snackbar = document.getElementById('snackbar');
-        let snackText: any = snackbar?.querySelector('#snackbar-text');
-        snackText.innerText = snack?.message;
-        snackbar?.classList.add('show');
-        snackbar?.classList.add(...snack.classes);
-        this.isSnacking = true;
+        let snack = this.snackQueue.shift() as snack;
 
-        setTimeout(() => {
-            this.isSnacking = false;
-            if (snackbar) {
-                snackbar.className = "";
-            }
+        if (snack) {
+
+            let snackbar = document.getElementById('snackbar');
+            let snackText = snackbar?.querySelector('#snackbar-text') as HTMLElement;
+            snackText.innerText = snack?.message;
+            snackbar?.classList.add('show');
+            snackbar?.classList.add(...snack.classes);
+            this.isSnacking = true;
+
             setTimeout(() => {
-                this.eatSnack();
-            }, 100)
-        }, 4500)
+                this.isSnacking = false;
+                if (snackbar) {
+                    snackbar.className = "";
+                }
+                setTimeout(() => {
+                    this.eatSnack();
+                }, 100)
+            }, 4500)
+        }
 
 
     }

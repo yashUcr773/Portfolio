@@ -1,3 +1,5 @@
+@import "../../_common_v3.scss";
+
 .experience-wrapper {
     width: 100%;
     height: calc(100% - 50px);
@@ -48,7 +50,7 @@
                     margin-bottom: 0px;
 
                     &:before {
-                        background-color: #27DEBF;
+                        background-color: var(--v2_text_heading_underline);
                         content: '';
                         display: block;
                         height: 4px;
@@ -58,7 +60,7 @@
                     }
 
                     &:after {
-                        background-color: #27DEBF;
+                        background-color: var(--v2_text_heading_underline);
                         content: '';
                         display: block;
                         position: absolute;
@@ -86,7 +88,7 @@
 
                 /* width */
                 ::-webkit-scrollbar {
-                    width: 16px;
+                    width: 12px;
                 }
 
                 /* Track */
@@ -97,29 +99,70 @@
 
                 /* Handle */
                 ::-webkit-scrollbar-thumb {
-                    background: #263240;
+                    background: var(--v2_primary_background_color_1_darken);
                     border-radius: 12px;
                 }
 
                 .info {
                     display: flex;
                     flex-direction: column;
-                    background-color: #0E1B2B;
+                    background-color: var(--v2_primary_background_color_1);
                     margin: 8px;
-                    padding: 20px;
+                    margin-top: 64px;
                     border-radius: 16px;
                     font-size: 1.4em;
                     box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.2);
-                    height: 600px;
-                    overflow: hidden;
-                    overflow-y: scroll;
 
+                    .info-container {
+                        margin: 64px 32px;
+                        margin-bottom: 16px;
+                        padding: 8px;
+                        overflow: hidden;
+                        overflow-y: auto;
+                        height: 20vh;
+                        transition: 0.3s;
 
+                        &.show {
+                            height: 40vh;
+                        }
 
-                    p {
-                        margin: 8px;
-                        padding: 12px;
-                        letter-spacing: 2px;
+                        p {
+                            margin: 8px;
+                            padding: 12px;
+                            letter-spacing: 2px;
+                            display: none;
+
+                            &:nth-child(1) {
+                                display: block;
+                            }
+
+                            &.show {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    .see-more {
+                        display: flex;
+                        justify-content: flex-end;
+                        width: 100%;
+
+                        p {
+                            display: none;
+                            padding: 4px 20px;
+                            margin: 8px;
+                            cursor: pointer;
+                            border-radius: 16px;
+                            border: 2px solid var(--v2_primary_background_color_1_darken);
+
+                            &:hover {
+                                background: var(--v2_primary_background_color_1_darken);
+                            }
+
+                            &.show {
+                                display: flex;
+                            }
+                        }
                     }
                 }
 
@@ -215,7 +258,7 @@
                                 justify-content: space-between;
                                 align-items: center;
                                 padding: 16px;
-                                background: #10594c;
+                                background: var(--v2_main_color_1_lighten);
                                 border-radius: 8px;
                                 box-shadow: -8px -8px 16px -4px rgba(0, 0, 0, 0.75);
 
@@ -239,7 +282,7 @@
                                             display: block;
                                             width: 0px;
                                             height: 0px;
-                                            border-bottom: solid 2px white;
+                                            border-bottom: solid 2px var(--v2_text_color_1);
                                             position: absolute;
                                             bottom: 11px;
                                             transform: rotate(90deg);
@@ -251,7 +294,7 @@
                                         display: block;
                                         width: 24px;
                                         height: 0px;
-                                        border-bottom: solid 2px white;
+                                        border-bottom: solid 2px var(--v2_text_color_1);
                                         position: absolute;
                                         bottom: 11px;
                                         transform: rotate(90deg);
@@ -263,7 +306,7 @@
                                         display: block;
                                         width: 24px;
                                         height: 0px;
-                                        border-bottom: solid 2px white;
+                                        border-bottom: solid 2px var(--v2_text_color_1);
                                         position: absolute;
                                         bottom: 11px;
                                     }
@@ -286,7 +329,7 @@
                                 opacity: 0;
                                 width: 96%;
                                 margin: auto;
-                                background: #0c4339;
+                                background: var(--v2_main_color_1);
                                 transition: all 0.2s;
                                 border-bottom-left-radius: 8px;
                                 border-bottom-right-radius: 8px;
@@ -344,7 +387,7 @@
                                                 height: 0;
                                                 border-left: 5px solid transparent;
                                                 border-right: 5px solid transparent;
-                                                border-bottom: 10px solid #FFF;
+                                                border-bottom: 10px solid var(--v2_text_color_1);
                                                 transform: rotate(90deg);
                                             }
                                         }
@@ -367,7 +410,7 @@
                                         margin: 16px 0px;
 
                                         .badges {
-                                            background-color: #082f28;
+                                            background-color: var(--v2_main_color_1_darken);
                                             font-size: 1.1em;
                                             border-radius: 2em;
                                             font-weight: 400;
