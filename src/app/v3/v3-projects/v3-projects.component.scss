@@ -1,3 +1,5 @@
+@import "../../_common_v3.scss";
+
 .projects-wrapper {
     width: 100%;
     height: calc(100% - 50px);
@@ -49,7 +51,7 @@
                         margin-bottom: 0px;
 
                         &:before {
-                            background-color: #27DEBF;
+                            background-color: var(--v2_text_heading_underline);
                             content: '';
                             display: block;
                             height: 4px;
@@ -59,7 +61,7 @@
                         }
 
                         &:after {
-                            background-color: #27DEBF;
+                            background-color: var(--v2_text_heading_underline);
                             content: '';
                             display: block;
                             position: absolute;
@@ -88,22 +90,26 @@
                     .links {
                         overflow: hidden;
                         border-radius: 8px;
-                        background-color: #0c4339;
+                        background-color: var(--v2_main_color_1);
                         width: fit-content;
                         display: flex;
                         margin: 16px;
+                        flex-wrap: wrap;
+                        justify-content: center;
 
                         a {
                             float: left;
                             font-size: 16px;
-                            color: aliceblue;
+                            color: var(--v2_text_color_1);
                             text-align: center;
                             padding: 14px 16px;
                             text-decoration: none;
+                            flex: 1 1 auto;
+                            cursor: pointer;
 
                             &:hover,
                             &.selected {
-                                background-color: #10594c;
+                                background-color: var(--v2_main_color_1_lighten);
                             }
                         }
                     }
@@ -125,9 +131,8 @@
                         width: 320px;
                         min-height: 380px;
                         border-radius: 16px;
-                        background: #0c4339;
-                        box-shadow: 5px 5px 8px #060b12,
-                            -5px -5px 8px #060b12;
+                        background: var(--v2_main_color_1);
+                        box-shadow: 6px 6px 8px rgba(#000, 0.4), -6px -6px 8px rgba(#000, 0.4);
                         transition: 0.4s;
 
                         &:hover {
@@ -137,15 +142,15 @@
                         .card-title {
                             font-size: 18px;
                             font-weight: 600;
-                            color: #9eb4b0;
+                            color: var(--v2_text_color_1_darken);
                             margin: 12px 0px;
                         }
 
                         .card-image {
-                            background-color: #313131;
+                            background-color: #000;
                             border-radius: 16px;
-                            box-shadow: inset 5px 5px 3px #2f2f2f,
-                                inset -5px -5px 3px #333333;
+                            box-shadow: inset 6px 6px 4px rgba(#000, 0.4),
+                                inset -6px -6px 4px rgba(#000, 0.4);
 
                             img {
                                 max-width: 300px;
@@ -157,7 +162,7 @@
                         }
 
                         .card-body {
-                            color: rgb(184, 184, 184);
+                            color: var(--v2_text_color_1);
                             font-size: 16px;
                             margin: 0px;
                             padding: 4px;
@@ -177,7 +182,7 @@
                                 color: black;
 
                                 &:hover {
-                                    color: #9eb4b0;
+                                    color: var(--v2_main_color_1_lighter_than_lighter);
                                 }
                             }
                         }

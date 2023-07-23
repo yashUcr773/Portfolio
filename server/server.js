@@ -12,6 +12,22 @@ app.use(cors())
 // Middleware
 app.use(bodyParser.json());
 
+function isSecure(req) {
+    if (req.headers['x-forwarded-proto']) {
+        return req.headers['x-forwarded-proto'] === 'https';
+    }
+    return req.secure;
+};
+
+// redirect any page form http to https
+app.use((req, res, next) => {
+    if (process.env.NODE_ENV !== 'development' && process.env.NODE_ENV !== 'test' && !isSecure(req)) {
+        res.redirect(301, `https://${req.headers.host}${req.url}`);
+    } else {
+        next();
+    }
+});
+
 // Routes
 // Define your backend routes here
 require('./routes/routes-handler')(app)

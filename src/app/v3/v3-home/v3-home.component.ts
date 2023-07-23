@@ -39,12 +39,15 @@ export class V3HomeComponent implements OnInit {
     // @HostListener('scroll', ['$event']) // for scroll events of the current element
     @HostListener('window:scroll', ['$event']) // for window scroll events
     onScroll() {
-        let mybutton: any = document.getElementById("buttonToTop");
+        let mybutton = document.getElementById("buttonToTop") as HTMLElement;
 
-        if (document.body.scrollTop > this.baseScrollHeight || document.documentElement.scrollTop > this.baseScrollHeight) {
-            mybutton.style.display = "flex";
-        } else {
-            mybutton.style.display = "none";
+        if (mybutton) {
+
+            if (document.body.scrollTop > this.baseScrollHeight || document.documentElement.scrollTop > this.baseScrollHeight) {
+                mybutton.style.display = "flex";
+            } else {
+                mybutton.style.display = "none";
+            }
         }
     }
 
