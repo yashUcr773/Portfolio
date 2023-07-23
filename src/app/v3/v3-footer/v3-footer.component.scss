@@ -7,14 +7,13 @@
 
     .footer-content-container {
         z-index: 1;
-        --footer-background: rgb(12, 67, 57);
         position: relative;
         overflow: hidden;
         margin-top: 32px;
 
         .bubbles {
             margin-top: 200px;
-            background: var(--footer-background);
+            background: $v2_main_color_1;
             filter: url("#blob");
             z-index: 2;
             position: inherit;
@@ -22,7 +21,7 @@
             .bubble {
                 position: absolute;
                 left: var(--position, 50%);
-                background: var(--footer-background);
+                background: $v2_main_color_1;
                 border-radius: 100%;
                 -webkit-animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
                 animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
@@ -116,7 +115,7 @@
         .footer-content {
             height: 100%;
             width: 100%;
-            background: var(--footer-background);
+            background: $v2_main_color_1;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -161,15 +160,15 @@
                                 margin: 12px 16px;
 
                                 .logo-circle {
-                                    stroke: white;
-                                    fill: #758C71;
+                                    stroke: $v2_text_color_1;
+                                    fill: $v2_logo_background;
                                     stroke-width: 6px;
                                     stroke-dasharray: 571px;
                                 }
 
                                 .logo-name {
-                                    fill: white;
-                                    stroke: white;
+                                    fill: $v2_text_color_1;
+                                    stroke: $v2_text_color_1;
                                     stroke-dasharray: 650px;
                                     transform: translate(30%, 22%);
                                 }
@@ -179,7 +178,7 @@
 
                         .name {
 
-                            font-family: "Caranda";
+                            font-family: $v2_font_family_my_name;
                             margin: 12px;
                             padding: 7px;
                             font-size: 48px;
@@ -211,7 +210,7 @@
                         .heart {
 
                             animation: beatingHeart 1s infinite;
-                            fill: rgb(255, 110, 110);
+                            fill: $v2_heart_red;
 
                             @keyframes beatingHeart {
                                 0% {
@@ -280,7 +279,7 @@
                         height: 92px;
                         outline: none;
                         border: none;
-                        background: #10594c;
+                        background: $v2_main_color_1_lighten;
                         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
                         transition: .2s ease-in-out;
 
@@ -290,13 +289,13 @@
                             .linkedin {
                                 margin-top: 1.5em;
                                 margin-left: 1.2em;
-                                fill: #378fe9;
+                                fill: $v2_linkedin_blue;
                             }
 
                             &:hover {
                                 cursor: pointer;
                                 scale: 1.1;
-                                background-color: #378fe9;
+                                background-color: $v2_linkedin_blue;
 
                                 .linkedin {
                                     fill: white;
@@ -311,13 +310,13 @@
                             .twitter {
                                 margin-top: 1.5em;
                                 margin-left: -.9em;
-                                fill: #03A9F4;
+                                fill: $v2_twitter_blue;
                             }
 
                             &:hover {
                                 cursor: pointer;
                                 scale: 1.1;
-                                background-color: #03A9F4;
+                                background-color: $v2_twitter_blue;
 
                                 .twitter {
                                     fill: white;
@@ -357,7 +356,7 @@
                             &:hover {
                                 cursor: pointer;
                                 scale: 1.1;
-                                background-color: #E7E4D7;
+                                background-color: $v2_gmail_wheat;
                             }
                         }
                     }

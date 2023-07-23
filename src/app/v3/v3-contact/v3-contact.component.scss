@@ -1,3 +1,5 @@
+@import '../../_common_v3.scss';
+
 .contact-wrapper {
     width: 100%;
     height: calc(100% - 50px);
@@ -55,7 +57,7 @@
                     margin-bottom: 0px;
 
                     &:before {
-                        background-color: #27DEBF;
+                        background-color: $v2_text_heading_underline;
                         content: '';
                         display: block;
                         height: 4px;
@@ -65,7 +67,7 @@
                     }
 
                     &:after {
-                        background-color: #27DEBF;
+                        background-color: $v2_text_heading_underline;
                         content: '';
                         display: block;
                         position: absolute;
@@ -220,7 +222,7 @@
                                 .social-btn {
 
                                     .background {
-                                        background: #03A9F4;
+                                        background: $v2_twitter_blue;
                                     }
 
                                     .svgContainer {
@@ -234,7 +236,7 @@
                             &.linkedin {
                                 .social-btn {
                                     .background {
-                                        background: #378fe9;
+                                        background: $v2_linkedin_blue;
                                     }
                                 }
 
@@ -248,7 +250,7 @@
                             &.gmail {
                                 .social-btn {
                                     .background {
-                                        background: #E7E4D7;
+                                        background: $v2_gmail_wheat;
                                     }
                                 }
 
@@ -271,7 +273,7 @@
                     width: fit-content;
                     min-width: 300px;
                     padding: 36px;
-                    background: rgb(12, 67, 57);
+                    background: $v2_main_color_1;
                     box-shadow: 0 16px 24px rgba(0, 0, 0, .6);
                     border-radius: 12px;
                     padding-bottom: 64px;
@@ -290,7 +292,7 @@
                         .form-heading {
                             margin: auto;
                             font-size: 2em;
-                            border-bottom: 2px solid white;
+                            border-bottom: 2px solid $v2_text_color_1;
                             padding: 2px 24px;
                             margin-bottom: 16px;
                         }
@@ -302,10 +304,10 @@
                                 width: 100%;
                                 padding: 8px 4px;
                                 font-size: 1em;
-                                color: #fff;
+                                color: $v2_text_color_1;
                                 margin-bottom: 28px;
                                 border: none;
-                                border-bottom: 1px solid #fff;
+                                border-bottom: 1px solid $v2_text_color_1;
                                 outline: none;
                                 background: transparent;
                             }
@@ -317,7 +319,7 @@
                                 left: 0;
                                 padding: 12px 0;
                                 font-size: 1em;
-                                color: #fff;
+                                color: $v2_text_color_1;
                                 pointer-events: none;
                                 transition: 0.5s;
                             }
@@ -326,7 +328,7 @@
                             .form-input:valid~label {
                                 top: -20px;
                                 left: 0;
-                                color: #bdb8b8;
+                                color: $v2_text_color_1_darken;
                                 font-size: 0.8em;
                             }
 
@@ -334,7 +336,7 @@
                         }
 
                         .error {
-                            color: red;
+                            color: $v2_error_red;
                             position: relative;
                             margin-left: 42px;
                             margin-top: -16px;
@@ -347,12 +349,12 @@
                                 position: absolute;
                                 content: "!";
                                 border-radius: 50%;
-                                border: 1px solid red;
+                                border: 1px solid $v2_error_red;
                                 width: 28px;
                                 height: 28px;
                                 line-height: 26px;
                                 text-align: center;
-                                color: red;
+                                color: $v2_error_red;
                                 left: -36px;
                                 font-weight: 700;
                             }
@@ -360,7 +362,7 @@
 
                         a {
                             padding: 12px 24px;
-                            color: #ffffff;
+                            color: $v2_text_color_1;
                             font-size: 1.1em;
                             text-decoration: none;
                             text-transform: uppercase;
@@ -371,8 +373,8 @@
                             cursor: pointer;
 
                             &:hover {
-                                background: #10594c;
-                                color: #fff;
+                                background: $v2_main_color_1_darken;
+                                color: $v2_text_color_1;
                                 border-radius: 8px;
                             }
                         }
@@ -385,7 +387,7 @@
                             display: flex;
                             flex-direction: row;
                             gap: 8px;
-                            color: white;
+                            color: $v2_text_color_1;
                             align-items: center;
                             justify-content: center;
                             border-radius: 8px;
@@ -394,6 +396,11 @@
                             svg {
                                 width: 24px;
                                 height: 24px;
+                                fill: $v2_text_color_1;
+
+                                path {
+                                    stroke: $v2_text_color_1;
+                                }
                             }
 
                             .email {
