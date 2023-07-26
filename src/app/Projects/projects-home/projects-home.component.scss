@@ -1,0 +1,278 @@
+@import "../../_common_v3.scss";
+
+.projects-wrapper {
+    width: 100%;
+    height: calc(100% - 50px);
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px;
+
+    .projects-content {
+        height: 100%;
+        padding: 12px;
+        width: 100%;
+        z-index: 2;
+
+        @media (min-width:768px) {
+            width: 96%;
+        }
+
+        @media (min-width:1400px) {
+            width: 90%;
+        }
+
+        .projects-content-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 12px;
+            margin-top: 24px;
+
+            @media (min-width:900px) {
+                margin-top: auto;
+            }
+
+            .back-container {
+                background: transparent;
+                outline: none;
+                border: none;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 4px;
+                cursor: pointer;
+                padding-right: 8px;
+                width: fit-content;
+                position: relative;
+
+                .back-arrow {
+                    height: 32px;
+                    width: 32px;
+                    fill: var(--v2_text_color_1);
+                }
+
+                .back-text {
+                    font-size: 1em;
+                }
+
+                &:after {
+                    position: absolute;
+                    bottom: -4px;
+                    transition: all ease-in-out .2s;
+                    background: none repeat scroll 0 0 var(--v2_text_color_1);
+                    content: "";
+                    display: block;
+                    height: 2px;
+                    width: 0;
+
+                }
+
+                &:hover:after {
+                    width: 106%;
+                }
+
+            }
+
+            .projects-title-section {
+
+                margin: 12px 0px;
+
+                .heading {
+                    position: relative;
+                    width: fit-content;
+                    padding: 16px 0px;
+
+                    h1 {
+                        font-size: 36px;
+                        font-weight: 700;
+                        letter-spacing: 4px;
+                        text-transform: uppercase;
+                        margin-bottom: 0px;
+
+                        &:before {
+                            background-color: var(--v2_text_heading_underline);
+                            content: '';
+                            display: block;
+                            height: 4px;
+                            width: 120px;
+                            margin-bottom: 8px;
+
+                        }
+
+                        &:after {
+                            background-color: var(--v2_text_heading_underline);
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            right: 0;
+                            bottom: 0;
+                            height: 4px;
+                            width: 120px;
+                            margin-top: 8px;
+                        }
+                    }
+                }
+
+            }
+
+            .projects-body {
+                .sorting-table {
+                    display: flex;
+                    margin: 16px 0px;
+
+                    .links {
+                        overflow: hidden;
+                        border-radius: 8px;
+                        width: fit-content;
+                        display: flex;
+                        margin: 16px 0px;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        background: rgba(var(--v2_primary_background_color_1_rgb), 0.2);
+                        box-shadow: 0 8px 68px 0 rgba(var(--v2_primary_background_color_1_lighten_rgb), 0.369),
+                            inset 0 30px 68px 0 rgba(var(--v2_primary_background_color_1_lighten_rgb), 0.369);
+                        backdrop-filter: blur(9.5px);
+
+                        a {
+                            float: left;
+                            font-size: 16px;
+                            color: var(--v2_text_color_1);
+                            text-align: center;
+                            padding: 14px 16px;
+                            text-decoration: none;
+                            flex: 1 1 auto;
+                            cursor: pointer;
+
+                            &:hover,
+                            &.selected {
+                                background-color: var(--v2_primary_background_color_1_lighten);
+                            }
+                        }
+                    }
+
+
+                }
+
+                .cards-container {
+                    padding: 0px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 24px;
+
+                    .card {
+                        margin: 12px;
+                        padding: 24px;
+                        border-radius: 16px;
+                        transition: 0.4s;
+                        width: 100%;
+                        background: var(--v2_primary_background_color_1);
+                        border: none;
+                        position: relative;
+                        box-shadow: 0px 0px 24px 8px rgba(0, 0, 0, 0.5);
+
+                        display: flex;
+                        flex-direction: column;
+                        gap: 32px;
+
+                        @media (min-width:900px) {
+                            &:nth-child(even) {
+                                flex-direction: row;
+                            }
+
+                            &:nth-child(odd) {
+                                flex-direction: row-reverse;
+                            }
+                        }
+
+                        .fake-card {
+                            position: absolute;
+                            border-radius: 16px;
+                            pointer-events: none;
+                            top: 0px;
+                            left: 0px;
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        &:hover {
+                            translate: 0 -12px;
+                            cursor: pointer;
+
+                            .fake-card {
+                                background-color: rgba(255, 255, 255, 0.1);
+                                box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.25);
+
+                            }
+                        }
+
+
+
+                        .card-image {
+                            border-radius: 16px;
+                            box-shadow: 0px 0px 24px 2px rgba(0, 0, 0, 0.5);
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            width: 100%;
+                            height: fit-content;
+                            flex: 1 1 auto;
+
+                            img {
+                                border-radius: 16px;
+                                width: 100%;
+                            }
+
+                        }
+
+                        .content {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            flex: 1 1 auto;
+                            min-width: 50%;
+
+                            .card-title {
+                                font-size: 18px;
+                                font-weight: 600;
+                                color: var(--v2_text_color_1_darken);
+                                margin: 12px 0px;
+                            }
+
+                            .card-body {
+                                color: var(--v2_text_color_1);
+                                font-size: 16px;
+                                margin: 0px;
+                                padding: 4px;
+                            }
+
+                            .links-container {
+                                display: flex;
+                                justify-content: center;
+                                margin: 4px;
+                                padding: 4px;
+
+                                .links svg {
+                                    width: 36px;
+                                    height: 36px;
+                                    padding: 4px;
+                                    margin: 4px 8px;
+                                    color: var(--v2_text_color_1);
+
+                                    &:hover {
+                                        color: var(--v2_main_color_1_lighter_than_lighter);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
+        }
+    }
+}
