@@ -26,7 +26,7 @@ export class ProjectsHomeComponent {
             {
                 'title': 'Portfolio Website',
                 'image': '../../../assets/Project_images/portfolio_screenshot.jpg',
-                'description': "Website telling about me and showcasing various projects I have been a part of.",
+                'description': "A website that presents information about myself and showcases the various projects I have been involved in.",
                 'github_link': 'https://github.com/yashUcr773/Portfolio',
                 'demo_link': 'https://yashaggarwal.com/',
                 'tags': ['ai', 'web'],

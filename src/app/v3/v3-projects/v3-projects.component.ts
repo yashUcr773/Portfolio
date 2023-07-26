@@ -21,7 +21,7 @@ export class V3ProjectsComponent implements OnInit {
             {
                 'title': 'Portfolio (this Website)',
                 'image': '../../../assets/Project_images/portfolio_screenshot.jpg',
-                'description': "Website telling about me and showcasing various projects I have been a part of.",
+                'description': " A Website that presents information about myself and showcases a diverse array of projects I have contributed to",
                 'github_link': 'https://github.com/yashUcr773/Portfolio',
                 'demo_link': 'https://yashaggarwal.com/',
                 'tags': 'web',
