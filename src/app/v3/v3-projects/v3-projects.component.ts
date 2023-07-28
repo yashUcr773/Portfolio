@@ -39,6 +39,14 @@ export class V3ProjectsComponent implements OnInit {
                 'demo_link': 'https://n-puzzle-solver.netlify.app/',
                 'tags': 'ai',
                 'fadeStyle': fadeStyle['ai']
+            },
+            {
+                'title': 'Feature Selector for ML models',
+                'image': '../../../assets/Project_images/featureSelector.png',
+                'description': "A project that aims to identify the most relevant and irrelevant features through forward selection, backward elimination, and nearest neighbor search techniques. By employing these methods, the project seeks to enhance the understanding and improve performance of artificial intelligence algorithms in feature selection, contributing to the overall knowledge and expertise of the students.",
+                'github_link': 'https://github.com/yashUcr773/CS_205_AI/tree/main/Projects/Project%202',
+                'tags': 'ai',
+                'fadeStyle': fadeStyle['ai']
             }
         ]
     }
