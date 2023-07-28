@@ -31,6 +31,15 @@ export class ProjectsHomeComponent {
                 'demo_link': 'https://yashaggarwal.com/',
                 'tags': ['ai', 'web'],
                 'fadeStyle': fadeStyle['web']
+            },
+            {
+                'title': 'N Puzzle Solver',
+                'image': '../../../assets/Project_images/NPuzzle.png',
+                'description': "A project allowing users to either solve a randomly generated n-puzzle or opt for the AI to solve it on their behalf. Implemented using the versatile search functionality, the solver provides various cost functions that influence the time and computational requirements for achieving the solution.",
+                'github_link': 'https://github.com/yashUcr773/N-Puzzle-Solver',
+                'demo_link': 'https://n-puzzle-solver.netlify.app/',
+                'tags': ['ai', 'web'],
+                'fadeStyle': fadeStyle['ai']
             }
         ]
 

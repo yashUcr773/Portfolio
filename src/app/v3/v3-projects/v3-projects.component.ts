@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import AOS from 'aos';
+import { AppHelperService } from 'src/app/services/app-helper.service';
 
 @Component({
     selector: 'app-v3-projects',
@@ -8,6 +9,9 @@ import AOS from 'aos';
 })
 export class V3ProjectsComponent implements OnInit {
 
+    constructor(private appHelperService: AppHelperService) {
+
+    }
     project_cards: ProjectCards[] = [];
     display_cards = 'all';
 
@@ -21,12 +25,21 @@ export class V3ProjectsComponent implements OnInit {
             {
                 'title': 'Portfolio (this Website)',
                 'image': '../../../assets/Project_images/portfolio_screenshot.jpg',
-                'description': " A Website that presents information about myself and showcases a diverse array of projects I have contributed to",
+                'description': "A website that presents information about myself and showcases the various projects I have been involved in.",
                 'github_link': 'https://github.com/yashUcr773/Portfolio',
                 'demo_link': 'https://yashaggarwal.com/',
                 'tags': 'web',
                 'fadeStyle': fadeStyle['web']
             },
+            {
+                'title': 'N Puzzle Solver',
+                'image': '../../../assets/Project_images/NPuzzle.png',
+                'description': "A project allowing users to either solve a randomly generated n-puzzle or opt for the AI to solve it on their behalf. Implemented using the versatile search functionality, the solver provides various cost functions that influence the time and computational requirements for achieving the solution.",
+                'github_link': 'https://github.com/yashUcr773/N-Puzzle-Solver',
+                'demo_link': 'https://n-puzzle-solver.netlify.app/',
+                'tags': 'ai',
+                'fadeStyle': fadeStyle['ai']
+            }
         ]
     }
 
@@ -35,6 +48,10 @@ export class V3ProjectsComponent implements OnInit {
         setTimeout(() => {
             AOS.refresh()
         })
+    }
+
+    launchLink(url: string, newTab = true) {
+        this.appHelperService.launchLink(url, newTab);
     }
 
 }

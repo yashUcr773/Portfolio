@@ -19,7 +19,6 @@ import { V3ContactComponent } from './v3/v3-contact/v3-contact.component';
 import { AppHelperService } from './services/app-helper.service';
 import { SnackbarService } from './services/snackbar-service';
 import { ProjectsHomeComponent } from './Projects/projects-home/projects-home.component';
-import { NPuzzleSolverComponent } from './Projects/projects-list/n-puzzle-solver/n-puzzle-solver.component';
 
 @NgModule({
     declarations: [
@@ -33,7 +32,6 @@ import { NPuzzleSolverComponent } from './Projects/projects-list/n-puzzle-solver
         V3ContactComponent,
         V3ProjectsComponent,
         ProjectsHomeComponent,
-        NPuzzleSolverComponent
     ],
     imports: [
         BrowserModule,
