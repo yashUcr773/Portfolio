@@ -44,7 +44,10 @@ body {
     &.theme-dark {
         // background colors
         --v2_primary_background_color_1: #0E1B2B;
+        --v2_primary_background_color_1_rgb: 14, 27, 43;
         --v2_primary_background_color_1_darken: #263240;
+        --v2_primary_background_color_1_lighten: #263240;
+        --v2_primary_background_color_1_lighten_rgb: 38, 50, 64;
         --v2_primary_background_star_color: #c49952;
 
         // text colors
@@ -86,5 +89,9 @@ body {
 
     &.sidebarActive {
         overflow: hidden;
+    }
+
+    #external-link-button{
+        display: none;
     }
 }
