@@ -63,6 +63,14 @@ export class ProjectsHomeComponent {
                 'github_link': 'https://github.com/yashUcr773/CS_235_Data_Mining/tree/main/Projects/Detection%20of%20Phishing%20Websites',
                 'tags': ['ai'],
                 'fadeStyle': fadeStyle['ai']
+            },
+            {
+                'title': 'Image Captioning',
+                'image': '../../../assets/Project_images/ImageCaptioning.png',
+                'description': "This project aims to generate captions from images using a novel model YaHa that is based on the flamingo architecture and uses GPT3 and ViT vision transformers as backbone.",
+                'github_link': 'https://github.com/yashUcr773/CS_260_NLG_with_DL/tree/main/Projects/ImageCaptioning',
+                'tags': ['ai'],
+                'fadeStyle': fadeStyle['ai']
             }
         ]
 
