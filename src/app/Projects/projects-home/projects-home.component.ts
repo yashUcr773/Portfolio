@@ -55,6 +55,14 @@ export class ProjectsHomeComponent {
                 'github_link': 'https://github.com/yashUcr773/CS_228_Intro_to_DL/tree/main/Projects/Project%201',
                 'tags': ['ai'],
                 'fadeStyle': fadeStyle['ai']
+            },
+            {
+                'title': 'Detection of phishing websites',
+                'image': '../../../assets/Project_images/Phishing_websites.jpg',
+                'description': "This project aims to develop an advanced and robust system capable of identifying and flagging fraudulent websites that attempt to deceive users into divulging sensitive information, such as login credentials and financial details. Leveraging cutting-edge technologies like machine learning, data analytics, and website analysis, the system will analyze various features and patterns characteristic of phishing websites to distinguish them from legitimate ones.",
+                'github_link': 'https://github.com/yashUcr773/CS_235_Data_Mining/tree/main/Projects/Detection%20of%20Phishing%20Websites',
+                'tags': ['ai'],
+                'fadeStyle': fadeStyle['ai']
             }
         ]
 
