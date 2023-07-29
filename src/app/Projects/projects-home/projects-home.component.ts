@@ -47,6 +47,14 @@ export class ProjectsHomeComponent {
                 'github_link': 'https://github.com/yashUcr773/CS_205_AI/tree/main/Projects/Project%202',
                 'tags': ['ai'],
                 'fadeStyle': fadeStyle['ai']
+            },
+            {
+                'title': 'Image Colorization using AutoEncoders',
+                'image': '../../../assets/Project_images/ImageColorization.jpg',
+                'description': "This project aims to implement image colorization using autoencoders, a type of neural network architecture that can learn to encode and decode images while preserving their color information, converting grayscale images to colorized versions.",
+                'github_link': 'https://github.com/yashUcr773/CS_228_Intro_to_DL/tree/main/Projects/Project%201',
+                'tags': ['ai'],
+                'fadeStyle': fadeStyle['ai']
             }
         ]
 
