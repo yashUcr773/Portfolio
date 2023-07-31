@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import AOS from "aos";
+import { ThemeHelperService } from './services/theme-service';
 
 @Component({
     selector: 'app-root',
@@ -7,6 +8,12 @@ import AOS from "aos";
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+
+    title = 'portfolio';
+
+    constructor(private themeHelperService: ThemeHelperService) {
+
+    }
 
     ngOnInit(): void {
 
@@ -33,7 +40,40 @@ export class AppComponent implements OnInit {
 
         });
 
+        this.themeHelperService.checkAndApplytheme();
+
+        window.scrollTo(0, 0);
+
+        this.followCurser()
     }
-    title = 'portfolio';
+
+    followCurser() {
+
+        const curserOffset = -32;
+        const cursor = document.querySelector("#cursor") as HTMLDivElement;
+        const cursorBorder = document.querySelector("#cursor-border") as HTMLDivElement;
+        const cursorPos = { x: 0, y: 0 };
+        const cursorBorderPos = { x: 0, y: 0 };
+
+        document.addEventListener("mousemove", (e) => {
+            cursorPos.x = e.clientX;
+            cursorPos.y = e.clientY;
+
+            cursor.style.transform = `translate(${e.clientX - curserOffset}px, ${e.clientY - curserOffset}px)`;
+        });
+
+        requestAnimationFrame(function loop() {
+            const easting = 8;
+            cursorBorderPos.x += (cursorPos.x - cursorBorderPos.x - curserOffset) / easting;
+            cursorBorderPos.y += (cursorPos.y - cursorBorderPos.y - curserOffset) / easting;
+
+            cursorBorder.style.transform = `translate(${cursorBorderPos.x}px, ${cursorBorderPos.y}px)`;
+            requestAnimationFrame(loop);
+        });
+
+
+    }
+
+
 
 }

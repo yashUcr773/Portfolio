@@ -99,7 +99,7 @@
 
                 /* Handle */
                 ::-webkit-scrollbar-thumb {
-                    background: var(--v2_primary_background_color_1_darken);
+                    background: var(--v2_main_color_1);
                     border-radius: 12px;
                 }
 
@@ -153,10 +153,10 @@
                             margin: 8px;
                             cursor: pointer;
                             border-radius: 16px;
-                            border: 2px solid var(--v2_primary_background_color_1_darken);
+                            border: 2px solid var(--v2_main_color_1);
 
                             &:hover {
-                                background: var(--v2_primary_background_color_1_darken);
+                                background: var(--v2_main_color_1);
                             }
 
                             &.show {
@@ -260,7 +260,7 @@
                                 padding: 16px;
                                 background: var(--v2_main_color_1_lighten);
                                 border-radius: 8px;
-                                box-shadow: -8px -8px 16px -4px rgba(0, 0, 0, 0.75);
+                                box-shadow: 0px -2px 16px -4px rgba(0, 0, 0, 0.75);
 
                                 p {
                                     font-size: 1.5em;
@@ -333,7 +333,7 @@
                                 transition: all 0.2s;
                                 border-bottom-left-radius: 8px;
                                 border-bottom-right-radius: 8px;
-                                box-shadow: 12px 12px 16px -4px rgba(0, 0, 0, 0.75);
+                                box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.75);
                                 display: flex;
                                 flex-direction: column;
                                 justify-content: flex-start;
@@ -415,6 +415,11 @@
                                             border-radius: 2em;
                                             font-weight: 400;
                                             padding: 0.5em 0.9em;
+                                            cursor: pointer;
+
+                                            &:hover {
+                                                background-color: var(--v2_main_color_1_lighten);
+                                            }
                                         }
                                     }
                                 }

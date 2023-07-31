@@ -163,7 +163,8 @@
                                         <div class="techstack" *ngIf="experienceData.showTechStack">
                                             <span>{{experienceData.techHeading}}</span>
                                             <div class="techbadges">
-                                                <div class="badges" *ngFor="let tech of experienceData.tech">{{tech}}
+                                                <div class="badges" *ngFor="let tech of experienceData.tech"
+                                                    (click)="launchLink(tech.link)">{{tech.name}}
                                                 </div>
                                             </div>
                                         </div>

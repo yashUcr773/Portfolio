@@ -15,8 +15,14 @@ To run in prod mode
 - Clone the repo
 - Run `npm install`
 - Run `npm run build`
-- Run `npm run serve`
+- Run `npm run start:prod`
 - App will start at localhost:3000
 
 The app uses nodemailer for sending mails.
 The SMTP server / mailer used is [Brevo](https://www.brevo.com/)
+To successfully send in the mails, you will need to add/update the following env variables
+- SMTP_EMAIL_HOST
+- SMTP_EMAIL_PORT
+- SMTP_EMAIL_USER
+- SMTP_EMAIL_PASS
+- NODE_ENV
