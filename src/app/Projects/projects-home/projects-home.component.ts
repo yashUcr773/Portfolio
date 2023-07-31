@@ -40,6 +40,37 @@ export class ProjectsHomeComponent {
                 'demo_link': 'https://n-puzzle-solver.netlify.app/',
                 'tags': ['ai', 'web'],
                 'fadeStyle': fadeStyle['ai']
+            }, {
+                'title': 'Feature Selector for ML models',
+                'image': '../../../assets/Project_images/featureSelector.png',
+                'description': "A project that aims to identify the most relevant and irrelevant features through forward selection, backward elimination, and nearest neighbor search techniques. By employing these methods, the project seeks to enhance the understanding and improve performance of artificial intelligence algorithms in feature selection, contributing to the overall knowledge and expertise of the students.",
+                'github_link': 'https://github.com/yashUcr773/CS_205_AI/tree/main/Projects/Project%202',
+                'tags': ['ai'],
+                'fadeStyle': fadeStyle['ai']
+            },
+            {
+                'title': 'Image Colorization using AutoEncoders',
+                'image': '../../../assets/Project_images/ImageColorization.jpg',
+                'description': "This project aims to implement image colorization using autoencoders, a type of neural network architecture that can learn to encode and decode images while preserving their color information, converting grayscale images to colorized versions.",
+                'github_link': 'https://github.com/yashUcr773/CS_228_Intro_to_DL/tree/main/Projects/Project%201',
+                'tags': ['ai'],
+                'fadeStyle': fadeStyle['ai']
+            },
+            {
+                'title': 'Detection of phishing websites',
+                'image': '../../../assets/Project_images/Phishing_websites.jpg',
+                'description': "This project aims to develop an advanced and robust system capable of identifying and flagging fraudulent websites that attempt to deceive users into divulging sensitive information, such as login credentials and financial details. Leveraging cutting-edge technologies like machine learning, data analytics, and website analysis, the system will analyze various features and patterns characteristic of phishing websites to distinguish them from legitimate ones.",
+                'github_link': 'https://github.com/yashUcr773/CS_235_Data_Mining/tree/main/Projects/Detection%20of%20Phishing%20Websites',
+                'tags': ['ai'],
+                'fadeStyle': fadeStyle['ai']
+            },
+            {
+                'title': 'Image Captioning',
+                'image': '../../../assets/Project_images/ImageCaptioning.png',
+                'description': "This project aims to generate captions from images using a novel model YaHa that is based on the flamingo architecture and uses GPT3 and ViT vision transformers as backbone.",
+                'github_link': 'https://github.com/yashUcr773/CS_260_NLG_with_DL/tree/main/Projects/ImageCaptioning',
+                'tags': ['ai'],
+                'fadeStyle': fadeStyle['ai']
             }
         ]
 

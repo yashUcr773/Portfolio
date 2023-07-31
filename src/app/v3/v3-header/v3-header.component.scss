@@ -62,13 +62,7 @@
                     height: 32px;
                 }
 
-
-                .sun {
-                    display: block;
-                }
-
                 .moon {
-                    display: none;
 
                     svg {
                         fill: white;
@@ -81,34 +75,49 @@
                 padding: 2px;
                 font-size: 1.2em;
 
-                .lumos {
-                    display: block;
+
+            }
+
+            .svg-container {
+
+                .sun {
+                    display: none;
                 }
 
-                .nox {
-                    display: none;
+                .moon {
+                    display: block;
                 }
             }
 
-            &.checked {
+            .text-container {
+                .lumos {
+                    display: none;
+                }
+
+                .nox {
+                    display: block;
+                }
+            }
+
+            &.dark {
                 .svg-container {
 
                     .sun {
-                        display: none;
+                        display: block;
                     }
 
                     .moon {
-                        display: block;
+                        display: none;
                     }
                 }
 
                 .text-container {
                     .lumos {
-                        display: none;
+                        display: block;
                     }
 
                     .nox {
-                        display: block;
+                        display: none;
                     }
                 }
 
@@ -156,7 +165,7 @@
 
             .hamburger {
                 display: block;
-                width: 50px;
+                width: 54px;
                 height: 56px;
                 background-color: var(--v2_main_color_1);
                 position: relative;
@@ -189,7 +198,15 @@
                     bottom: 14px;
                 }
 
+                &:hover {
+                    background-color: var(--v2_main_color_1_lighten);
+
+                }
+
                 &.active {
+                    width: 50px;
+                    background-color: var(--v2_main_color_1_lighten);
+
                     span {
                         opacity: 0;
                         top: 24px;

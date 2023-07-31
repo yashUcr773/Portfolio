@@ -26,19 +26,19 @@ export class V3FooterComponent implements OnInit {
 
     setBubbles() {
 
-        let totalBubbles = window.innerWidth / 3;
+        let totalBubbles = window.innerWidth / 8;
 
         if (totalBubbles < 100) {
             totalBubbles = 100
         } else if (totalBubbles > 500) {
-            totalBubbles = 500
+            totalBubbles = 200
         }
 
         let bubbles = document.querySelector('.bubbles') as HTMLElement;
         if (bubbles) {
             for (let i = 0; i < totalBubbles; i += 1) {
                 let bubble = document.createElement('div');
-                let style = '--size: ' + this.generateRandomNumbers(1, 10, 'rem') + ';';
+                let style = '--size: ' + this.generateRandomNumbers(6, 18, 'rem') + ';';
                 style += ' --distance: ' + this.generateRandomNumbers(4, 12, 'rem') + ';';
                 style += ' --position: ' + this.generateRandomNumbers(-10, 110, '%') + ';';
                 style += ' --time: ' + this.generateRandomNumbers(2, 8, 's') + ';';

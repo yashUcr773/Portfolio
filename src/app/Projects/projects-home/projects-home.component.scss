@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-around;
     padding: 12px;
+    overflow-x: hidden;
 
     .projects-content {
         height: 100%;
@@ -131,9 +132,9 @@
                         margin: 16px 0px;
                         flex-wrap: wrap;
                         justify-content: center;
-                        background: rgba(var(--v2_primary_background_color_1_rgb), 0.2);
-                        box-shadow: 0 8px 68px 0 rgba(var(--v2_primary_background_color_1_lighten_rgb), 0.369),
-                            inset 0 30px 68px 0 rgba(var(--v2_primary_background_color_1_lighten_rgb), 0.369);
+                        background: rgba(var(--v2_primary_background_color_1_rgb), 0.3);
+                        box-shadow: 0 8px 68px 0 rgba(var(--v2_main_color_1_rgb), 0.369),
+                            inset 0 30px 68px 0 rgba(var(--v2_main_color_1_rgb), 0.369);
                         backdrop-filter: blur(9.5px);
 
                         a {
@@ -148,7 +149,7 @@
 
                             &:hover,
                             &.selected {
-                                background-color: var(--v2_primary_background_color_1_lighten);
+                                background-color: var(--v2_main_color_1);
                             }
                         }
                     }
@@ -221,6 +222,7 @@
                             height: fit-content;
                             flex: 1 1 auto;
                             align-items: center;
+
                             img {
                                 border-radius: 16px;
                                 width: 100%;
