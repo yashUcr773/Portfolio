@@ -62,13 +62,7 @@
                     height: 32px;
                 }
 
-
-                .sun {
-                    display: block;
-                }
-
                 .moon {
-                    display: none;
 
                     svg {
                         fill: white;
@@ -81,12 +75,27 @@
                 padding: 2px;
                 font-size: 1.2em;
 
-                .lumos {
+
+            }
+
+            .svg-container {
+
+                .sun {
+                    display: none;
+                }
+
+                .moon {
                     display: block;
+                }
+            }
+
+            .text-container {
+                .lumos {
+                    display: none;
                 }
 
                 .nox {
-                    display: none;
+                    display: block;
                 }
             }
 
@@ -94,21 +103,21 @@
                 .svg-container {
 
                     .sun {
-                        display: none;
+                        display: block;
                     }
 
                     .moon {
-                        display: block;
+                        display: none;
                     }
                 }
 
                 .text-container {
                     .lumos {
-                        display: none;
+                        display: block;
                     }
 
                     .nox {
-                        display: block;
+                        display: none;
                     }
                 }
 
