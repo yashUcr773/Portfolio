@@ -103,7 +103,15 @@ export class V3ExperienceComponent implements OnInit {
                     'Developed scalable features and configuration-driven applications to support modular and dynamic requirements.',
                 ],
                 'techHeading': 'Tech Stack',
-                'tech': ['RxDB', 'Express', 'Angular5+', 'Angularjs', 'Nodejs', 'Electron', 'AWS']
+                'tech': [
+                    { name: 'RxDB', link: 'https://rxdb.info/' },
+                    { name: 'Express', link: 'https://expressjs.com/' },
+                    { name: 'Angular5+', link: 'https://angular.io/' },
+                    { name: 'Angularjs', link: 'https://angularjs.org/' },
+                    { name: 'Nodejs', link: 'https://nodejs.org/en' },
+                    { name: 'Electron', link: 'https://www.electronjs.org/' },
+                    { name: 'AWS', link: 'https://aws.amazon.com/' }
+                ]
             },
             {
                 'Company': 'HCL Infotech',
@@ -116,7 +124,11 @@ export class V3ExperienceComponent implements OnInit {
                 showTechStack: true,
                 message: 'Part of an intern group tasked with gathering requirements, creating a roadmap, and developing features for our in-house libraries. Through our efforts, we achieved a remarkable 40% increase in productivity by automating numerous manual tasks.',
                 'techHeading': 'Tech Stack',
-                'tech': ['Java', 'MySQL', 'SpringBoot']
+                'tech': [
+                    { name: 'Java', link: 'https://www.java.com/en/' },
+                    { name: 'MySQL', link: 'https://www.mysql.com/' },
+                    { name: 'SpringBoot', link: 'https://spring.io/projects/spring-boot' },
+                ]
             }
         ]
     }
@@ -144,5 +156,8 @@ interface experience {
     bulletsHeading?: string
     techHeading?: string
     bullets?: string[]
-    tech?: string[]
+    tech?: {
+        link: string,
+        name: string
+    }[]
 }

@@ -90,7 +90,7 @@
                 }
             }
 
-            &.checked {
+            &.dark {
                 .svg-container {
 
                     .sun {
@@ -156,7 +156,7 @@
 
             .hamburger {
                 display: block;
-                width: 50px;
+                width: 54px;
                 height: 56px;
                 background-color: var(--v2_main_color_1);
                 position: relative;
@@ -189,7 +189,15 @@
                     bottom: 14px;
                 }
 
+                &:hover {
+                    background-color: var(--v2_main_color_1_lighten);
+
+                }
+
                 &.active {
+                    width: 50px;
+                    background-color: var(--v2_main_color_1_lighten);
+
                     span {
                         opacity: 0;
                         top: 24px;

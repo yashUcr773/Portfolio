@@ -19,6 +19,7 @@ import { V3ContactComponent } from './v3/v3-contact/v3-contact.component';
 import { AppHelperService } from './services/app-helper.service';
 import { SnackbarService } from './services/snackbar-service';
 import { ProjectsHomeComponent } from './Projects/projects-home/projects-home.component';
+import { ThemeHelperService } from './services/theme-service';
 
 @NgModule({
     declarations: [
@@ -40,7 +41,8 @@ import { ProjectsHomeComponent } from './Projects/projects-home/projects-home.co
     ],
     providers: [
         AppHelperService,
-        SnackbarService
+        SnackbarService,
+        ThemeHelperService
     ],
     bootstrap: [AppComponent
     ]

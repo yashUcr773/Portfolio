@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import AOS from "aos";
+import { ThemeHelperService } from './services/theme-service';
 
 @Component({
     selector: 'app-root',
@@ -7,6 +8,12 @@ import AOS from "aos";
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+
+    title = 'portfolio';
+
+    constructor(private themeHelperService: ThemeHelperService) {
+
+    }
 
     ngOnInit(): void {
 
@@ -33,7 +40,11 @@ export class AppComponent implements OnInit {
 
         });
 
+        this.themeHelperService.checkAndApplytheme();
+
     }
-    title = 'portfolio';
+
+
+
 
 }
