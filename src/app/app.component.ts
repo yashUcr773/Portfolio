@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import AOS from "aos";
 import { ThemeHelperService } from './services/theme-service';
 
@@ -10,8 +10,10 @@ import { ThemeHelperService } from './services/theme-service';
 export class AppComponent implements OnInit {
 
     title = 'portfolio';
+    touchDevice = false;
 
-    constructor(private themeHelperService: ThemeHelperService) {
+    constructor(private themeHelperService: ThemeHelperService,
+        private ref: ChangeDetectorRef) {
 
     }
 
@@ -44,12 +46,20 @@ export class AppComponent implements OnInit {
 
         window.scrollTo(0, 0);
 
-        this.followCurser()
+        if ("ontouchstart" in window) {
+            this.touchDevice = true
+        } else {
+            this.touchDevice = false
+            this.ref.detectChanges()
+            this.followCurser()
+        }
     }
 
     followCurser() {
 
-        const curserOffset = -32;
+
+
+        const curserOffset = -64;
         const cursor = document.querySelector("#cursor") as HTMLDivElement;
         const cursorBorder = document.querySelector("#cursor-border") as HTMLDivElement;
         const cursorPos = { x: 0, y: 0 };
