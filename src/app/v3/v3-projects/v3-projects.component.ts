@@ -72,15 +72,7 @@ export class V3ProjectsComponent implements OnInit {
                 'tags': 'ai',
                 'fadeStyle': fadeStyle['ai']
             },
-            {
-                'title': 'Visualize DSA',
-                'image': '../../../assets/Project_images/DSA.jpeg',
-                'description': "Developing a project that aids users in visualizing diverse data structures and algorithms, showcasing their practical application and seamless operations.",
-                'github_link': 'https://github.com/yashUcr773/Visualize_Data_Structures',
-                'demo_link': 'https://visualdsa.netlify.app/',
-                'tags': 'dsa',
-                'fadeStyle': fadeStyle['dsa']
-            }
+
         ]
     }
 
