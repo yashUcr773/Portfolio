@@ -7,9 +7,15 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class V3HomeComponent implements OnInit {
 
     baseScrollHeight: number = 100;
+    showLoader = false;
 
     ngOnInit(): void {
-
+        this.showLoader = true;
+        if (JSON.parse(sessionStorage.getItem('logo-shown') || 'false') == true) {
+            this.showLoader = false
+        } else {
+            sessionStorage.setItem('logo-shown', 'true');
+        }
     }
 
     // @HostListener('scroll', ['$event']) // for scroll events of the current element
