@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { AppHelperService } from '../../services/app-helper.service';
 import { socials_config } from 'config/socials';
+import { ThemeHelperService } from 'src/app/services/theme-service';
 
 @Component({
     selector: 'app-v3-header',
@@ -12,13 +13,15 @@ export class V3HeaderComponent implements OnInit {
 
     socials_config = socials_config;
     hamburgerActive = false;
-    modeChecked = false;
-    constructor(private appHelperService: AppHelperService) {
-        this.checkAndApplyTheme()
+    darkTheme = false;
+
+    constructor(private appHelperService: AppHelperService,
+        private themeHelperService: ThemeHelperService) {
     }
 
     ngOnInit(): void {
 
+        this.checkAndUpdateThemeIcon();
     }
 
     @HostListener('window:resize', ['$event'])
@@ -55,33 +58,16 @@ export class V3HeaderComponent implements OnInit {
 
     }
 
-    checkAndApplyTheme() {
-
-        let dark = false;
-        let lsTheme = localStorage.getItem('theme');
-
-        if (lsTheme == 'dark') {
-            dark = true;
-        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            dark = true;
-        }
-
-        this.modeChecked = dark;
-        this.applyTheme(this.modeChecked ? 'light' : 'dark');
-    }
-
     toggleTheme(event: any) {
-        this.modeChecked = !this.modeChecked;
-        this.applyTheme(this.modeChecked ? 'light' : 'dark')
+        this.darkTheme = !this.darkTheme;
+        this.themeHelperService.applyTheme(this.darkTheme ? 'dark' : 'light')
     }
 
-    applyTheme(theme: 'light' | 'dark') {
-
-        document.querySelector('body')?.classList.remove('theme-light');
-        document.querySelector('body')?.classList.remove('theme-dark');
-        document.querySelector('body')?.classList.add('theme-' + theme);
-        localStorage.setItem('theme', theme);
-
+    checkAndUpdateThemeIcon() {
+        let theme = localStorage.getItem('theme');
+        this.darkTheme = theme == 'dark' ? true : false;
     }
+
+
 
 }

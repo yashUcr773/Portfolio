@@ -85,6 +85,12 @@
                 .sorting-table {
                     display: flex;
                     justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+
+                    @media (min-width:600px) {
+                        flex-direction: row;
+                    }
 
                     /* Navbar container */
                     .links {
@@ -114,6 +120,23 @@
                         }
                     }
 
+                    .all-projects {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        .viewAll {
+                            padding: 16px;
+                            border-radius: 16px;
+                            background: var(--v2_main_color_1);
+                            color: var(--v2_text_color_1);
+                            border: none;
+
+                            &:hover {
+                                background: var(--v2_main_color_1_lighten);
+                            }
+                        }
+                    }
 
                 }
 
@@ -132,7 +155,7 @@
                         min-height: 380px;
                         border-radius: 16px;
                         background: var(--v2_main_color_1);
-                        box-shadow: 6px 6px 8px rgba(#000, 0.4), -6px -6px 8px rgba(#000, 0.4);
+                        box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.3);
                         transition: 0.4s;
 
                         &:hover {
@@ -153,6 +176,7 @@
                                 inset -6px -6px 4px rgba(#000, 0.4);
 
                             img {
+                                filter: brightness(80%);
                                 max-width: 300px;
                                 max-height: 200px;
                                 width: 100%;
@@ -173,10 +197,11 @@
                             justify-content: center;
                             margin: 4px;
                             padding: 4px;
+                            align-items: center;
 
                             .links svg {
-                                width: 36px;
-                                height: 36px;
+                                width: 40px;
+                                height: 40px;
                                 padding: 4px;
                                 margin: 4px 8px;
                                 color: black;
@@ -184,6 +209,12 @@
                                 &:hover {
                                     color: var(--v2_main_color_1_lighter_than_lighter);
                                 }
+
+
+                            }
+                            .external-link svg {
+                                height: 42px;
+                                width: 42px;
                             }
                         }
                     }

@@ -24,28 +24,32 @@ body {
     &.theme-light {
 
         // background colors
-        --v2_primary_background_color_1: #0E1B2B;
-        --v2_primary_background_color_1_darken: #263240;
-        --v2_primary_background_star_color: #c49952;
+        --v2_primary_background_color_1: #fef6e4;
+        --v2_primary_background_color_1_rgb: 254, 246, 228;
+        --v2_primary_background_star_color: #384734;
 
         // text colors
-        --v2_text_color_1: #FFFFFF;
-        --v2_text_color_1_darken: #cccccc;
-        --v2_text_heading_underline: #27DEBF;
+        --v2_text_color_1: #172C66;
+        --v2_text_color_1_darken: #122352;
+        --v2_text_heading_underline: #384734;
 
         // theme colors
-        --v2_main_color_1: #0c4339;
-        --v2_main_color_1_lighten: #10594c;
-        --v2_main_color_1_lighter_than_lighter: #9eb4b0;
-        --v2_main_color_1_darken: #082f28;
+        --v2_main_color_1: #a3dcd4; // lighter than background
+        --v2_main_color_1_rgb: 163, 220, 212;
+        --v2_main_color_1_lighten: #b5e3dd; // lighter that main
+        --v2_main_color_1_lighter_than_lighter: #c8eae5; // very light version
+        --v2_main_color_1_darken: #93c6bf; // background
+
+        // logo colors
+        --v2_logo_background: #b5e3dd; // lighten
 
     }
 
     &.theme-dark {
         // background colors
-        --v2_primary_background_color_1: #0E1B2B;
-        --v2_primary_background_color_1_darken: #263240;
-        --v2_primary_background_star_color: #c49952;
+        --v2_primary_background_color_1: #0e1b2b;
+        --v2_primary_background_color_1_rgb: 14, 27, 43;
+        --v2_primary_background_star_color: #27DEBF;
 
         // text colors
         --v2_text_color_1: #FFFFFF;
@@ -53,11 +57,14 @@ body {
         --v2_text_heading_underline: #27DEBF;
 
         // theme colors
-        --v2_main_color_1: #0c4339;
-        --v2_main_color_1_lighten: #10594c;
-        --v2_main_color_1_lighter_than_lighter: #9eb4b0;
-        --v2_main_color_1_darken: #082f28;
+        --v2_main_color_1: #263240; // lighter than background
+        --v2_main_color_1_rgb: 38, 50, 64;
+        --v2_main_color_1_lighten: #3e4955; // lighter that main
+        --v2_main_color_1_lighter_than_lighter: #565f6b; // very light version
+        --v2_main_color_1_darken: #0E1B2B; // background
 
+        // logo colors
+        --v2_logo_background: #3e4955; // lighten
     }
 
     &.theme-common {
@@ -71,8 +78,7 @@ body {
         --v2_error_red: #8B0000;
         --v2_heart_red: #ff6e6e;
 
-        // logo colors
-        --v2_logo_background: #758C71;
+
     }
 }
 
@@ -86,5 +92,9 @@ body {
 
     &.sidebarActive {
         overflow: hidden;
+    }
+
+    #external-link-button {
+        display: none;
     }
 }

@@ -373,7 +373,7 @@
                             cursor: pointer;
 
                             &:hover {
-                                background: var(--v2_main_color_1_darken);
+                                background: var(--v2_main_color_1_lighten);
                                 color: var(--v2_text_color_1);
                                 border-radius: 8px;
                             }
@@ -383,7 +383,6 @@
                             position: absolute;
                             bottom: -52px;
                             right: -48px;
-                            background: black;
                             display: flex;
                             flex-direction: row;
                             gap: 8px;
@@ -392,6 +391,9 @@
                             justify-content: center;
                             border-radius: 8px;
                             cursor: pointer;
+                            background: var(--v2_main_color_1);
+                            box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.1);
+                            transition: 0.7s;
 
                             svg {
                                 width: 24px;
@@ -414,10 +416,8 @@
 
                             }
 
-                            a {
-                                &:hover {
-                                    background: black;
-                                }
+                            &:hover {
+                                background: var(--v2_main_color_1_lighten);
                             }
                         }
                     }

@@ -18,6 +18,8 @@ import { V3ContactComponent } from './v3/v3-contact/v3-contact.component';
 // Services
 import { AppHelperService } from './services/app-helper.service';
 import { SnackbarService } from './services/snackbar-service';
+import { ProjectsHomeComponent } from './Projects/projects-home/projects-home.component';
+import { ThemeHelperService } from './services/theme-service';
 
 @NgModule({
     declarations: [
@@ -29,7 +31,8 @@ import { SnackbarService } from './services/snackbar-service';
         V3ExperienceComponent,
         V3FooterComponent,
         V3ContactComponent,
-        V3ProjectsComponent
+        V3ProjectsComponent,
+        ProjectsHomeComponent,
     ],
     imports: [
         BrowserModule,
@@ -38,7 +41,8 @@ import { SnackbarService } from './services/snackbar-service';
     ],
     providers: [
         AppHelperService,
-        SnackbarService
+        SnackbarService,
+        ThemeHelperService
     ],
     bootstrap: [AppComponent
     ]

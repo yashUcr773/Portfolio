@@ -4,10 +4,12 @@ import { constants } from 'config/constants';
 @Injectable()
 export class AppHelperService {
 
-    launchLink(url: string) {
+    launchLink(url: string, newTab = true) {
         let link = document.querySelector('#external-link-button') as HTMLAnchorElement;
         if (link) {
-            link.target = '_blank';
+            if (newTab) {
+                link.target = '_blank';
+            }
             link.href = url;
             link.click();
         }

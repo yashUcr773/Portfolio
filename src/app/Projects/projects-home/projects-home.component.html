@@ -1,0 +1,78 @@
+<div class="projects-wrapper">
+    <div class="projects-content">
+        <div class="projects-content-container">
+            <div class="back-container" (click)="launchLink('')" title="Back to portfolio" data-aos="fade-up">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="back-arrow">
+                    <g data-name="Layer 2">
+                        <g data-name="arrow-back">
+                            <rect width="24" height="24" opacity="0" transform="rotate(90 12 12)"></rect>
+                            <path
+                                d="M19 11H7.14l3.63-4.36a1 1 0 1 0-1.54-1.28l-5 6a1.19 1.19 0 0 0-.09.15c0 .05 0 .08-.07.13A1 1 0 0 0 4 12a1 1 0 0 0 .07.36c0 .05 0 .08.07.13a1.19 1.19 0 0 0 .09.15l5 6A1 1 0 0 0 10 19a1 1 0 0 0 .64-.23 1 1 0 0 0 .13-1.41L7.14 13H19a1 1 0 0 0 0-2z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+                <p class="back-text">Back</p>
+            </div>
+
+            <!-- https://codepen.io/vedadesigns/pen/GPxYZg -->
+            <div class="projects-title-section" data-aos="fade-up">
+                <div class="heading">
+                    <h1>Projects</h1>
+                </div>
+            </div>
+
+            <div class="projects-body" data-aos="fade-up">
+                <!-- https://codepen.io/TheBigHappyDay/pen/WNgYZKq -->
+                <div class="sorting-table">
+                    <div class="links">
+                        <a (click)="filterCards('all')" [ngClass]="{ 'selected': display_cards == 'all' }">All</a>
+                        <a (click)="filterCards('web')" [ngClass]="{ 'selected': display_cards == 'web' }">Web</a>
+                        <a (click)="filterCards('ai')" [ngClass]="{ 'selected': display_cards == 'ai' }">AI / ML</a>
+                    </div>
+                </div>
+
+
+                <div class="cards-container" data-aos="fade-up">
+                    <ng-container *ngFor="let cardData of project_cards">
+                        <div class="card" [attr.data-aos]="cardData.fadeStyle">
+                            <div class="fake-card"></div>
+
+
+                            <div class="card-image">
+                                <img src={{cardData.image}}>
+                            </div>
+                            <div class="content">
+                                <p class="card-title">{{cardData.title}}</p>
+                                <p class="card-body">
+                                    {{cardData.description}}
+                                </p>
+                                <div class="links-container">
+                                    <a class="links github-link" href="{{cardData.github_link}}" target="_blank" title="View source Code" *ngIf="cardData.github_link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" class="feather feather-github">
+                                            <path
+                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                    <a class="links external-link" href="{{cardData.demo_link}}" target="_blank" title="View Demo" *ngIf="cardData.demo_link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                            viewBox="0 0 24 24">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2"
+                                                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m4-3h6v6m-11 5L21 3" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
