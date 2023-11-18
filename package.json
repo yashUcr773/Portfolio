@@ -4,9 +4,12 @@
     "scripts": {
         "start:front": "ng serve --o",
         "start:back": "npm run build && nodemon server/server.js --watch",
-        "start:prod": "NODE_ENV=production && node server/server.js",
+        "start:prod": "set NODE_ENV=production && node server/server.js",
         "start": "concurrently \"npm run start:front\" \"npm run start:back\" ",
         "build": "ng build",
+        "build:prod": "npm run clean:dist && ng build --configuration=production",
+        "clean:dist": "npm run rimraf -- dist",
+        "rimraf": "rimraf",
         "serve": "node server/server.js",
         "build:serve": "npm run build && npm run serve",
         "serve:watch": "nodemon server/server.js --watch",
