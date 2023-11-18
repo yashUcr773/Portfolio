@@ -22,6 +22,7 @@
         "@angular/platform-browser": "^15.0.0",
         "@angular/platform-browser-dynamic": "^15.0.0",
         "@angular/router": "^15.0.0",
+        "@hotjar/browser": "^1.0.9",
         "@srexi/purecounterjs": "^1.5.0",
         "aos": "^2.3.4",
         "body-parser": "^1.20.2",
