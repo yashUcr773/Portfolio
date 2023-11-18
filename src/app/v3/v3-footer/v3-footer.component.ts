@@ -33,6 +33,9 @@ export class V3FooterComponent implements OnInit {
         } else if (totalBubbles > 500) {
             totalBubbles = 200
         }
+        if (window.innerWidth < 500){
+            totalBubbles = 40
+        }
 
         let bubbles = document.querySelector('.bubbles') as HTMLElement;
         if (bubbles) {
