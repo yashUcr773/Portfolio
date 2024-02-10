@@ -40,7 +40,26 @@ export class ProjectsHomeComponent {
                 'demo_link': 'https://n-puzzle-solver.netlify.app/',
                 'tags': ['ai', 'web'],
                 'fadeStyle': fadeStyle['ai']
-            }, {
+            },
+            {
+                'title': 'URL Shortner',
+                'image': '../../../assets/Project_images/url-shortener.jpg',
+                'description': "Introducing a sleek URL shortening solution engineered with the MERN stack, streamlining long URLs into concise links.",
+                'github_link': 'https://github.com/yashUcr773/URLShortner',
+                'demo_link': 'https://app.shtr.dev/',
+                'tags': ['web'],
+                'fadeStyle': fadeStyle['web']
+            },
+            {
+                'title': 'Mock E-wallet',
+                'image': '../../../assets/Project_images/e-wallet.jpg',
+                'description': "Introducing a mock e-wallet app created with MERN stack, that can be used to send and recieve money from contacts.",
+                'github_link': 'https://github.com/yashUcr773/e_wallet_app',
+                'demo_link': 'https://e-wallet-app-vert.vercel.app/signup',
+                'tags': ['web'],
+                'fadeStyle': fadeStyle['web']
+            },
+            {
                 'title': 'Feature Selector for ML models',
                 'image': '../../../assets/Project_images/featureSelector.png',
                 'description': "A project that aims to identify the most relevant and irrelevant features through forward selection, backward elimination, and nearest neighbor search techniques. By employing these methods, the project seeks to enhance the understanding and improve performance of artificial intelligence algorithms in feature selection, contributing to the overall knowledge and expertise of the students.",
