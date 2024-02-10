@@ -32,6 +32,24 @@ export class V3ProjectsComponent implements OnInit {
                 'fadeStyle': fadeStyle['web']
             },
             {
+                'title': 'URL Shortner',
+                'image': '../../../assets/Project_images/url-shortener.jpg',
+                'description': "Introducing a sleek URL shortening solution engineered with the MERN stack, streamlining long URLs into concise links.",
+                'github_link': 'https://github.com/yashUcr773/URLShortner',
+                'demo_link': 'https://app.shtr.dev/',
+                'tags': 'web',
+                'fadeStyle': fadeStyle['web']
+            },
+            {
+                'title': 'Mock E-wallet',
+                'image': '../../../assets/Project_images/e-wallet.jpg',
+                'description': "Introducing a mock e-wallet app created with MERN stack, that can be used to send and recieve money from contacts.",
+                'github_link': 'https://github.com/yashUcr773/e_wallet_app',
+                'demo_link': 'https://e-wallet-app-vert.vercel.app/signup',
+                'tags': 'web',
+                'fadeStyle': fadeStyle['web']
+            },
+            {
                 'title': 'N Puzzle Solver',
                 'image': '../../../assets/Project_images/NPuzzle.png',
                 'description': "A project allowing users to either solve a randomly generated n-puzzle or opt for the AI to solve it on their behalf. Implemented using the versatile search functionality, the solver provides various cost functions that influence the time and computational requirements for achieving the solution.",
