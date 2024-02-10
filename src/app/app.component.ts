@@ -1,6 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import AOS from "aos";
 import { ThemeHelperService } from './services/theme-service';
+import Hotjar from '@hotjar/browser';
 
 @Component({
     selector: 'app-root',
@@ -40,6 +41,16 @@ export class AppComponent implements OnInit {
             mirror: true, // whether elements should animate out while scrolling past them
             // anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
+        });
+
+        const siteId = 3741300;
+        const hotjarVersion = 6;
+
+        Hotjar.init(siteId, hotjarVersion);
+
+        // Initializing with `debug` option:
+        Hotjar.init(siteId, hotjarVersion, {
+            debug: true
         });
 
         this.themeHelperService.checkAndApplytheme();

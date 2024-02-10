@@ -138,8 +138,8 @@
                                     </div>
                                     <div class="content">
                                         <div class="title">
-                                            <p class="heading" (click)="launchLink(experienceData.companyLink)">
-                                                {{experienceData.designation}} @ <span>{{experienceData.Company}}</span>
+                                            <p class="heading" (click)="experienceData.companyLink && launchLink(experienceData.companyLink)">
+                                                {{experienceData.designation}}  <span *ngIf="experienceData.companyLink">@ {{experienceData.Company}}</span>
                                             </p>
                                             <div class="duration">
                                                 <span>{{experienceData.start}}</span>

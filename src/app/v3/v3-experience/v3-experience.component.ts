@@ -88,6 +88,36 @@ export class V3ExperienceComponent implements OnInit {
     initExperiences() {
         this.experiences = [
             {
+                'Company': 'Freelance Consultant',
+                'designation': 'Web development Consultant',
+                'start': 'April-2023',
+                'end': 'Present',
+                showBullets: true,
+                showMessage: true,
+                showTechStack: true,
+                'message': 'Helping small businesses create a presence on web.',
+                'bulletsHeading': 'Highlights',
+                'bullets': [
+                    'Establishment online presence for multiple small businesses by developing websites integrated with CRM systems.',
+                    'Provided comprehensive support in data analysis, enabling informed decision-making for optimizing business strategies.',
+                    'Implemented data analysis strategies, delivering actionable insights that guided business growth and marketing initiatives.',
+                    'Utilized analytics tools to track website performance, identifying areas for improvement and implementing targeted strategies for enhanced user experience and conversion rates.'
+                ],
+                'techHeading': 'Tech Stack',
+                'tech': [
+                    { name: 'RxDB', link: 'https://rxdb.info/' },
+                    { name: 'Express', link: 'https://expressjs.com/' },
+                    { name: 'Angular5+', link: 'https://angular.io/' },
+                    { name: 'React', link: 'https://react.dev/' },
+                    { name: 'Nodejs', link: 'https://nodejs.org/en' },
+                    { name: 'AWS', link: 'https://aws.amazon.com/' },
+                    { name: 'Python', link: 'https://www.python.org/' },
+                    { name: 'Data Analysis', link: 'https://pandas.pydata.org/' },
+                    { name: 'Excel', link: 'https://www.microsoft.com/en-us/microsoft-365/excel' }
+
+                ]
+            },
+            {
                 'Company': 'Compro Technologies',
                 'designation': 'Software Developer',
                 'companyLink': 'https://www.comprotechnologies.com/home',
@@ -146,7 +176,7 @@ export class V3ExperienceComponent implements OnInit {
 interface experience {
     Company: string
     designation: string
-    companyLink: string
+    companyLink?: string
     start: string
     end: string
     showBullets: boolean
