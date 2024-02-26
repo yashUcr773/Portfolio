@@ -31,6 +31,32 @@ export class ProjectsHomeComponent {
                 'demo_link': 'https://yashaggarwal.com/',
                 'tags': ['ai', 'web'],
                 'fadeStyle': fadeStyle['web']
+            }, {
+                'title': 'SwiftChat',
+                'image': '../../../assets/Project_images/chat_app.jpg',
+                'description': "Introducing a real-time chat app made with the MERN stack, for sending and recieving messages from and to friends.",
+                'github_link': 'https://github.com/yashUcr773/chat_app',
+                'demo_link': 'https://app.digitaldime.win/',
+                'tags': ['web'],
+                'fadeStyle': fadeStyle['web']
+            },
+            {
+                'title': 'SHTR',
+                'image': '../../../assets/Project_images/url-shortener.jpg',
+                'description': "Introducing a sleek URL shortening solution engineered with the MERN stack, streamlining long URLs into concise links.",
+                'github_link': 'https://github.com/yashUcr773/URLShortner',
+                'demo_link': 'https://app.shtr.dev/',
+                'tags': ['web'],
+                'fadeStyle': fadeStyle['web']
+            },
+            {
+                'title': 'DigitalDime',
+                'image': '../../../assets/Project_images/e-wallet.jpg',
+                'description': "Introducing a mock e-wallet app created with MERN stack, that can be used to send and recieve money from contacts.",
+                'github_link': 'https://github.com/yashUcr773/e_wallet_app',
+                'demo_link': 'https://e-wallet-app-vert.vercel.app/signup',
+                'tags': ['web'],
+                'fadeStyle': fadeStyle['web']
             },
             {
                 'title': 'N Puzzle Solver',
@@ -40,24 +66,6 @@ export class ProjectsHomeComponent {
                 'demo_link': 'https://n-puzzle-solver.netlify.app/',
                 'tags': ['ai', 'web'],
                 'fadeStyle': fadeStyle['ai']
-            },
-            {
-                'title': 'URL Shortner',
-                'image': '../../../assets/Project_images/url-shortener.jpg',
-                'description': "Introducing a sleek URL shortening solution engineered with the MERN stack, streamlining long URLs into concise links.",
-                'github_link': 'https://github.com/yashUcr773/URLShortner',
-                'demo_link': 'https://app.shtr.dev/',
-                'tags': ['web'],
-                'fadeStyle': fadeStyle['web']
-            },
-            {
-                'title': 'Mock E-wallet',
-                'image': '../../../assets/Project_images/e-wallet.jpg',
-                'description': "Introducing a mock e-wallet app created with MERN stack, that can be used to send and recieve money from contacts.",
-                'github_link': 'https://github.com/yashUcr773/e_wallet_app',
-                'demo_link': 'https://e-wallet-app-vert.vercel.app/signup',
-                'tags': ['web'],
-                'fadeStyle': fadeStyle['web']
             },
             {
                 'title': 'Feature Selector for ML models',
