@@ -36,7 +36,7 @@ export class ProjectsHomeComponent {
                 'image': '../../../assets/Project_images/chat_app.jpg',
                 'description': "Introducing a real-time chat app made with the MERN stack, for sending and recieving messages from and to friends.",
                 'github_link': 'https://github.com/yashUcr773/chat_app',
-                'demo_link': 'https://app.digitaldime.win/',
+                'demo_link': 'https://chat.swiftchat.dev/signin',
                 'tags': ['web'],
                 'fadeStyle': fadeStyle['web']
             },
@@ -54,7 +54,7 @@ export class ProjectsHomeComponent {
                 'image': '../../../assets/Project_images/e-wallet.jpg',
                 'description': "Introducing a mock e-wallet app created with MERN stack, that can be used to send and recieve money from contacts.",
                 'github_link': 'https://github.com/yashUcr773/e_wallet_app',
-                'demo_link': 'https://e-wallet-app-vert.vercel.app/signup',
+                'demo_link': 'https://app.digitaldime.win/signin',
                 'tags': ['web'],
                 'fadeStyle': fadeStyle['web']
             },
