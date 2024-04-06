@@ -1,6 +1,6 @@
 
 export const constants: constants = {
-    'apiBaseURL': 'apigateway'
+    'apiBaseURL': 'https://yashaggarwal.net'
 }
 
 interface constants {
