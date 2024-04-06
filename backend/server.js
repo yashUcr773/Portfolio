@@ -6,6 +6,7 @@ const cors = require("cors");
 const corsOptions = require("./config/corsOptions");
 const fs = require("fs");
 const { downloadPDF } = require("./controllers/pdfController");
+const path = require('path')
 const port = process.env.PORT || 3000;
 const cookieParser = require("cookie-parser");
 const {
