@@ -6,7 +6,7 @@ export const socials_config: socials = {
     'instagram': 'https://www.instagram.com/yash_ylh/',
     'facebook': 'https://www.facebook.com/yashagg',
     'gmail': 'mailto:yash.aggarwal.8618@gmail.com',
-    'resume': 'https://yashaggarwal.com/resume'
+    'resume': 'https://yashaggarwal.net/resume'
 }
 
 interface socials {
