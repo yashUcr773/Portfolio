@@ -63,23 +63,40 @@ export class V3ContactComponent implements OnInit {
             (<HTMLInputElement>document.getElementById('contact-email')).value = "";
             (<HTMLInputElement>document.getElementById('contact-textarea')).value = "";
 
-            this.http.post(url, payload).subscribe((response: any) => {
-                console.log(response);
-                if (response.success == true) {
-                    this.snackbarService
-                        .enqueueSnack({
-                            message: "Your message was recieved. Allow me 1-2 days to revert back.",
-                            classes: ['success']
-                        });
-                } else {
+            try {
+                this.http.post(url, payload).subscribe((response: any) => {
+                    console.log(response);
+                    if (response.success == true) {
+                        this.snackbarService
+                            .enqueueSnack({
+                                message: "Your message was recieved. Allow me 1-2 days to revert back.",
+                                classes: ['success']
+                            });
+                    } else {
+                        this.snackbarService
+                            .enqueueSnack({
+                                message: "There was an issue sending the message. Try again in a few days.",
+                                classes: ['error']
+                            });
+                    }
+                }, (error: any) => {
+                    console.log(error)
                     this.snackbarService
                         .enqueueSnack({
                             message: "There was an issue sending the message. Try again in a few days.",
                             classes: ['error']
                         });
-                }
-            });
+                });
 
+            }
+            catch (e) {
+                console.log(e)
+                this.snackbarService
+                    .enqueueSnack({
+                        message: "There was an issue sending the message. Try again in a few days.",
+                        classes: ['error']
+                    });
+            }
         }
 
 
