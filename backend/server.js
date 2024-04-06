@@ -39,30 +39,9 @@ app.use(cookieParser());
 // Define your backend routes here
 require("./routes/routes-handler")(app);
 
-app.get("/resume", async (req, res) => {
-    try {
-        const url =
-            "https://d26phrkqcbbdz6.cloudfront.net/Resume/Yash_resume.pdf";
-        const destinationPath = "./Yash_Resume.pdf";
-
-        await downloadPDF(url, destinationPath);
-
-        // Read the PDF file
-        const stat = fs.statSync(destinationPath);
-
-        // Set headers
-        res.writeHead(200, {
-            "Content-Type": "application/pdf",
-            "Content-Length": stat.size,
-        });
-
-        // Create a read stream and pipe it to the response
-        const readStream = fs.createReadStream(destinationPath);
-        readStream.pipe(res);
-    } catch (e) {
-        res.status(404).send("URL Not Found");
-        console.log(e);
-    }
+app.get("/resume", (req, res) => {
+    const pdfFilePath = path.resolve(__dirname, "Yash_Resume.pdf");
+    res.sendFile(pdfFilePath);
 });
 
 // redirect backend to fe
