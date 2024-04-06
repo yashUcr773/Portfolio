@@ -6,5 +6,5 @@ node_modules
 .editorconfig
 dist
 
-
+.env
 

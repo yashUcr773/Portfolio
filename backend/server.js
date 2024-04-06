@@ -1,44 +1,43 @@
+require("dotenv").config();
+const { CONSTANTS } = require("./config/constants.config");
 const express = require("express");
-const path = require("path");
-const bodyParser = require("body-parser");
+const app = express();
 const cors = require("cors");
+const corsOptions = require("./config/corsOptions");
 const fs = require("fs");
 const { downloadPDF } = require("./controllers/pdfController");
-const app = express();
 const port = process.env.PORT || 3000;
+const cookieParser = require("cookie-parser");
+const {
+    credentials,
+} = require("./middlewares/access-control-credentials.middleware");
 
-// using cors
-app.use(cors());
+// Set allow credentials to true to send cookie
+app.use(credentials);
 
-// Middleware
-app.use(bodyParser.json());
-
-function isSecure(req) {
-    if (req.headers["x-forwarded-proto"]) {
-        return req.headers["x-forwarded-proto"] === "https";
-    }
-    return req.secure;
-}
-
-// redirect any page form http to https
+// Cross-Origin Resource Sharing
 app.use((req, res, next) => {
-    if (
-        process.env.NODE_ENV !== "development" &&
-        process.env.NODE_ENV !== "test" &&
-        !isSecure(req)
-    ) {
-        res.redirect(301, `https://${req.headers.host}${req.url}`);
+    if (req.path.startsWith("/apigateway")) {
+        // Use CORS with options for other routes
+        cors(corsOptions)(req, res, next);
     } else {
-        next();
+        // Allow all origins for the root path
+        cors()(req, res, next);
     }
 });
+
+// built-in middleware to handle urlencoded form data
+app.use(express.urlencoded({ extended: false }));
+
+// built-in middleware for json
+app.use(express.json());
+
+// to parse cookies sent with request
+app.use(cookieParser());
 
 // Routes
 // Define your backend routes here
 require("./routes/routes-handler")(app);
-
-// Serve the static files from the Angular app
-app.use(express.static(path.join(__dirname, "../dist")));
 
 app.get("/resume", async (req, res) => {
     try {
@@ -66,8 +65,14 @@ app.get("/resume", async (req, res) => {
     }
 });
 
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../dist/index.html"));
+// redirect backend to fe
+app.use("/", (req, res) => {
+    return res.redirect(CONSTANTS.FEURL);
+});
+
+// global router catcher
+app.all("*", (req, res) => {
+    return res.redirect(CONSTANTS.FEURL);
 });
 
 // Start the server
