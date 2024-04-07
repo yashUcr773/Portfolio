@@ -40,11 +40,6 @@ app.use(cookieParser());
 // Define your backend routes here
 require("./routes/routes-handler")(app);
 
-app.get("/resume", (req, res) => {
-    const pdfFilePath = path.resolve(__dirname, "Yash_Resume.pdf");
-    res.sendFile(pdfFilePath);
-});
-
 // redirect backend to fe
 app.use("/", (req, res) => {
     return res.redirect(CONSTANTS.FEURL);

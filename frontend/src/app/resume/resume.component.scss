@@ -1,0 +1,53 @@
+@import "../common_v3.scss";
+
+:root,
+html,
+body {
+    overflow: hidden !important;
+}
+
+#cursor {
+    display: none;
+}
+
+#cursor-border {
+    display: none;
+
+}
+
+.resume-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+
+    .resume-content {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+
+        .resume-content-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            overflow: hidden;
+
+            .resume-pdf-container {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+
+                .pdf-content {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+
+                }
+            }
+
+        }
+    }
+}
