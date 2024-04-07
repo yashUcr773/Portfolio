@@ -14,11 +14,12 @@ import { V3ExperienceComponent } from './v3/v3-experience/v3-experience.componen
 import { V3ProjectsComponent } from './v3/v3-projects/v3-projects.component';
 import { V3FooterComponent } from './v3/v3-footer/v3-footer.component';
 import { V3ContactComponent } from './v3/v3-contact/v3-contact.component';
+import { ResumeComponent } from './resume/resume.component';
+import { ProjectsHomeComponent } from './Projects/projects-home/projects-home.component';
 
 // Services
 import { AppHelperService } from './services/app-helper.service';
 import { SnackbarService } from './services/snackbar-service';
-import { ProjectsHomeComponent } from './Projects/projects-home/projects-home.component';
 import { ThemeHelperService } from './services/theme-service';
 
 @NgModule({
@@ -33,6 +34,7 @@ import { ThemeHelperService } from './services/theme-service';
         V3ContactComponent,
         V3ProjectsComponent,
         ProjectsHomeComponent,
+        ResumeComponent
     ],
     imports: [
         BrowserModule,

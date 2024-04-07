@@ -7,7 +7,7 @@ export const socials_config: socials = {
     'facebook': 'https://www.facebook.com/yashagg',
     'gmail': 'mailto:yash.aggarwal.8618@gmail.com',
     //'resume': 'http://localhost:3000/resume'
-    'resume': 'https://server.yashaggarwal.com/resume'
+     'resume': 'https://server.yashaggarwal.com/resume'
 }
 
 interface socials {
