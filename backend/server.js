@@ -41,7 +41,7 @@ app.use(cookieParser());
 require("./routes/routes-handler")(app);
 
 app.get("/resume", (req, res) => {
-    const pdfFilePath = path.resolve(__dirname, "Yash_resume.pdf");
+    const pdfFilePath = path.resolve(__dirname, "Yash_Aggarwal.pdf");
     res.sendFile(pdfFilePath);
 });
 
