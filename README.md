@@ -10,7 +10,7 @@ To run in dev mode
 - Clone the repo
 - `cd backend ` and `npm install`
 - `cd ..` and `cd frontend` and `npm i`
-- Run `npm run start:both` to start both frontend and backend server
+- Run `npm run start:dev` to start both frontend and backend server
 - Frontend will start on localhost:4200 and Backend will start at localhost:3000
 
 The app uses nodemailer for sending mails.
