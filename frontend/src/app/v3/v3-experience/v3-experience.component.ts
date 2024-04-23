@@ -88,9 +88,9 @@ export class V3ExperienceComponent implements OnInit {
     initExperiences() {
         this.experiences = [
             {
-                'Company': 'Freelance Consultant',
-                'designation': 'Web development Consultant',
-                'start': 'April-2023',
+                'Company': 'Infosys',
+                'designation': 'Software Engineer',
+                'start': 'September-2023',
                 'end': 'Present',
                 showBullets: true,
                 showMessage: true,
@@ -109,12 +109,10 @@ export class V3ExperienceComponent implements OnInit {
                     { name: 'Express', link: 'https://expressjs.com/' },
                     { name: 'Angular5+', link: 'https://angular.io/' },
                     { name: 'React', link: 'https://react.dev/' },
+                    { name: 'Next', link: 'https://nextjs.org/' },
                     { name: 'Nodejs', link: 'https://nodejs.org/en' },
                     { name: 'AWS', link: 'https://aws.amazon.com/' },
                     { name: 'Python', link: 'https://www.python.org/' },
-                    { name: 'Data Analysis', link: 'https://pandas.pydata.org/' },
-                    { name: 'Excel', link: 'https://www.microsoft.com/en-us/microsoft-365/excel' }
-
                 ]
             },
             {

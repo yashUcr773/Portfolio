@@ -32,6 +32,24 @@ export class V3ProjectsComponent implements OnInit {
                 'fadeStyle': fadeStyle['web']
             },
             {
+                'title': 'Discord',
+                'image': '../../../assets/Project_images/Discord.png',
+                'description': "Introducing a web-application to connect with your friends, message and talk with them. Share document and find poeple with similar interests.",
+                'github_link': 'https://github.com/yashUcr773/discordClone',
+                'demo_link': 'https://discordclone.uk/',
+                'tags': 'web',
+                'fadeStyle': fadeStyle['web']
+            },
+            {
+                'title': 'Spotify',
+                'image': '../../../assets/Project_images/Spotify.png',
+                'description': "Introducing a web-application to listen to all your favorite music at one place.",
+                'github_link': 'https://github.com/yashUcr773/SpotifyClone',
+                'demo_link': 'https://spotifyclone.uk/',
+                'tags': 'web',
+                'fadeStyle': fadeStyle['web']
+            },
+            {
                 'title': 'SwiftChat',
                 'image': '../../../assets/Project_images/chat_app.jpg',
                 'description': "Introducing a real-time chat app made with the MERN stack, for sending and recieving messages from and to friends.",
