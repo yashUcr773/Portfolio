@@ -63,7 +63,7 @@ export class V3ProjectsComponent implements OnInit {
                 'image': '../../../assets/Project_images/chat_app.jpg',
                 'description': "Introducing a real-time chat app made with the MERN stack, for sending and recieving messages from and to friends.",
                 'github_link': 'https://github.com/yashUcr773/chat_app',
-                'demo_link': 'https://chat.swiftchat.dev',
+                'demo_link': 'https://swiftchat.dev/',
                 'tags': 'web',
                 'fadeStyle': fadeStyle['web']
             },

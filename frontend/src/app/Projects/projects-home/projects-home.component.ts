@@ -46,7 +46,7 @@ export class ProjectsHomeComponent {
                 'image': '../../../assets/Project_images/chat_app.jpg',
                 'description': "Introducing a real-time chat app made with the Next.js, for sending and recieving messages from and to friends.",
                 'github_link': 'https://github.com/yashUcr773/chat_app',
-                'demo_link': 'https://chat.swiftchat.dev/signin',
+                'demo_link': 'https://swiftchat.dev//signin',
                 'tags': ['web'],
                 'fadeStyle': fadeStyle['web']
             },
