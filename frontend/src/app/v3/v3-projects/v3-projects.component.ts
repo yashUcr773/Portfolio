@@ -32,6 +32,15 @@ export class V3ProjectsComponent implements OnInit {
                 'fadeStyle': fadeStyle['web']
             },
             {
+                'title': 'FinTracker',
+                'image': '../../../assets/Project_images/FinTracker.png',
+                'description': "Introducing a web-application track and manage your finances and transaction. Generate insights and plan better.",
+                'github_link': 'https://github.com/yashUcr773/FinTracker',
+                'demo_link': 'https://FinTracker.uk/',
+                'tags': 'web',
+                'fadeStyle': fadeStyle['web']
+            },
+            {
                 'title': 'Discord',
                 'image': '../../../assets/Project_images/Discord.png',
                 'description': "Introducing a web-application to connect with your friends, message and talk with them. Share document and find poeple with similar interests.",

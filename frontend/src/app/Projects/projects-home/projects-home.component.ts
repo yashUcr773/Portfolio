@@ -33,6 +33,15 @@ export class ProjectsHomeComponent {
                 'fadeStyle': fadeStyle['web']
             },
             {
+                'title': 'FinTracker',
+                'image': '../../../assets/Project_images/FinTracker.png',
+                'description': "Introducing a web-application track and manage your finances and transaction. Generate insights and plan better.",
+                'github_link': 'https://github.com/yashUcr773/FinTracker',
+                'demo_link': 'https://FinTracker.uk/',
+                'tags': ['web', 'ai'],
+                'fadeStyle': fadeStyle['web']
+            },
+            {
                 'title': 'SwiftChat',
                 'image': '../../../assets/Project_images/chat_app.jpg',
                 'description': "Introducing a real-time chat app made with the Next.js, for sending and recieving messages from and to friends.",
