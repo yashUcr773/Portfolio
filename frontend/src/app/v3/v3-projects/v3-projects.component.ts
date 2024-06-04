@@ -41,6 +41,15 @@ export class V3ProjectsComponent implements OnInit {
                 'fadeStyle': fadeStyle['web']
             },
             {
+                'title': 'MiroClone',
+                'image': '../../../assets/Project_images/Miro.png',
+                'description': "Introducing a web-application plan and colaborate with others in real-time.",
+                'github_link': 'https://github.com/yashUcr773/miroClone',
+                'demo_link': 'https://miroclone.uk/',
+                'tags': 'web',
+                'fadeStyle': fadeStyle['web']
+            },
+            {
                 'title': 'Discord',
                 'image': '../../../assets/Project_images/Discord.png',
                 'description': "Introducing a web-application to connect with your friends, message and talk with them. Share document and find poeple with similar interests.",
