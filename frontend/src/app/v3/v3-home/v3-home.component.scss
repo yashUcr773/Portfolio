@@ -6,7 +6,7 @@
     width: 100%;
     height: 100vh;
     background: var(--v2_primary_background_color_1);
-    animation: hide-loader 0.5s ease 3.5s forwards;
+    animation: hide-loader 0.5s ease 2s forwards;
     opacity: 1;
 
     .loader-container {
@@ -17,7 +17,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 32px;
-        animation: hide-loader-container 1s ease 3.5s forwards;
+        animation: hide-loader-container 0.5s ease 1.8s forwards;
 
         .name {
             display: flex;
@@ -27,7 +27,7 @@
             justify-content: center;
 
             .svg-logo-name {
-                animation: logo-fill 1s ease-in-out forwards 2.5s;
+                animation: logo-fill 0.7s ease-in-out forwards 0.2s;
 
                 display: none;
 
@@ -42,25 +42,25 @@
                 path:nth-child(1) {
                     stroke-dasharray: 456px;
                     stroke-dashoffset: 456px;
-                    animation: line-anim 2s ease-in-out forwards 0.1s;
+                    animation: line-anim 1s ease-in-out forwards 0.2s;
                 }
 
                 path:nth-child(2) {
                     stroke-dasharray: 616px;
                     stroke-dashoffset: 616px;
-                    animation: line-anim 2s ease-in-out forwards 0.4s;
+                    animation: line-anim 1s ease-in-out forwards 0.3s;
                 }
 
                 path:nth-child(3) {
                     stroke-dasharray: 455px;
                     stroke-dashoffset: 455px;
-                    animation: line-anim 2s ease-in-out forwards 0.7s;
+                    animation: line-anim 1s ease-in-out forwards 0.4s;
                 }
 
                 path:nth-child(4) {
                     stroke-dasharray: 720px;
                     stroke-dashoffset: 720px;
-                    animation: line-anim 2s ease-in-out forwards 1s;
+                    animation: line-anim 1s ease-in-out forwards 0.5s;
                 }
 
                 @keyframes logo-fill {
@@ -86,7 +86,7 @@
                     stroke: var(--v2_logo_background);
                     stroke-dasharray: 571px;
                     stroke-dashoffset: 571px;
-                    animation: line-anim-logo1 3s ease-in-out forwards;
+                    animation: line-anim-logo1 1.5s ease-in-out forwards;
                     stroke-width: 2px;
                 }
 
@@ -95,7 +95,7 @@
                     stroke-dasharray: 650px;
                     stroke-dashoffset: 650px;
                     transform: translate(30%, 22%);
-                    animation: line-anim-logo2 3s ease-in-out forwards;
+                    animation: line-anim-logo2 1.5s ease-in-out forwards;
                     stroke-width: 2px;
                 }
 

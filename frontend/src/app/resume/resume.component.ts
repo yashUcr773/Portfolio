@@ -1,6 +1,5 @@
-import { AfterViewInit, Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, ViewEncapsulation } from '@angular/core';
 import { socials_config } from 'config/socials';
-import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-resume',
@@ -11,7 +10,7 @@ import { Router } from '@angular/router';
 export class ResumeComponent implements AfterViewInit {
     socials_config = socials_config;
 
-    constructor(private router: Router) {
+    constructor() {
 
     }
 
@@ -19,15 +18,7 @@ export class ResumeComponent implements AfterViewInit {
         this.launchLink(socials_config.resume);
     }
 
-    launchLink(url: string, newTab = true) {
-        let link = document.querySelector('#external-link-button') as HTMLAnchorElement;
-        if (link) {
-            if (newTab) {
-                link.target = '_blank';
-            }
-            link.href = url;
-            link.click();
-        }
-        this.router.navigate(['/']);
+    launchLink(url: string) {
+        window.location.href = url
     }
 }
