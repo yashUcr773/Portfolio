@@ -51,7 +51,7 @@
                         margin-bottom: 0px;
 
                         &:before {
-                            background-color: var(--v2_text_heading_underline);
+                            background-color: var(--v2_accent_color);
                             content: '';
                             display: block;
                             height: 4px;
@@ -61,7 +61,7 @@
                         }
 
                         &:after {
-                            background-color: var(--v2_text_heading_underline);
+                            background-color: var(--v2_accent_color);
                             content: '';
                             display: block;
                             position: absolute;

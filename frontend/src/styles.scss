@@ -23,48 +23,51 @@ body {
 body {
     &.theme-light {
 
+        // accent color
+        --v2_accent_color: #384734;
+
         // background colors
         --v2_primary_background_color_1: #f5f8fa;
         --v2_primary_background_color_1_rgb: 254, 246, 228;
-        --v2_primary_background_star_color: #384734;
 
         // text colors
         --v2_text_color_1: #1a3a52;
         --v2_text_color_1_darken: #122352;
-        --v2_text_heading_underline: #2d6a5f;
 
         // theme colors
-        --v2_main_color_1: #a3dcd4; // lighter than background
+        --v2_main_color_1: #a3dcd4; // card / component background
         --v2_main_color_1_rgb: 163, 220, 212;
-        --v2_main_color_1_lighten: #b5e3dd; // lighter that main
-        --v2_main_color_1_lighter_than_lighter: #c8eae5; // very light version
-        --v2_main_color_1_darken: #93c6bf; // background
+        --v2_main_color_1_lighten: #b5e3dd; // hover states
+        --v2_main_color_1_lighter_than_lighter: #c8eae5; // active + hover states
+        --v2_main_color_1_darken: #93c6bf; // disabled states
 
         // logo colors
-        --v2_logo_background: #b5e3dd; // lighten
+        --v2_logo_background: var(--v2_main_color_1_lighten)
 
     }
 
     &.theme-dark {
+
+        // accent color - for stars and section heading underlines
+        --v2_accent_color: #5FD1C8;
+
         // background colors
-        --v2_primary_background_color_1: #0e1b2b;
+        --v2_primary_background_color_1: #0e1b2b; // app background
         --v2_primary_background_color_1_rgb: 14, 27, 43;
-        --v2_primary_background_star_color: #20b89f;
 
         // text colors
-        --v2_text_color_1: #FFFFFF;
-        --v2_text_color_1_darken: #cccccc;
-        --v2_text_heading_underline: #20b89f;
+        --v2_text_color_1: #C3CFDA; // active text
+        --v2_text_color_1_darken: #8FA0B3; // disabled text
 
         // theme colors
-        --v2_main_color_1: #1e2a38; // lighter than background
-        --v2_main_color_1_rgb: 38, 50, 64;
-        --v2_main_color_1_lighten: #3a4a5c; // lighter that main
-        --v2_main_color_1_lighter_than_lighter: #4f5f73; // very light version
-        --v2_main_color_1_darken: #0E1B2B; // background
+        --v2_main_color_1: #17212E; // card / component background
+        --v2_main_color_1_rgb: 23, 33, 46;
+        --v2_main_color_1_lighten: #1F2B3A; // hover states
+        --v2_main_color_1_lighter_than_lighter: #3A4A63; // active + hover states
+        --v2_main_color_1_darken: #0E141C; // disabled states
 
         // logo colors
-        --v2_logo_background: #3e4955; // lighten
+        --v2_logo_background: var(--v2_main_color_1_lighten)
     }
 
     &.theme-common {

@@ -86,7 +86,7 @@ export class V3HeaderComponent implements OnInit, AfterViewInit {
         const height = window.innerHeight * 2;
         const color =
             getComputedStyle(document.body)
-                .getPropertyValue('--v2_primary_background_star_color')
+                .getPropertyValue('--v2_accent_color')
                 .trim() || '#fff';
 
         const shadows = [];
