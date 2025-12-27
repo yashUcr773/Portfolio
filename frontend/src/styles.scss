@@ -25,6 +25,7 @@ body {
 
         // accent color
         --v2_accent_color: #384734;
+        --v2_accent_color_rgb: 56, 71, 52;
 
         // background colors
         --v2_primary_background_color_1: #f5f8fa;
@@ -49,7 +50,8 @@ body {
     &.theme-dark {
 
         // accent color - for stars and section heading underlines
-        --v2_accent_color: #5FD1C8;
+        --v2_accent_color: #5fd1c8;
+        --v2_accent_color_rgb: 95, 209, 200;
 
         // background colors
         --v2_primary_background_color_1: #0e1b2b; // app background

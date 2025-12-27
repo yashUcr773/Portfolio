@@ -134,6 +134,7 @@
                         border: none;
                         background: var(--v2_main_color_1_lighten);
                         opacity: 1;
+                        box-shadow: 0 0 18px 4px rgba(var(--v2_accent_color_rgb), 0.25);
 
                         &:hover {
                             background: var(--v2_main_color_1_lighter_than_lighter);
@@ -182,8 +183,10 @@
 
                 img {
                     width: 100%;
-                    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.75);
                     border-radius: 32px;
+                    box-shadow:
+                        0 10px 40px rgba(0, 0, 0, 0.45),
+                        0 0 0 1px rgba(255, 255, 255, 0.03);
                 }
             }
 
