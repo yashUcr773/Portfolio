@@ -83,10 +83,11 @@ export class V3HeaderComponent implements OnInit, AfterViewInit {
         if (!el) return;
 
         const width = window.innerWidth;
-        const height = window.innerHeight * 2; // IMPORTANT: 2x animation distance
-        const color = getComputedStyle(document.body)
-            .getPropertyValue('--v2_primary_background_star_color')
-            .trim() || '#fff';
+        const height = window.innerHeight * 2;
+        const color =
+            getComputedStyle(document.body)
+                .getPropertyValue('--v2_primary_background_star_color')
+                .trim() || '#fff';
 
         const shadows = [];
 
@@ -96,16 +97,21 @@ export class V3HeaderComponent implements OnInit, AfterViewInit {
             shadows.push(`${x}px ${y}px ${color}`);
         }
 
+        // random drift direction
+        const dx = (Math.random() - 0.5) * 1200;   // left/right
+        const dy = -2000 + Math.random() * -500; // mostly upward
+
+        el.style.setProperty('--dx', `${dx}px`);
+        el.style.setProperty('--dy', `${dy}px`);
         el.style.boxShadow = shadows.join(', ');
         el.style.width = `${size}px`;
         el.style.height = `${size}px`;
     }
 
-    // density tuned for performance
     generateStars() {
         const dpr = window.devicePixelRatio || 1;
         const area = window.innerWidth * window.innerHeight * dpr * dpr;
-        const maxStars = 3000;
+        const maxStars = Math.floor(area*0.00008);
         const baseCount = Math.floor(area * (0.03 / 100));
         const count = Math.min(baseCount, maxStars);
 

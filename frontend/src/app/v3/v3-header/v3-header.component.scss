@@ -374,42 +374,58 @@
     }
 
     @-webkit-keyframes animStar {
-        from {
-            -webkit-transform: translateY(0px);
+        0% {
+            transform: translate(0, 0);
         }
 
-        to {
-            -webkit-transform: translateY(-2000px);
+        50% {
+            transform: translate(calc(var(--dx) * 0.5), -1000px);
+        }
+
+        100% {
+            transform: translate(var(--dx), var(--dy));
         }
     }
 
     @-moz-keyframes animStar {
-        from {
-            -moz-transform: translateY(0px);
+        0% {
+            transform: translate(0, 0);
         }
 
-        to {
-            -moz-transform: translateY(-2000px);
+        50% {
+            transform: translate(calc(var(--dx) * 0.5), -1000px);
+        }
+
+        100% {
+            transform: translate(var(--dx), var(--dy));
         }
     }
 
     @-ms-keyframes animStar {
-        from {
-            -ms-transform: translateY(0px);
+        0% {
+            transform: translate(0, 0);
         }
 
-        to {
-            -ms-transform: translateY(-2000px);
+        50% {
+            transform: translate(calc(var(--dx) * 0.5), -1000px);
+        }
+
+        100% {
+            transform: translate(var(--dx), var(--dy));
         }
     }
 
     @keyframes animStar {
-        from {
-            transform: translateY(0px);
+        0% {
+            transform: translate(0, 0);
         }
 
-        to {
-            transform: translateY(-2000px);
+        50% {
+            transform: translate(calc(var(--dx) * 0.5), -1000px);
+        }
+
+        100% {
+            transform: translate(var(--dx), var(--dy));
         }
     }
 }
