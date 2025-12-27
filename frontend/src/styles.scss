@@ -24,14 +24,14 @@ body {
     &.theme-light {
 
         // background colors
-        --v2_primary_background_color_1: #fef6e4;
+        --v2_primary_background_color_1: #f5f8fa;
         --v2_primary_background_color_1_rgb: 254, 246, 228;
         --v2_primary_background_star_color: #384734;
 
         // text colors
-        --v2_text_color_1: #172C66;
+        --v2_text_color_1: #1a3a52;
         --v2_text_color_1_darken: #122352;
-        --v2_text_heading_underline: #384734;
+        --v2_text_heading_underline: #2d6a5f;
 
         // theme colors
         --v2_main_color_1: #a3dcd4; // lighter than background
@@ -49,18 +49,18 @@ body {
         // background colors
         --v2_primary_background_color_1: #0e1b2b;
         --v2_primary_background_color_1_rgb: 14, 27, 43;
-        --v2_primary_background_star_color: #27DEBF;
+        --v2_primary_background_star_color: #20b89f;
 
         // text colors
         --v2_text_color_1: #FFFFFF;
         --v2_text_color_1_darken: #cccccc;
-        --v2_text_heading_underline: #27DEBF;
+        --v2_text_heading_underline: #20b89f;
 
         // theme colors
-        --v2_main_color_1: #263240; // lighter than background
+        --v2_main_color_1: #1e2a38; // lighter than background
         --v2_main_color_1_rgb: 38, 50, 64;
-        --v2_main_color_1_lighten: #3e4955; // lighter that main
-        --v2_main_color_1_lighter_than_lighter: #565f6b; // very light version
+        --v2_main_color_1_lighten: #3a4a5c; // lighter that main
+        --v2_main_color_1_lighter_than_lighter: #4f5f73; // very light version
         --v2_main_color_1_darken: #0E1B2B; // background
 
         // logo colors
@@ -96,5 +96,20 @@ body {
 
     #external-link-button {
         display: none;
+    }
+}
+
+.glow {
+    animation: glow 2s ease-in-out infinite alternate;
+
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.5));
+    }
+
+    to {
+        filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.8));
     }
 }
