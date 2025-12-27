@@ -16,6 +16,26 @@ export class V3HeaderComponent implements OnInit, AfterViewInit {
     darkTheme = false;
     resizeTimer: ReturnType<typeof setTimeout> | undefined = undefined
     generateFunctionReference: (() => void) | undefined = undefined
+    sections = [
+        {
+            link: 'hero',
+            title: "Go to Home",
+            name: 'Home'
+        }, {
+            link: 'projects',
+            title: "See My Projects",
+            name: 'Projects'
+        }, {
+            link: 'experience',
+            title: "Know About Me",
+            name: 'About'
+        }, {
+            link: 'contact',
+            title: "Contact Me",
+            name: 'Contact'
+        }
+    ]
+    activeSection = this.sections[0].link;
 
     constructor(private appHelperService: AppHelperService,
         private themeHelperService: ThemeHelperService) {
@@ -38,6 +58,24 @@ export class V3HeaderComponent implements OnInit, AfterViewInit {
         }
         clearTimeout(this.resizeTimer);
         this.resizeTimer = setTimeout(this.generateFunctionReference!, 200);
+    }
+
+    @HostListener('window:scroll', [])
+    onScroll() {
+        const scrollPos = window.scrollY + 120; // offset for header
+
+        for (const section of this.sections) {
+            const el = document.getElementById(`${section.link}-section`);
+            if (!el) continue;
+
+            const top = el.offsetTop;
+            const height = el.offsetHeight;
+
+            if (scrollPos >= top && scrollPos < top + height) {
+                this.activeSection = section.link;
+                break;
+            }
+        }
     }
 
     goto(section: string) {
@@ -111,7 +149,7 @@ export class V3HeaderComponent implements OnInit, AfterViewInit {
     generateStars() {
         const dpr = window.devicePixelRatio || 1;
         const area = window.innerWidth * window.innerHeight * dpr * dpr;
-        const maxStars = Math.floor(area*0.00008);
+        const maxStars = Math.floor(area * 0.00008);
         const baseCount = Math.floor(area * (0.03 / 100));
         const count = Math.min(baseCount, maxStars);
 

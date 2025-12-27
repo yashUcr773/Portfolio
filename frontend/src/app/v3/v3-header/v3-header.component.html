@@ -42,9 +42,8 @@
         <div class="links-container">
 
             <div class="nav-links">
-                <a (click)="goto('projects')" title="See My Projects">Projects</a>
-                <a (click)="goto('experience')" title="Know About Me">About</a>
-                <a (click)="goto('contact')" title="Contact Me">Contact</a>
+                <a *ngFor="let section of sections" (click)="goto(section.link)" title="section.title"
+                    [ngClass]="{'active':activeSection==section.link}">{{section.name}}</a>
                 <a (click)="launchLink(socials_config.resume)" title="See My Resume">Resume</a>
             </div>
 
@@ -56,9 +55,8 @@
 
             <div class="sidebar" [ngClass]="{'active' : hamburgerActive}">
                 <div class="links">
-                    <a (click)="goto('projects')" title="See My Projects">Projects</a>
-                    <a (click)="goto('experience')" title="Know About Me">About</a>
-                    <a (click)="goto('contact')" title="Contact Me">Contact</a>
+                    <a *ngFor="let section of sections" (click)="goto(section.link)" title="section.title"
+                        [ngClass]="{'active':activeSection==section.link}">{{section.name}}</a>
                     <a (click)="launchLink(socials_config.resume)" title="See My Resume">Resume</a>
                 </div>
             </div>
