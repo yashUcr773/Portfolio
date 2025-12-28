@@ -1,0 +1,43 @@
+@use "sass:color";
+
+/* =========================
+   RAW COLOR PRIMITIVES
+   ========================= */
+
+$primary: #27debf;
+$secondary: #1b3f5e;
+$ghost: #1a4e47;
+
+$text-light: #e6f1ff;
+$text-mid: #a8bed8;
+$text-dim: #6f8ba8;
+
+$border-base: #244766;
+
+$bg-primary: #0e1b2b;
+$surface-1: #13263d;
+$surface-2: #1a3554;
+
+/* =========================
+   COLOR FUNCTIONS
+   ========================= */
+
+@function lift($c, $amount: 8%) {
+   @return color.adjust($c, $lightness: $amount);
+}
+
+@function sink($c, $amount: 6%) {
+   @return color.adjust($c, $lightness: -$amount);
+}
+
+@function mute($c) {
+   @return color.adjust($c, $lightness: -5%, $saturation: -15%);
+}
+
+@function glow($c, $alpha: 0.45) {
+   @return rgba($c, $alpha);
+}
+
+@function on-color($c) {
+   @return color.adjust($c, $lightness: -45%);
+}

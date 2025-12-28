@@ -1,0 +1,64 @@
+@use "variables" as *;
+
+/* =========================
+   APP THEME TOKENS
+   ========================= */
+
+:root {
+    /* Surfaces */
+    --bg-primary: #{$bg-primary};
+    --surface-1: #{$surface-1};
+    --surface-2: #{$surface-2};
+
+    /* Typography */
+    --text-primary: #{$text-light};
+    --text-secondary: #{$text-mid};
+    --text-muted: #{$text-dim};
+
+    /* Borders */
+    --border-subtle: #{$border-base};
+
+    /* Focus */
+    --focus-ring: rgba(79, 172, 255, 0.6);
+
+    /* =====================
+     BUTTON — PRIMARY
+     ===================== */
+
+    --btn-primary-text: #{on-color($primary)};
+    --btn-primary-bg: linear-gradient(180deg, #{lift($primary)}, #{sink($primary)});
+    --btn-primary-bg-hover: linear-gradient(180deg, #{lift($primary, 12%)}, #{$primary});
+    --btn-primary-bg-disabled: linear-gradient(180deg, #{mute($primary)}, #{sink(mute($primary), 10%)});
+    --btn-primary-glow: #{glow($primary)};
+
+    /* =====================
+     BUTTON — SECONDARY
+     ===================== */
+
+    --btn-secondary-text: var(--text-primary);
+    --btn-secondary-bg: linear-gradient(180deg, #{lift($secondary, 6%)}, #{sink($secondary)});
+    --btn-secondary-bg-hover: linear-gradient(180deg, #{lift($secondary, 10%)}, #{$secondary});
+    --btn-secondary-bg-disabled: linear-gradient(180deg, #{mute($secondary)}, #{sink(mute($secondary), 2%)});
+    --btn-secondary-glow: #{glow($secondary, 0.65)};
+
+    /* =====================
+     BUTTON — GHOST
+     ===================== */
+
+    --btn-ghost-border: #{glow($ghost, 0.35)};
+    --btn-ghost-border-hover: #{glow($ghost, 0.6)};
+    --btn-ghost-bg-hover: #{glow($ghost, 0.12)};
+    --btn-ghost-bg-active: #{glow($ghost, 0.18)};
+    --btn-ghost-disabled-border: #{glow($text-dim, 0.25)};
+
+
+    /* =====================
+     BUTTON — OUTLINE
+     ===================== */
+
+    --btn-outline-border-hover: #{$primary};
+    --btn-outline-bg-hover: #{glow($primary, 0.08)};
+    --btn-outline-bg-active: #{glow($primary, 0.12)};
+    --btn-outline-focus-glow: #{glow($primary)};
+    --btn-outline-glow: #{glow($primary, 0.45)};
+}
