@@ -1,0 +1,17 @@
+@use "variables" as *;
+
+.text-primary {
+    color: #{$text-light}
+}
+
+.text-secondary {
+    color: #{$text-mid}
+}
+
+.text-muted {
+    color: #{$text-dim}
+}
+
+.text-accent {
+    color: #{$primary}
+}
