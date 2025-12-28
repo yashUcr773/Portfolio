@@ -1,0 +1,16 @@
+/* =========================
+   CUSTOM FONT HANDLING
+   ========================= */
+@font-face {
+    font-family: 'Caranda';
+    src: url('./assets/fonts/caranda/Caranda.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Dosis';
+    src: url('./assets/fonts/Dosis/static/Dosis-Regular.ttf') format('truetype');
+}
+
+// font family
+$font_family_styled: 'Caranda';
+$font_family_base: 'Dosis';

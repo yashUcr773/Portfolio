@@ -1,0 +1,27 @@
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    min-height: 100vh;
+    padding: 12px 24px;
+
+    .fonts {
+        padding: 0px 12px;
+
+        .content {
+            padding: 0px 12px;
+        }
+    }
+
+    .buttons {
+        padding: 0px 12px;
+
+        .content {
+            padding: 0px 12px;
+            display: flex;
+            gap: 24px;
+        }
+    }
+}

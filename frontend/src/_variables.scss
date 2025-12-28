@@ -1,0 +1,29 @@
+@use "sass:color";
+
+/* =========================
+   BASE VARIABLES
+   ========================= */
+$btn-primary-base: #27debf;
+
+
+/* =========================
+   DERIVED VARIABLES
+   ========================= */
+
+$btn-primary-top: color.adjust($btn-primary-base, $lightness: 8%);
+$btn-primary-bottom: color.adjust($btn-primary-base, $lightness: -6%);
+
+$btn-primary-hover-top: color.adjust($btn-primary-base, $lightness: 12%);
+$btn-primary-hover-bottom: $btn-primary-base;
+
+$btn-primary-disabled-top: color.adjust($btn-primary-base,
+      $lightness: -25%,
+      $saturation: -20%);
+
+$btn-primary-disabled-bottom: color.adjust($btn-primary-base,
+      $lightness: -35%,
+      $saturation: -20%);
+
+
+$btn-primary-glow: rgba($btn-primary-base, 0.45);
+$text-on-accent: color.adjust($btn-primary-base, $lightness: -45%);
