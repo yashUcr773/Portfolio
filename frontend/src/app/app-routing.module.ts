@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { V3BaseComponent } from './v3/v3-base/v3-base.component';
 import { ProjectsHomeComponent } from './Projects/projects-home/projects-home.component';
 import { ResumeComponent } from './resume/resume.component';
+import { ThemeTestComponent } from './theme-test/theme-test.component';
 
 const routes: Routes = [
     { path: '', component: V3BaseComponent },
     { path: 'projects', component: ProjectsHomeComponent },
     { path: 'resume', component: ResumeComponent },
+    { path: 'theme-test', component: ThemeTestComponent },
     { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 

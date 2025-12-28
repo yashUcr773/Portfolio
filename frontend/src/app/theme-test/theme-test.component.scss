@@ -1,0 +1,62 @@
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .header {
+        width: 100%;
+        padding: 16px 32px;
+        border: 2px solid red;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+
+        .logo {
+            .svg-logo-circle {
+                stroke-dashoffset: 0px;
+                stroke-width: 2px;
+                width: 56px;
+                height: 56px;
+
+                .logo-circle {
+                    stroke: var(--v2_text_color_1);
+                    fill: var(--v2_logo_background);
+                    stroke-width: 6px;
+                    stroke-dasharray: 571px;
+                }
+
+                .logo-name {
+                    fill: var(--v2_text_color_1);
+                    stroke: var(--v2_text_color_1);
+                    stroke-dasharray: 650px;
+                    transform: translate(30%, 22%);
+                }
+
+            }
+        }
+
+        .nav-links {
+            ul {
+                padding: 0;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 16px;
+                list-style-type: none;
+
+                li {
+                    font-size: 1.25em;
+                }
+            }
+
+            .nav-link {
+                &.active{
+                    color:red
+                }
+            }
+        }
+    }
+}
