@@ -1,0 +1,12 @@
+@if (variant==='inline') {
+<span class="icon" [style.width]="size" [style.height]="size" [innerHTML]="svg" [title]="title"></span>
+} @else {
+<div class="social" [title]="title" [ngClass]="social">
+  <button class="social-btn">
+    <span class="svgContainer" [title]="title" style="color: white">
+      <span [innerHTML]="svg"></span>
+    </span>
+    <span class="background"></span>
+  </button>
+</div>
+}

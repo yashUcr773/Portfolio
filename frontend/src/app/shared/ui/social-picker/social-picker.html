@@ -1,0 +1,11 @@
+<div class="socials">
+    @for (row of rows; let rowIndex = $index; track $index) {
+    <div [class.top]="rowIndex === 0" [class.bottom]="rowIndex === 1">
+        @for (icon of row; track icon.class) {
+        <button class="cards" [ngClass]="[icon.class, icon.social]" [title]="icon.title">
+            <span [innerHTML]="icon.svg" [ngClass]="icon.social"></span>
+        </button>
+        }
+    </div>
+    }
+</div>

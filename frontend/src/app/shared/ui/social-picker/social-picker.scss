@@ -1,0 +1,155 @@
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+
+    .top {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5em;
+    }
+
+    .bottom {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5em;
+    }
+
+    .cards {
+        width: 92px;
+        height: 92px;
+        outline: none;
+        border: none;
+        background-color: rgba(156, 156, 156, 0.466);
+        backdrop-filter: blur(8px);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        transition: all .2s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.card1 {
+            border-radius: 92px 8px 8px 8px;
+
+            span {
+                margin-right: -16px;
+                margin-top: 12px;
+            }
+        }
+
+        &.card2 {
+            border-radius: 8px 92px 8px 8px;
+
+            span {
+                margin-left: -16px;
+                margin-top: 12px;
+            }
+        }
+
+        &.card3 {
+            border-radius: 8px 8px 8px 92px;
+
+            span {
+                margin-right: -16px;
+                margin-bottom: 12px;
+            }
+        }
+
+        &.card4 {
+            border-radius: 8px 8px 92px 8px;
+
+            span {
+                margin-left: -16px;
+                margin-bottom: 12px;
+            }
+        }
+
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+        }
+
+        &.linkedin {
+            span {
+                color: var(--v2_linkedin_blue);
+            }
+
+            &:hover {
+                cursor: pointer;
+                scale: 1.1;
+                background-color: var(--v2_linkedin_blue);
+
+                span {
+                    color: white;
+                }
+            }
+        }
+
+        &.twitter {
+            span {
+                color: var(--v2_twitter_blue);
+            }
+
+            &:hover {
+                cursor: pointer;
+                scale: 1.1;
+                background-color: var(--v2_twitter_blue);
+
+                span {
+                    color: white;
+                }
+            }
+        }
+
+        &.github {
+            span {
+                color: black;
+            }
+
+            &:hover {
+                cursor: pointer;
+                scale: 1.1;
+                background-color: black;
+
+                span {
+                    color: white;
+                }
+            }
+        }
+
+        &.gmail {
+            span {
+                color: var(--v2_gmail_wheat);
+            }
+
+            &:hover {
+                cursor: pointer;
+                scale: 1.1;
+                background-color: var(--v2_gmail_wheat);
+
+                span {
+                    color: white;
+                }
+            }
+        }
+
+        &.whatsapp {
+            span {
+                color: var(--v2_whatsapp_green);
+            }
+
+            &:hover {
+                cursor: pointer;
+                scale: 1.1;
+                background-color: var(--v2_whatsapp_green);
+
+                span {
+                    color: white;
+                }
+            }
+        }
+    }
+}
