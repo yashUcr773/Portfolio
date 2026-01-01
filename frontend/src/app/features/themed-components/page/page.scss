@@ -14,15 +14,42 @@
         .content {
             padding: 0px 12px;
         }
-    }
 
-    .buttons, .socials {
-        padding: 0px 12px;
-
-        .content {
-            padding: 0px 12px;
+        &.misc-components {
+            border: 2px solid red;
             display: flex;
-            gap: 24px;
+            flex-direction: column;
+            gap: 32px;
+
+            .next-component-content {
+                margin: 96px 12px;
+            }
+
+            .svgs-content {
+                display: flex;
+                gap: 24px;
+                align-items: center;
+                justify-content: center;
+
+                span {
+                    width: 48px;
+                    height: 48px;
+                }
+            }
         }
+
+        &.buttons,
+        &.socials {
+            padding: 0px 12px;
+
+            .content {
+                padding: 0px 12px;
+                display: flex;
+                gap: 24px;
+            }
+        }
+
     }
+
+
 }
