@@ -1,0 +1,75 @@
+.indicator {
+    width: fit-content;
+    height: fit-content;
+    display: none;
+    pointer-events: all;
+    cursor: pointer;
+    transform: rotate(45deg);
+
+    @media (min-width: 900px) {
+        display: block
+    }
+
+    transform: rotate(45deg);
+
+    span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 28px;
+        height: 28px;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 3px solid var(--text-primary);
+        border-right: 3px solid var(--text-primary);
+        animation: animate 1s linear infinite;
+        pointer-events: none;
+
+        &:nth-child(1) {
+            top: -16px;
+            left: -16px;
+            animation-delay: 0s;
+        }
+
+        &:nth-child(2) {
+            top: 0px;
+            left: 0px;
+            animation-delay: 0.2s;
+        }
+
+        &:nth-child(3) {
+            top: 16px;
+            left: 16px;
+            animation-delay: 0.4s;
+        }
+
+        &:nth-child(4) {
+            top: 32px;
+            left: 32px;
+            animation-delay: 0.6s;
+        }
+
+        &:nth-child(5) {
+            top: 48px;
+            left: 48px;
+            animation-delay: 0.8s;
+        }
+    }
+
+    @keyframes animate {
+        0% {
+            border-color: var(--text-primary);
+            transform: translate(0, 0);
+        }
+
+        20% {
+            border-color: var(--text-primary);
+            transform: translate(15px, 15px);
+        }
+
+        20.1%,
+        100% {
+            border-color: var(--accent-primary);
+        }
+    }
+}
