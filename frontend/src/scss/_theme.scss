@@ -25,6 +25,13 @@
      BUTTON — PRIMARY
      ===================== */
 
+    --accent-primary: #{$primary};
+
+
+    /* =====================
+     BUTTON — PRIMARY
+     ===================== */
+
     --btn-primary-text: #{on-color($primary)};
     --btn-primary-bg: linear-gradient(180deg, #{lift($primary)}, #{sink($primary)});
     --btn-primary-bg-hover: linear-gradient(180deg, #{lift($primary, 12%)}, #{$primary});

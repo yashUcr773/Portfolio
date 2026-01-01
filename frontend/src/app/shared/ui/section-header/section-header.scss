@@ -1,0 +1,36 @@
+.heading {
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    padding: 16px 0px;
+
+    h1 {
+        font-size: 36px;
+        font-weight: 700;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-bottom: 0px;
+
+        &:before {
+            background-color: var(--accent-primary);
+            content: '';
+            display: block;
+            height: 4px;
+            width: 120px;
+            margin-bottom: 8px;
+
+        }
+
+        &:after {
+            background-color: var(--accent-primary);
+            content: '';
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 4px;
+            width: 120px;
+            margin-top: 8px;
+        }
+    }
+}
