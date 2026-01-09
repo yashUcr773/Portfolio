@@ -1,0 +1,63 @@
+// High Contrast Theme
+// Enhanced contrast for accessibility
+
+[data-theme="high-contrast"] {
+  // High contrast color palette
+  --color-primary-500: #0066cc;
+  --color-primary-600: #0052a3;
+  --color-primary-700: #003d7a;
+
+  --color-secondary-500: #7b1fa2;
+  --color-secondary-600: #6a1b9a;
+  --color-secondary-700: #4a148c;
+
+  --color-success-500: #2e7d32;
+  --color-success-600: #1b5e20;
+  --color-success-700: #0d3f0f;
+
+  --color-danger-500: #c62828;
+  --color-danger-600: #b71c1c;
+  --color-danger-700: #8b0000;
+
+  --color-warning-500: #f57c00;
+  --color-warning-600: #e65100;
+  --color-warning-700: #bf360c;
+
+  --color-info-500: #0277bd;
+  --color-info-600: #01579b;
+  --color-info-700: #003d71;
+
+  // Semantic colors
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-variant: #f0f0f0;
+  --color-on-background: #000000;
+  --color-on-surface: #000000;
+  --color-border: #000000;
+  --color-border-strong: #000000;
+  --color-shadow: rgba(0, 0, 0, 0.3);
+
+  // Text colors - maximum contrast
+  --text-primary: #000000;
+  --text-secondary: #000000;
+  --text-disabled: #666666;
+  --text-hint: #666666;
+
+  // Component-specific overrides
+  --button-primary-bg: #0052a3;
+  --button-primary-hover-bg: #003d7a;
+  --button-primary-active-bg: #002952;
+  --button-primary-text: #ffffff;
+
+  --button-secondary-bg: #6a1b9a;
+  --button-secondary-hover-bg: #4a148c;
+  --button-secondary-active-bg: #38006b;
+  --button-secondary-text: #ffffff;
+
+  // Stronger borders
+  --shadow-sm: 0 0 0 1px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 0 0 2px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 0 0 3px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 0 0 4px rgba(0, 0, 0, 0.3);
+  --shadow-2xl: 0 0 0 5px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,50 @@
+// Dark Theme
+// Dark background with light text for reduced eye strain
+
+[data-theme="dark"] {
+  // Override color palette for better dark mode contrast
+  --color-primary-50: #0d47a1;
+  --color-primary-100: #1565c0;
+  --color-primary-200: #1976d2;
+  --color-primary-300: #1e88e5;
+  --color-primary-400: #2196f3;
+  --color-primary-500: #42a5f5;
+  --color-primary-600: #64b5f6;
+  --color-primary-700: #90caf9;
+  --color-primary-800: #bbdefb;
+  --color-primary-900: #e3f2fd;
+
+  // Semantic colors for dark theme
+  --color-background: #0e1b2b;
+  --color-surface: #13263d;
+  --color-surface-variant: #1a3554;
+  --color-on-background: #e6f1ff;
+  --color-on-surface: #e6f1ff;
+  --color-border: #244766;
+  --color-border-strong: #2d5a82;
+  --color-shadow: rgba(0, 0, 0, 0.4);
+
+  // Text colors
+  --text-primary: #e6f1ff;
+  --text-secondary: #a8bed8;
+  --text-disabled: #6f8ba8;
+  --text-hint: #6f8ba8;
+
+  // Component-specific overrides
+  --button-primary-bg: #27debf;
+  --button-primary-hover-bg: #1fb9a0;
+  --button-primary-active-bg: #1a9988;
+  --button-primary-text: #0b2a26;
+
+  --button-secondary-bg: var(--color-secondary-600);
+  --button-secondary-hover-bg: var(--color-secondary-700);
+  --button-secondary-active-bg: var(--color-secondary-800);
+  --button-secondary-text: #ffffff;
+
+  // Strong visible shadows for dark mode
+  --shadow-sm: 0 2px 8px 0 rgba(0, 0, 0, 0.6);
+  --shadow-md: 0 4px 16px 0 rgba(0, 0, 0, 0.7);
+  --shadow-lg: 0 8px 24px 0 rgba(0, 0, 0, 0.8);
+  --shadow-xl: 0 12px 32px 0 rgba(0, 0, 0, 0.85);
+  --shadow-2xl: 0 16px 48px 0 rgba(0, 0, 0, 0.9);
+}

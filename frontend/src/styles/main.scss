@@ -1,0 +1,40 @@
+// Main Styles Entry Point
+// Import theme variables and theme files
+
+@use 'themes/variables' as *;
+@use 'themes/light' as *;
+@use 'themes/dark' as *;
+
+// import component styles
+@use '../app/components/button/button.component' as *;
+@use '../app/components/badge/badge.component' as *;
+@use '../app/components/link/link.directive' as *;
+@use '../app/components/typography/typography.directive' as *;
+
+// Global styles
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--text-primary);
+  background-color: var(--color-background);
+  transition: background-color var(--transition-base), color var(--transition-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Focus visible styles
+*:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}

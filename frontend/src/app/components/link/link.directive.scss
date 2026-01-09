@@ -1,0 +1,166 @@
+// Link Directive Styles
+
+.link {
+  // Base styles
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+}
+
+// Underline variants
+.link-underline-none {
+  text-decoration: none;
+}
+
+.link-underline-hover {
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.link-underline-always {
+  text-decoration: underline;
+}
+
+// Primary variant
+.link-primary {
+  color: var(--color-primary-600);
+
+  &:hover {
+    color: var(--color-primary-700);
+  }
+
+  &:active {
+    color: var(--color-primary-800);
+  }
+
+  &:visited {
+    color: var(--color-primary-700);
+  }
+}
+
+// Secondary variant
+.link-secondary {
+  color: var(--color-secondary-600);
+
+  &:hover {
+    color: var(--color-secondary-700);
+  }
+
+  &:active {
+    color: var(--color-secondary-800);
+  }
+
+  &:visited {
+    color: var(--color-secondary-700);
+  }
+}
+
+// Success variant
+.link-success {
+  color: var(--color-success-600);
+
+  &:hover {
+    color: var(--color-success-700);
+  }
+
+  &:active {
+    color: var(--color-success-800);
+  }
+
+  &:visited {
+    color: var(--color-success-700);
+  }
+}
+
+// Danger variant
+.link-danger {
+  color: var(--color-danger-600);
+
+  &:hover {
+    color: var(--color-danger-700);
+  }
+
+  &:active {
+    color: var(--color-danger-800);
+  }
+
+  &:visited {
+    color: var(--color-danger-700);
+  }
+}
+
+// Warning variant
+.link-warning {
+  color: var(--color-warning-700);
+
+  &:hover {
+    color: var(--color-warning-800);
+  }
+
+  &:active {
+    color: var(--color-warning-900);
+  }
+
+  &:visited {
+    color: var(--color-warning-800);
+  }
+}
+
+// Info variant
+.link-info {
+  color: var(--color-info-600);
+
+  &:hover {
+    color: var(--color-info-700);
+  }
+
+  &:active {
+    color: var(--color-info-800);
+  }
+
+  &:visited {
+    color: var(--color-info-700);
+  }
+}
+
+// Neutral variant
+.link-neutral {
+  color: var(--text-primary);
+
+  &:hover {
+    color: var(--color-primary-600);
+  }
+
+  &:active {
+    color: var(--color-primary-700);
+  }
+
+  &:visited {
+    color: var(--text-secondary);
+  }
+}
+
+// External link indicator
+.link-external {
+  &::after {
+    content: '↗';
+    margin-left: var(--spacing-xs);
+    font-size: 0.875em;
+    opacity: 0.7;
+  }
+}

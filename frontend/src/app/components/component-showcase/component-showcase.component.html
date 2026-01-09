@@ -1,0 +1,193 @@
+<div class="showcase">
+  <div class="showcase-header">
+    <h1 appTypography variant="h1" color="text-primary">Component Library Showcase</h1>
+    <p appTypography variant="body1" color="text-secondary">
+      A comprehensive Angular component library with theming support
+    </p>
+    
+    <div class="theme-switcher">
+      <button appButton variant="outline" size="sm" (click)="setTheme('light')">
+        Light
+      </button>
+      <button appButton variant="outline" size="sm" (click)="setTheme('dark')">
+        Dark
+      </button>
+      <button appButton variant="outline" size="sm" (click)="setTheme('high-contrast')">
+        High Contrast
+      </button>
+    </div>
+  </div>
+
+  <!-- Typography Section -->
+  <section class="showcase-section">
+    <h2 appTypography variant="h2" color="primary">Typography</h2>
+    
+    <div class="showcase-group">
+      <h1 appTypography variant="h1">Heading 1</h1>
+      <h2 appTypography variant="h2">Heading 2</h2>
+      <h3 appTypography variant="h3">Heading 3</h3>
+      <h4 appTypography variant="h4">Heading 4</h4>
+      <h5 appTypography variant="h5">Heading 5</h5>
+      <h6 appTypography variant="h6">Heading 6</h6>
+      
+      <p appTypography variant="subtitle1">Subtitle 1 - Larger subtitle text</p>
+      <p appTypography variant="subtitle2">Subtitle 2 - Standard subtitle text</p>
+      
+      <p appTypography variant="body1">
+        Body 1 - This is the main body text used for paragraphs and longer content.
+      </p>
+      <p appTypography variant="body2">
+        Body 2 - Smaller body text for secondary content.
+      </p>
+      
+      <p appTypography variant="caption">Caption - Small text for captions and labels</p>
+      <p appTypography variant="overline">Overline Text</p>
+    </div>
+
+    <div class="showcase-group">
+      <h3 appTypography variant="h3">Typography Colors</h3>
+      <p appTypography variant="body1" color="primary">Primary colored text</p>
+      <p appTypography variant="body1" color="secondary">Secondary colored text</p>
+      <p appTypography variant="body1" color="success">Success colored text</p>
+      <p appTypography variant="body1" color="danger">Danger colored text</p>
+      <p appTypography variant="body1" color="warning">Warning colored text</p>
+      <p appTypography variant="body1" color="info">Info colored text</p>
+    </div>
+  </section>
+
+  <!-- Buttons Section -->
+  <section class="showcase-section">
+    <h2 appTypography variant="h2" color="primary">Buttons</h2>
+    
+    <div class="showcase-group">
+      <h3 appTypography variant="h3">Button Variants</h3>
+      <div class="button-row">
+        <button appButton variant="primary">Primary</button>
+        <button appButton variant="secondary">Secondary</button>
+        <button appButton variant="success">Success</button>
+        <button appButton variant="danger">Danger</button>
+        <button appButton variant="warning">Warning</button>
+        <button appButton variant="info">Info</button>
+      </div>
+      
+      <div class="button-row">
+        <button appButton variant="outline">Outline</button>
+        <button appButton variant="ghost">Ghost</button>
+        <button appButton variant="link">Link</button>
+      </div>
+    </div>
+
+    <div class="showcase-group">
+      <h3 appTypography variant="h3">Button Sizes</h3>
+      <div class="button-row">
+        <button appButton variant="primary" size="sm">Small</button>
+        <button appButton variant="primary" size="md">Medium</button>
+        <button appButton variant="primary" size="lg">Large</button>
+      </div>
+    </div>
+
+    <div class="showcase-group">
+      <h3 appTypography variant="h3">Button States</h3>
+      <div class="button-row">
+        <button appButton variant="primary">Normal</button>
+        <button appButton variant="primary" [disabled]="true">Disabled</button>
+        <button appButton variant="primary" [loading]="true">Loading</button>
+      </div>
+    </div>
+
+    <div class="showcase-group">
+      <h3 appTypography variant="h3">Full Width Button</h3>
+      <button appButton variant="primary" [fullWidth]="true">Full Width Button</button>
+    </div>
+  </section>
+
+  <!-- Badges Section -->
+  <section class="showcase-section">
+    <h2 appTypography variant="h2" color="primary">Badges</h2>
+    
+    <div class="showcase-group">
+      <h3 appTypography variant="h3">Badge Variants</h3>
+      <div class="badge-row">
+        <app-badge variant="primary">Primary</app-badge>
+        <app-badge variant="secondary">Secondary</app-badge>
+        <app-badge variant="success">Success</app-badge>
+        <app-badge variant="danger">Danger</app-badge>
+        <app-badge variant="warning">Warning</app-badge>
+        <app-badge variant="info">Info</app-badge>
+        <app-badge variant="neutral">Neutral</app-badge>
+      </div>
+    </div>
+
+    <div class="showcase-group">
+      <h3 appTypography variant="h3">Badge Sizes</h3>
+      <div class="badge-row">
+        <app-badge variant="primary" size="sm">Small</app-badge>
+        <app-badge variant="primary" size="md">Medium</app-badge>
+        <app-badge variant="primary" size="lg">Large</app-badge>
+      </div>
+    </div>
+
+    <div class="showcase-group">
+      <h3 appTypography variant="h3">Outline Badges</h3>
+      <div class="badge-row">
+        <app-badge variant="primary" [outline]="true">Primary</app-badge>
+        <app-badge variant="secondary" [outline]="true">Secondary</app-badge>
+        <app-badge variant="success" [outline]="true">Success</app-badge>
+        <app-badge variant="danger" [outline]="true">Danger</app-badge>
+      </div>
+    </div>
+
+    <div class="showcase-group">
+      <h3 appTypography variant="h3">Pill Badges</h3>
+      <div class="badge-row">
+        <app-badge variant="primary" [pill]="true">Pill Badge</app-badge>
+        <app-badge variant="success" [pill]="true">Active</app-badge>
+        <app-badge variant="danger" [pill]="true">Error</app-badge>
+      </div>
+    </div>
+
+    <div class="showcase-group">
+      <h3 appTypography variant="h3">Dot Badges</h3>
+      <div class="badge-row">
+        <app-badge variant="primary" [dot]="true"></app-badge>
+        <app-badge variant="success" [dot]="true"></app-badge>
+        <app-badge variant="danger" [dot]="true"></app-badge>
+        <app-badge variant="warning" [dot]="true"></app-badge>
+      </div>
+    </div>
+  </section>
+
+  <!-- Links Section -->
+  <section class="showcase-section">
+    <h2 appTypography variant="h2" color="primary">Links</h2>
+    
+    <div class="showcase-group">
+      <h3 appTypography variant="h3">Link Variants</h3>
+      <div class="link-row">
+        <a appLink variant="primary" href="#" underline="hover">Primary Link</a>
+        <a appLink variant="secondary" href="#" underline="hover">Secondary Link</a>
+        <a appLink variant="success" href="#" underline="hover">Success Link</a>
+        <a appLink variant="danger" href="#" underline="hover">Danger Link</a>
+        <a appLink variant="warning" href="#" underline="hover">Warning Link</a>
+        <a appLink variant="info" href="#" underline="hover">Info Link</a>
+        <a appLink variant="neutral" href="#" underline="hover">Neutral Link</a>
+      </div>
+    </div>
+
+    <div class="showcase-group">
+      <h3 appTypography variant="h3">Underline Styles</h3>
+      <div class="link-row">
+        <a appLink variant="primary" href="#" underline="none">No Underline</a>
+        <a appLink variant="primary" href="#" underline="hover">Hover Underline</a>
+        <a appLink variant="primary" href="#" underline="always">Always Underline</a>
+      </div>
+    </div>
+
+    <div class="showcase-group">
+      <h3 appTypography variant="h3">External Link</h3>
+      <a appLink variant="primary" href="https://angular.dev" [external]="true" underline="hover">
+        Angular Documentation
+      </a>
+    </div>
+  </section>
+</div>

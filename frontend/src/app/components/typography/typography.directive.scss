@@ -1,0 +1,168 @@
+// Typography Directive Styles
+
+.typography {
+  font-family: var(--font-family-base);
+  margin: 0;
+  
+  // Remove margin when specified
+  &-no-margin {
+    margin: 0 !important;
+  }
+  
+  // Add gutter bottom
+  &-gutter-bottom {
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+// Heading variants
+.typography-h1 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-lg);
+  letter-spacing: -0.02em;
+}
+
+.typography-h2 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-lg);
+  letter-spacing: -0.01em;
+}
+
+.typography-h3 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-md);
+}
+
+.typography-h4 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-md);
+}
+
+.typography-h5 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  margin-bottom: var(--spacing-sm);
+}
+
+.typography-h6 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  margin-bottom: var(--spacing-sm);
+}
+
+// Subtitle variants
+.typography-subtitle1 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  margin-bottom: var(--spacing-sm);
+}
+
+.typography-subtitle2 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  margin-bottom: var(--spacing-sm);
+}
+
+// Body variants
+.typography-body1 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-md);
+}
+
+.typography-body2 {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  margin-bottom: var(--spacing-sm);
+}
+
+// Special variants
+.typography-caption {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  margin-bottom: var(--spacing-xs);
+}
+
+.typography-overline {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--spacing-xs);
+}
+
+// Color variants
+.typography-color-primary {
+  color: var(--color-primary-600);
+}
+
+.typography-color-secondary {
+  color: var(--color-secondary-600);
+}
+
+.typography-color-success {
+  color: var(--color-success-600);
+}
+
+.typography-color-danger {
+  color: var(--color-danger-600);
+}
+
+.typography-color-warning {
+  color: var(--color-warning-700);
+}
+
+.typography-color-info {
+  color: var(--color-info-600);
+}
+
+.typography-color-text-primary {
+  color: var(--text-primary);
+}
+
+.typography-color-text-secondary {
+  color: var(--text-secondary);
+}
+
+.typography-color-text-disabled {
+  color: var(--text-disabled);
+}
+
+// Text alignment
+.typography-align-left {
+  text-align: left;
+}
+
+.typography-align-center {
+  text-align: center;
+}
+
+.typography-align-right {
+  text-align: right;
+}
+
+.typography-align-justify {
+  text-align: justify;
+}

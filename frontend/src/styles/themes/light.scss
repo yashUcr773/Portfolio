@@ -1,0 +1,39 @@
+// Light Theme
+// Default theme with light background and dark text
+
+[data-theme="light"],
+:root {
+  // Override semantic colors for light theme
+  --color-background: #FEF6E4;
+  --color-surface: #F8ECD1;
+  --color-surface-variant: #F2E2BD;
+  --color-on-background: #1a1a1a;
+  --color-on-surface: #1a1a1a;
+  --color-border: #E5D4B5;
+  --color-border-strong: #D4C3A4;
+  --color-shadow: rgba(45, 45, 45, 0.08);
+
+  // Text colors - darker for better visibility
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-disabled: #9a9a9a;
+  --text-hint: #9a9a9a;
+
+  // Component-specific overrides
+  --button-primary-bg: var(--color-primary-600);
+  --button-primary-hover-bg: var(--color-primary-700);
+  --button-primary-active-bg: var(--color-primary-800);
+  --button-primary-text: #ffffff;
+
+  --button-secondary-bg: var(--color-secondary-600);
+  --button-secondary-hover-bg: var(--color-secondary-700);
+  --button-secondary-active-bg: var(--color-secondary-800);
+  --button-secondary-text: #ffffff;
+
+  // Strong visible shadows for light theme
+  --shadow-sm: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 4px 16px 0 rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 24px 0 rgba(0, 0, 0, 0.35);
+  --shadow-xl: 0 12px 32px 0 rgba(0, 0, 0, 0.4);
+  --shadow-2xl: 0 16px 48px 0 rgba(0, 0, 0, 0.45);
+}
