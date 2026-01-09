@@ -11,12 +11,7 @@
     .section {
         padding: 0px 12px;
 
-        .content {
-            padding: 0px 12px;
-        }
-
         &.misc-components {
-            border: 2px solid red;
             display: flex;
             flex-direction: column;
             gap: 32px;
