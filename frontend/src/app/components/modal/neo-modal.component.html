@@ -1,0 +1,22 @@
+@if (isOpen) {
+  <div class="neo-modal-backdrop" (click)="onBackdropClick($event)">
+    <div [class]="modalClasses">
+      @if (title || showCloseButton) {
+        <div class="neo-modal-header">
+          @if (title) {
+            <h2 class="neo-modal-title">{{ title }}</h2>
+          }
+          @if (showCloseButton) {
+            <button class="neo-modal-close" (click)="onClose()" aria-label="Close">
+              ✕
+            </button>
+          }
+        </div>
+      }
+      
+      <div class="neo-modal-body">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+}

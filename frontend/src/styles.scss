@@ -1,3 +1,4 @@
+@use '../src/app/components/neobrutalism.scss' as *;
 /* =========================
    CUSTOM FONT HANDLING
    ========================= */
@@ -55,11 +56,11 @@ body {
     --accent-dim: #1fb9a0;
     /* Secondary actions */
 
-    /* Typography */
-    --text-primary: #e6f1ff; // Main readable text 
-    --text-secondary: #a8bed8; // Subtitles, labels 
-    --text-muted: #6f8ba8; // Meta / disabled text 
-    --text-on-accent: #0b2a26; // Text on accent backgrounds 
+    // /* Typography */
+    // --text-primary: #e6f1ff; // Main readable text 
+    // --text-secondary: #a8bed8; // Subtitles, labels 
+    // --text-muted: #6f8ba8; // Meta / disabled text 
+    // --text-on-accent: #0b2a26; // Text on accent backgrounds 
 
     /* Status colors */
     --success: #3ee6a8;

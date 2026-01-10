@@ -1,0 +1,83 @@
+@use '../neobrutalism.scss' as *;
+
+.neo-badge {
+  @include neo-border;
+  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--neo-spacing-xs);
+  
+  padding: var(--neo-spacing-xs) var(--neo-spacing-sm);
+  font-size: 0.75rem;
+  font-weight: var(--neo-font-black);
+  font-family: 'Dosis', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  white-space: nowrap;
+  
+  box-shadow: 2px 2px 0 var(--neo-black);
+
+  /* Size Variants */
+  &--sm {
+    padding: 2px var(--neo-spacing-xs);
+    font-size: 0.625rem;
+  }
+
+  &--md {
+    padding: var(--neo-spacing-xs) var(--neo-spacing-sm);
+    font-size: 0.75rem;
+  }
+
+  &--lg {
+    padding: var(--neo-spacing-sm) var(--neo-spacing-md);
+    font-size: 0.875rem;
+  }
+
+  /* Color Variants */
+  &--primary {
+    background-color: var(--neo-yellow);
+    color: var(--neo-black);
+    border-color: var(--neo-black);
+  }
+
+  &--success {
+    background-color: var(--neo-green);
+    color: var(--neo-white);
+    border-color: var(--neo-black);
+  }
+
+  &--danger {
+    background-color: var(--neo-red);
+    color: var(--neo-white);
+    border-color: var(--neo-black);
+  }
+
+  &--warning {
+    background-color: var(--neo-orange);
+    color: var(--neo-black);
+    border-color: var(--neo-black);
+  }
+
+  &--info {
+    background-color: var(--neo-cyan);
+    color: var(--neo-black);
+    border-color: var(--neo-black);
+  }
+
+  &--dark {
+    background-color: var(--neo-black);
+    color: var(--neo-white);
+    border-color: var(--neo-black);
+  }
+
+  /* Dot Variant */
+  &--dot {
+    padding: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    font-size: 0;
+  }
+}

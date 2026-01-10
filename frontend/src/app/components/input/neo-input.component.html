@@ -1,0 +1,21 @@
+<div class="neo-input-wrapper">
+  @if (label) {
+    <label class="neo-input-label">{{ label }}</label>
+  }
+  
+  <input
+    [class]="inputClasses"
+    [type]="type"
+    [placeholder]="placeholder"
+    [disabled]="disabled"
+    [value]="value"
+    (input)="onInputChange($event)"
+    (blur)="onBlur()"
+  />
+  
+  @if (error) {
+    <div class="neo-input-error">{{ error }}</div>
+  } @else if (helperText) {
+    <div class="neo-input-helper">{{ helperText }}</div>
+  }
+</div>

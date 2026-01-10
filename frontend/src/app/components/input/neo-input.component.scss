@@ -1,0 +1,106 @@
+@use '../neobrutalism.scss' as *;
+
+.neo-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--neo-spacing-sm);
+  width: 100%;
+}
+
+.neo-input-label {
+  font-weight: var(--neo-font-bold);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--neo-black);
+}
+
+.neo-input {
+  @include neo-border;
+  @include neo-shadow-sm;
+  @include neo-disabled;
+  
+  padding: var(--neo-spacing-md);
+  font-size: 1rem;
+  font-weight: var(--neo-font-bold);
+  font-family: 'Dosis', sans-serif;
+  
+  background-color: var(--neo-white);
+  color: var(--neo-black);
+  
+  transition: all 0.2s ease;
+  
+  &:focus {
+    outline: none;
+    transform: translate(-2px, -2px);
+    box-shadow: calc(var(--neo-shadow-offset-sm) + 2px) calc(var(--neo-shadow-offset-sm) + 2px) 0 var(--neo-black);
+  }
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: 500;
+  }
+
+  /* Size Variants */
+  &--sm {
+    padding: var(--neo-spacing-sm) var(--neo-spacing-md);
+    font-size: 0.875rem;
+  }
+
+  &--md {
+    padding: var(--neo-spacing-md);
+    font-size: 1rem;
+  }
+
+  &--lg {
+    padding: var(--neo-spacing-lg);
+    font-size: 1.125rem;
+  }
+
+  /* Color Variants */
+  &--default {
+    border-color: var(--neo-black);
+  }
+
+  &--success {
+    border-color: var(--neo-green);
+    background-color: rgba(76, 175, 80, 0.1);
+  }
+
+  &--danger {
+    border-color: var(--neo-red);
+    background-color: rgba(255, 82, 82, 0.1);
+  }
+
+  &--warning {
+    border-color: var(--neo-orange);
+    background-color: rgba(255, 152, 0, 0.1);
+  }
+
+  &--error {
+    border-color: var(--neo-red);
+    background-color: rgba(255, 82, 82, 0.1);
+  }
+}
+
+.neo-input-error {
+  font-size: 0.875rem;
+  font-weight: var(--neo-font-bold);
+  color: var(--neo-red);
+  padding: var(--neo-spacing-xs) var(--neo-spacing-sm);
+  background-color: rgba(255, 82, 82, 0.1);
+  border-left: var(--neo-border-width) solid var(--neo-red);
+}
+
+.neo-input-helper {
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.6);
+  padding: var(--neo-spacing-xs) var(--neo-spacing-sm);
+}
+
+/* Textarea Variant */
+textarea.neo-input {
+  resize: vertical;
+  min-height: 100px;
+  font-family: 'Dosis', sans-serif;
+}

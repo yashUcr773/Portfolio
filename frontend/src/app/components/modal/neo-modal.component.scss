@@ -1,0 +1,121 @@
+@use '../neobrutalism.scss' as *;
+
+.neo-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: var(--neo-spacing-lg);
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.neo-modal-content {
+  @include neo-border-thick;
+  @include neo-shadow-lg;
+  
+  background-color: var(--neo-white);
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+  animation: slideUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+  /* Size Variants */
+  &--sm {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  &--md {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  &--lg {
+    width: 100%;
+    max-width: 800px;
+  }
+
+  &--xl {
+    width: 100%;
+    max-width: 1200px;
+  }
+}
+
+.neo-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--neo-spacing-lg);
+  border-bottom: var(--neo-border-width) solid var(--neo-black);
+  background-color: var(--neo-yellow);
+}
+
+.neo-modal-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: var(--neo-font-black);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--neo-black);
+}
+
+.neo-modal-close {
+  @include neo-border;
+  @include neo-shadow-sm;
+  
+  background-color: var(--neo-white);
+  color: var(--neo-black);
+  font-size: 1.5rem;
+  font-weight: var(--neo-font-bold);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background-color: var(--neo-red);
+    color: var(--neo-white);
+    transform: translate(-2px, -2px);
+    box-shadow: calc(var(--neo-shadow-offset-sm) + 2px) calc(var(--neo-shadow-offset-sm) + 2px) 0 var(--neo-black);
+  }
+
+  &:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 var(--neo-black);
+  }
+}
+
+.neo-modal-body {
+  padding: var(--neo-spacing-lg);
+  overflow-y: auto;
+  flex: 1;
+}

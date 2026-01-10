@@ -1,0 +1,244 @@
+<div class="showcase">
+  <div class="showcase-header">
+    <h1 class="showcase-title">Neobrutalism Component Library</h1>
+    <p class="showcase-subtitle">Bold, colorful, and unapologetically brutalist</p>
+  </div>
+
+  <!-- Buttons Section -->
+  <section class="showcase-section">
+    <h2 class="section-title">Buttons</h2>
+    
+    <neo-card>
+      <div class="card-header">Variants</div>
+      <div class="demo-grid">
+        <neo-button variant="primary">Primary</neo-button>
+        <neo-button variant="secondary">Secondary</neo-button>
+        <neo-button variant="success">Success</neo-button>
+        <neo-button variant="danger">Danger</neo-button>
+        <neo-button variant="warning">Warning</neo-button>
+        <neo-button variant="info">Info</neo-button>
+        <neo-button variant="outline">Outline</neo-button>
+      </div>
+    </neo-card>
+
+    <neo-card>
+      <div class="card-header">Sizes</div>
+      <div class="demo-grid">
+        <neo-button size="sm">Small</neo-button>
+        <neo-button size="md">Medium</neo-button>
+        <neo-button size="lg">Large</neo-button>
+      </div>
+    </neo-card>
+
+    <neo-card>
+      <div class="card-header">States</div>
+      <div class="demo-grid">
+        <neo-button>Active</neo-button>
+        <neo-button [disabled]="true">Disabled</neo-button>
+        <neo-button [fullWidth]="true">Full Width</neo-button>
+      </div>
+    </neo-card>
+  </section>
+
+  <!-- Cards Section -->
+  <section class="showcase-section">
+    <h2 class="section-title">Cards</h2>
+    
+    <div class="demo-grid">
+      <neo-card variant="default">
+        <div class="card-header">Default Card</div>
+        <div class="card-body">This is a default card with standard styling.</div>
+      </neo-card>
+
+      <neo-card variant="highlight">
+        <div class="card-header">Highlight Card</div>
+        <div class="card-body">This card stands out with bright yellow background.</div>
+      </neo-card>
+
+      <neo-card variant="success">
+        <div class="card-header">Success Card</div>
+        <div class="card-body">Green card for success messages.</div>
+      </neo-card>
+
+      <neo-card variant="danger">
+        <div class="card-header">Danger Card</div>
+        <div class="card-body">Red card for errors and warnings.</div>
+      </neo-card>
+    </div>
+
+    <neo-card [hoverable]="true">
+      <div class="card-header">Hoverable Card</div>
+      <div class="card-body">Hover over this card to see the lift effect!</div>
+    </neo-card>
+  </section>
+
+  <!-- Inputs Section -->
+  <section class="showcase-section">
+    <h2 class="section-title">Inputs</h2>
+    
+    <neo-card>
+      <div class="card-header">Input Fields</div>
+      <div class="input-demo">
+        <neo-input 
+          label="Default Input" 
+          placeholder="Enter text..."
+          [(ngModel)]="inputValue">
+        </neo-input>
+
+        <neo-input 
+          label="Success Input" 
+          variant="success"
+          placeholder="Validated input"
+          helperText="This field is valid">
+        </neo-input>
+
+        <neo-input 
+          label="Error Input" 
+          variant="danger"
+          placeholder="Invalid input"
+          error="This field is required">
+        </neo-input>
+
+        <neo-input 
+          label="Disabled Input" 
+          [disabled]="true"
+          placeholder="Cannot edit">
+        </neo-input>
+
+        <neo-input 
+          label="Large Input" 
+          size="lg"
+          placeholder="Bigger input field">
+        </neo-input>
+      </div>
+    </neo-card>
+  </section>
+
+  <!-- Badges Section -->
+  <section class="showcase-section">
+    <h2 class="section-title">Badges</h2>
+    
+    <neo-card>
+      <div class="card-header">Badge Variants</div>
+      <div class="demo-grid">
+        <neo-badge variant="primary">Primary</neo-badge>
+        <neo-badge variant="success">Success</neo-badge>
+        <neo-badge variant="danger">Danger</neo-badge>
+        <neo-badge variant="warning">Warning</neo-badge>
+        <neo-badge variant="info">Info</neo-badge>
+        <neo-badge variant="dark">Dark</neo-badge>
+      </div>
+    </neo-card>
+
+    <neo-card>
+      <div class="card-header">Badge Sizes</div>
+      <div class="demo-grid">
+        <neo-badge size="sm">Small</neo-badge>
+        <neo-badge size="md">Medium</neo-badge>
+        <neo-badge size="lg">Large</neo-badge>
+      </div>
+    </neo-card>
+
+    <neo-card>
+      <div class="card-header">Status Dots</div>
+      <div class="demo-grid">
+        <div class="status-item">
+          <neo-badge variant="success" [dot]="true"></neo-badge>
+          <span>Online</span>
+        </div>
+        <div class="status-item">
+          <neo-badge variant="danger" [dot]="true"></neo-badge>
+          <span>Offline</span>
+        </div>
+        <div class="status-item">
+          <neo-badge variant="warning" [dot]="true"></neo-badge>
+          <span>Away</span>
+        </div>
+      </div>
+    </neo-card>
+  </section>
+
+  <!-- Alerts Section -->
+  <section class="showcase-section">
+    <h2 class="section-title">Alerts</h2>
+    
+    <div class="alert-demo">
+      <neo-alert variant="info" title="Information">
+        This is an informational alert with important details.
+      </neo-alert>
+
+      <neo-alert variant="success" title="Success!" [dismissible]="true">
+        Your action was completed successfully.
+      </neo-alert>
+
+      <neo-alert variant="warning" title="Warning" [dismissible]="true">
+        Please review this important message.
+      </neo-alert>
+
+      <neo-alert variant="danger" title="Error" [dismissible]="true">
+        Something went wrong. Please try again.
+      </neo-alert>
+    </div>
+  </section>
+
+  <!-- Modal Section -->
+  <section class="showcase-section">
+    <h2 class="section-title">Modal</h2>
+    
+    <neo-card>
+      <div class="card-header">Modal Trigger</div>
+      <div class="card-body">
+        <neo-button (click)="openModal()">Open Modal</neo-button>
+      </div>
+    </neo-card>
+
+    <neo-modal 
+      [isOpen]="isModalOpen()"
+      title="Neobrutalism Modal"
+      size="md"
+      (closeModal)="closeModal()">
+      <div class="modal-demo-content">
+        <p>This is a neobrutalism-styled modal with bold borders and shadows!</p>
+        <p>It features a vibrant header and clean content area.</p>
+        
+        <div style="margin-top: 1.5rem;">
+          <neo-input label="Your Name" placeholder="Enter your name..."></neo-input>
+        </div>
+
+        <div class="card-footer" style="margin-top: 1.5rem;">
+          <neo-button variant="outline" (click)="closeModal()">Cancel</neo-button>
+          <neo-button variant="primary" (click)="closeModal()">Submit</neo-button>
+        </div>
+      </div>
+    </neo-modal>
+  </section>
+
+  <!-- Complex Example -->
+  <section class="showcase-section">
+    <h2 class="section-title">Complex Example</h2>
+    
+    <neo-card variant="highlight" [hoverable]="true">
+      <div class="card-header">
+        User Profile 
+        <neo-badge variant="success" size="sm">Active</neo-badge>
+      </div>
+      <div class="card-body">
+        <div class="profile-demo">
+          <div class="profile-info">
+            <h3>John Doe</h3>
+            <p>Full Stack Developer</p>
+            <div class="badge-list">
+              <neo-badge variant="primary" size="sm">Angular</neo-badge>
+              <neo-badge variant="info" size="sm">TypeScript</neo-badge>
+              <neo-badge variant="warning" size="sm">SCSS</neo-badge>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <neo-button variant="outline" size="sm">View Profile</neo-button>
+        <neo-button variant="primary" size="sm">Edit</neo-button>
+      </div>
+    </neo-card>
+  </section>
+</div>

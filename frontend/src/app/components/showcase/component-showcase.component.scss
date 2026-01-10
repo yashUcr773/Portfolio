@@ -1,0 +1,155 @@
+@use '../neobrutalism.scss' as *;
+
+.showcase {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--neo-spacing-xl);
+  background-color: var(--neo-bg-light);
+  min-height: 100vh;
+}
+
+.showcase-header {
+  text-align: center;
+  margin-bottom: var(--neo-spacing-xl);
+  padding: var(--neo-spacing-xl) 0;
+}
+
+.showcase-title {
+  font-size: 3rem;
+  font-weight: var(--neo-font-black);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  color: var(--neo-black);
+  text-shadow: 4px 4px 0 var(--neo-yellow);
+}
+
+.showcase-subtitle {
+  font-size: 1.25rem;
+  font-weight: var(--neo-font-bold);
+  margin-top: var(--neo-spacing-md);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.showcase-section {
+  margin-bottom: var(--neo-spacing-xl);
+}
+
+.section-title {
+  @include neo-border-thick;
+  @include neo-shadow;
+  
+  display: inline-block;
+  background-color: var(--neo-pink);
+  color: var(--neo-white);
+  font-size: 1.75rem;
+  font-weight: var(--neo-font-black);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: var(--neo-spacing-md) var(--neo-spacing-lg);
+  margin-bottom: var(--neo-spacing-lg);
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--neo-spacing-md);
+  margin-bottom: var(--neo-spacing-md);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.card-header {
+  padding: var(--neo-spacing-md) var(--neo-spacing-lg);
+  border-bottom: var(--neo-border-width) solid var(--neo-black);
+  font-weight: var(--neo-font-black);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: var(--neo-spacing-sm);
+}
+
+.card-body {
+  padding: var(--neo-spacing-lg);
+}
+
+.card-footer {
+  padding: var(--neo-spacing-md) var(--neo-spacing-lg);
+  border-top: var(--neo-border-width) solid var(--neo-black);
+  display: flex;
+  gap: var(--neo-spacing-md);
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.input-demo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--neo-spacing-lg);
+}
+
+.alert-demo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--neo-spacing-md);
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: var(--neo-spacing-sm);
+  font-weight: var(--neo-font-bold);
+}
+
+.modal-demo-content {
+  p {
+    margin: 0 0 var(--neo-spacing-md) 0;
+    line-height: 1.6;
+  }
+}
+
+.profile-demo {
+  .profile-info {
+    h3 {
+      margin: 0 0 var(--neo-spacing-xs) 0;
+      font-size: 1.5rem;
+      font-weight: var(--neo-font-black);
+    }
+
+    p {
+      margin: 0 0 var(--neo-spacing-md) 0;
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+  }
+}
+
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--neo-spacing-sm);
+  margin-top: var(--neo-spacing-md);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .showcase {
+    padding: var(--neo-spacing-md);
+  }
+
+  .showcase-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+  }
+
+  .demo-grid {
+    grid-template-columns: 1fr;
+  }
+}

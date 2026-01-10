@@ -1,0 +1,101 @@
+@use '../neobrutalism.scss' as *;
+
+.neo-btn {
+  @include neo-border;
+  @include neo-shadow;
+  @include neo-hover-lift;
+  @include neo-disabled;
+  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  
+  padding: var(--neo-spacing-md) var(--neo-spacing-lg);
+  font-size: 1rem;
+  font-weight: var(--neo-font-bold);
+  font-family: 'Dosis', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  
+  background-color: var(--neo-white);
+  color: var(--neo-black);
+  
+  &:focus-visible {
+    outline: 3px dashed var(--neo-black);
+    outline-offset: 3px;
+  }
+
+  /* Size Variants */
+  &--sm {
+    padding: var(--neo-spacing-sm) var(--neo-spacing-md);
+    font-size: 0.875rem;
+  }
+
+  &--md {
+    padding: var(--neo-spacing-md) var(--neo-spacing-lg);
+    font-size: 1rem;
+  }
+
+  &--lg {
+    padding: var(--neo-spacing-lg) var(--neo-spacing-xl);
+    font-size: 1.125rem;
+  }
+
+  /* Color Variants */
+  &--primary {
+    background-color: var(--neo-yellow);
+    color: var(--neo-black);
+    border-color: var(--neo-black);
+  }
+
+  &--secondary {
+    background-color: var(--neo-pink);
+    color: var(--neo-white);
+    border-color: var(--neo-black);
+  }
+
+  &--success {
+    background-color: var(--neo-green);
+    color: var(--neo-white);
+    border-color: var(--neo-black);
+  }
+
+  &--danger {
+    background-color: var(--neo-red);
+    color: var(--neo-white);
+    border-color: var(--neo-black);
+  }
+
+  &--warning {
+    background-color: var(--neo-orange);
+    color: var(--neo-black);
+    border-color: var(--neo-black);
+  }
+
+  &--info {
+    background-color: var(--neo-cyan);
+    color: var(--neo-black);
+    border-color: var(--neo-black);
+  }
+
+  &--outline {
+    background-color: transparent;
+    color: var(--neo-black);
+    border-color: var(--neo-black);
+
+    &:hover:not(:disabled) {
+      background-color: var(--neo-black);
+      color: var(--neo-white);
+    }
+  }
+
+  /* Full Width */
+  &--full {
+    width: 100%;
+  }
+}
