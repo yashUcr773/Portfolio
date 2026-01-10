@@ -1,0 +1,250 @@
+// Design System Quick Reference Guide
+
+// HOW TO USE THE DESIGN SYSTEM
+// ============================
+
+// 1. IMPORTING STYLES
+// -------------------
+// In your component SCSS files:
+@import '../../../styles/variables';  // CSS variables
+@import '../../../styles/mixins';     // Utility mixins
+
+// 2. USING CSS VARIABLES
+// ----------------------
+// Colors
+.my-element {
+  color: var(--color-primary);
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+// Spacing
+.my-element {
+  padding: var(--spacing-md);
+  margin: var(--spacing-lg);
+  gap: var(--spacing-sm);
+}
+
+// Typography
+.my-element {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+}
+
+// Border Radius
+.my-element {
+  border-radius: var(--radius-md);
+}
+
+// Shadows
+.my-element {
+  box-shadow: var(--shadow-md);
+}
+
+// 3. USING MIXINS
+// ---------------
+
+// Button Reset
+.custom-button {
+  @include button-reset;  // Removes all default button styles
+  // Your custom styles here
+}
+
+// Input Reset
+.custom-input {
+  @include input-reset;  // Removes all default input styles
+  // Your custom styles here
+}
+
+// Focus Ring
+.interactive-element {
+  &:focus-visible {
+    @include focus-ring;  // Adds accessible focus outline
+  }
+}
+
+// Truncate Text
+.text-overflow {
+  @include truncate;  // Single line ellipsis
+}
+
+// Line Clamp (multi-line truncate)
+.description {
+  @include line-clamp(3);  // Show 3 lines max
+}
+
+// Flex Center
+.centered-container {
+  @include flex-center;  // Centers children both ways
+}
+
+// Absolute Fill
+.overlay {
+  @include absolute-fill;  // Fills parent container
+}
+
+// Card Styling
+.custom-card {
+  @include card;  // Applies card styles
+}
+
+// Transitions
+.animated {
+  @include transition(background-color, transform);
+}
+
+// Custom Scrollbar
+.scrollable-area {
+  @include custom-scrollbar;  // Styled scrollbar
+}
+
+// Responsive Breakpoints
+.responsive-element {
+  width: 100%;
+
+  @include respond-to('md') {
+    width: 50%;
+  }
+
+  @include respond-to('lg') {
+    width: 33.333%;
+  }
+}
+
+// 4. THEME SWITCHING
+// ------------------
+// In your component TypeScript:
+// toggleTheme() {
+//   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+//   document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+// }
+
+// 5. COLOR PALETTE
+// ----------------
+// Primary: Blue shades (--color-primary-50 to --color-primary-900)
+// Secondary: Purple shades (--color-secondary-50 to --color-secondary-900)
+// Success: Green shades (--color-success-50 to --color-success-900)
+// Warning: Amber shades (--color-warning-50 to --color-warning-900)
+// Danger: Red shades (--color-danger-50 to --color-danger-900)
+// Gray: Neutral shades (--color-gray-50 to --color-gray-900)
+
+// 6. SEMANTIC COLORS
+// ------------------
+// These automatically change based on light/dark theme:
+// --color-background     (page background)
+// --color-surface        (card, input backgrounds)
+// --color-text-primary   (main text)
+// --color-text-secondary (muted text)
+// --color-text-disabled  (disabled text)
+// --color-border         (borders and dividers)
+
+// 7. COMPONENT COLORS
+// -------------------
+// These have hover states built-in:
+// --color-primary & --color-primary-hover
+// --color-secondary & --color-secondary-hover
+// --color-success & --color-success-hover
+// --color-warning & --color-warning-hover
+// --color-danger & --color-danger-hover
+
+// 8. SPACING SCALE
+// ----------------
+// --spacing-xs:   0.25rem (4px)
+// --spacing-sm:   0.5rem  (8px)
+// --spacing-md:   1rem    (16px)
+// --spacing-lg:   1.5rem  (24px)
+// --spacing-xl:   2rem    (32px)
+// --spacing-2xl:  3rem    (48px)
+// --spacing-3xl:  4rem    (64px)
+
+// 9. FONT SIZES
+// -------------
+// --font-size-xs:   0.75rem   (12px)
+// --font-size-sm:   0.875rem  (14px)
+// --font-size-base: 1rem      (16px)
+// --font-size-lg:   1.125rem  (18px)
+// --font-size-xl:   1.25rem   (20px)
+// --font-size-2xl:  1.5rem    (24px)
+// --font-size-3xl:  1.875rem  (30px)
+// --font-size-4xl:  2.25rem   (36px)
+
+// 10. BORDER RADIUS
+// -----------------
+// --radius-sm:   0.25rem  (small corners)
+// --radius-md:   0.375rem (medium corners)
+// --radius-lg:   0.5rem   (large corners)
+// --radius-xl:   0.75rem  (extra large)
+// --radius-2xl:  1rem     (very round)
+// --radius-full: 9999px   (fully round/pill)
+
+// 11. SHADOWS
+// -----------
+// --shadow-sm:  Subtle shadow
+// --shadow-md:  Medium shadow (default)
+// --shadow-lg:  Large shadow
+// --shadow-xl:  Extra large shadow
+// --shadow-2xl: Maximum shadow
+
+// 12. Z-INDEX LAYERS
+// ------------------
+// --z-dropdown:       1000
+// --z-sticky:         1020
+// --z-fixed:          1030
+// --z-modal-backdrop: 1040
+// --z-modal:          1050
+// --z-popover:        1060
+// --z-tooltip:        1070
+
+// EXAMPLE: Creating a New Component
+// ==================================
+/*
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.my-component {
+  @include card;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  @include transition(transform, box-shadow);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  &__title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  &__content {
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+  }
+
+  &__button {
+    @include button-reset;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    border-radius: var(--radius-md);
+    @include transition(background-color);
+
+    &:hover {
+      background-color: var(--color-primary-hover);
+    }
+
+    &:focus-visible {
+      @include focus-ring;
+    }
+  }
+
+  // Responsive
+  @include respond-to('md') {
+    padding: var(--spacing-xl);
+  }
+}
+*/

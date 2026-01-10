@@ -1,0 +1,101 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.card {
+  @include glassmorphism(0.05);
+  @include transition(all);
+  overflow: hidden;
+  border-radius: var(--radius-2xl);
+  position: relative;
+
+  // Variants
+  &-default {
+    &:hover {
+      box-shadow: var(--shadow-xl);
+    }
+  }
+
+  &-bordered {
+    border: 2px solid var(--color-primary);
+
+    &:hover {
+      border-color: var(--color-primary-hover);
+      box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+    }
+  }
+
+  &-elevated {
+    background: var(--glass-bg);
+    
+    &:hover {
+      box-shadow: var(--shadow-2xl), var(--shadow-glow);
+    }
+  }
+
+  &-flat {
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--color-border);
+  }
+
+  // States
+  &-hoverable {
+    &:hover {
+      transform: translateY(-4px) scale(1.01);
+      box-shadow: var(--shadow-2xl), 0 0 40px rgba(99, 102, 241, 0.2);
+    }
+  }
+
+  &-clickable {
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      transform: translateY(-4px) scale(1.01);
+      box-shadow: var(--shadow-2xl), 0 0 40px rgba(99, 102, 241, 0.2);
+    }
+
+    &:active {
+      transform: translateY(0) scale(0.99);
+      box-shadow: var(--shadow-md);
+    }
+  }
+
+  // Card Sections
+  &-header {
+    padding: var(--spacing-xl);
+    border-bottom: 1px solid var(--glass-border);
+    background: linear-gradient(180deg, var(--glass-bg) 0%, transparent 100%);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-xl);
+    letter-spacing: 0.5px;
+    background-clip: text;
+  }
+
+  &-body {
+    padding: var(--spacing-xl);
+    position: relative;
+  }
+
+  &-footer {
+    padding: var(--spacing-xl);
+    border-top: 1px solid var(--glass-border);
+    background: linear-gradient(180deg, transparent 0%, var(--glass-bg) 100%);
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: flex-end;
+  }
+}
+
+[data-theme='dark'] {
+  .card {
+    &::before {
+      opacity: 0.1;
+    }
+
+    &-bordered:hover::before,
+    &-elevated::before {
+      opacity: 0.2;
+    }
+  }
+}

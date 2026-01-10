@@ -1,1 +1,259 @@
+<div class="component-showcase">
+  <header class="showcase-header">
+    <h1>✨ MODERN UI LIBRARY ✨</h1>
+    <p>Glassmorphism • Gradients • Neon Glows • Advanced Animations</p>
+    <div class="header-actions">
+      <app-toggle 
+        label="Dark Mode" 
+        [checked]="isDarkMode()"
+        (checkedChange)="toggleTheme()"
+        size="md"
+      ></app-toggle>
+    </div>
+  </header>
+
+  <main class="showcase-content">
+    <!-- Buttons Section -->
+    <section class="showcase-section">
+      <h2>🎯 Gradient Buttons</h2>
+      <app-card variant="bordered">
+        <div class="component-grid">
+          <div class="component-group">
+            <h3>Animated Gradients</h3>
+            <div class="button-row">
+              <app-button variant="primary">Primary Glow</app-button>
+              <app-button variant="secondary">Neon Pink</app-button>
+              <app-button variant="success">Cyber Blue</app-button>
+              <app-button variant="warning">Solar Flare</app-button>
+              <app-button variant="danger">Hot Pink</app-button>
+            </div>
+          </div>
+
+          <div class="component-group">
+            <h3>Glass & Minimal</h3>
+            <div class="button-row">
+              <app-button variant="outline">Glass Border</app-button>
+              <app-button variant="ghost">Ghosted</app-button>
+              <app-button variant="link">Gradient Link</app-button>
+            </div>
+          </div>
+
+          <div class="component-group">
+            <h3>Sizes & States</h3>
+            <div class="button-row">
+              <app-button size="sm">Small</app-button>
+              <app-button size="md">Medium</app-button>
+              <app-button size="lg">Large</app-button>
+              <app-button [loading]="true" variant="primary">Loading</app-button>
+            </div>
+          </div>
+        </div>
+      </app-card>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="showcase-section">
+      <h2>💎 Glass Cards</h2>
+      <div class="card-grid">
+        <app-card variant="default" [header]="true" [footer]="true">
+          <div header>Glassmorphic Card</div>
+          <p>This card features modern glassmorphism with subtle blur effects and elegant shadows.</p>
+          <div footer>
+            <app-button variant="outline" size="sm">Cancel</app-button>
+            <app-button size="sm">Confirm</app-button>
+          </div>
+        </app-card>
+
+        <app-card variant="bordered" [hoverable]="true">
+          <h3>✨ Hover Me</h3>
+          <p>This card has an animated gradient border that appears on hover with glow effects.</p>
+        </app-card>
+
+        <app-card variant="elevated" [clickable]="true">
+          <h3>🚀 Interactive</h3>
+          <p>Click me to see the magnetic hover effect with elevated neon shadows.</p>
+        </app-card>
+      </div>
+    </section>
+
+    <!-- Inputs Section -->
+    <section class="showcase-section">
+      <h2>⚡ Magic Inputs</h2>
+      <app-card variant="bordered">
+        <div class="input-grid">
+          <app-input 
+            label="Gradient Label" 
+            type="email" 
+            placeholder="your@email.com"
+            helperText="Gradient animated label"
+            variant="outlined"
+          ></app-input>
+
+          <app-input 
+            label="Glass Filled" 
+            type="password" 
+            placeholder="••••••••"
+            [required]="true"
+            variant="filled"
+          ></app-input>
+
+          <app-input 
+            label="Animated Border" 
+            placeholder="Focus to see magic"
+            variant="default"
+          ></app-input>
+
+          <app-input 
+            label="With Error" 
+            placeholder="Error state"
+            error="⚠ This field has an error"
+          ></app-input>
+        </div>
+      </app-card>
+    </section>
+
+    <!-- Alerts Section -->
+    <section class="showcase-section">
+      <h2>🔔 Glass Alerts</h2>
+      <div class="alert-stack">
+        <app-alert variant="info" title="Information" [dismissible]="true">
+          This is an informational message with some helpful context.
+        </app-alert>
+
+        <app-alert variant="success" title="Success!" [dismissible]="true">
+          Your changes have been saved successfully.
+        </app-alert>
+
+        <app-alert variant="warning" title="Warning" [dismissible]="true">
+          Please review your information before proceeding.
+        </app-alert>
+
+        <app-alert variant="danger" title="Error" [dismissible]="true">
+          An error occurred while processing your request.
+        </app-alert>
+      </div>
+    </section>
+
+    <!-- Badges Section -->
+    <section class="showcase-section">
+      <h2>🏷️ Neon Badges</h2>
+      <app-card variant="bordered">
+        <div class="badge-showcase">
+          <div class="component-group">
+            <h3>Variants</h3>
+            <div class="badge-row">
+              <app-badge variant="primary">Primary</app-badge>
+              <app-badge variant="secondary">Secondary</app-badge>
+              <app-badge variant="success">Success</app-badge>
+              <app-badge variant="warning">Warning</app-badge>
+              <app-badge variant="danger">Danger</app-badge>
+              <app-badge variant="neutral">Neutral</app-badge>
+            </div>
+          </div>
+
+          <div class="component-group">
+            <h3>Outlined</h3>
+            <div class="badge-row">
+              <app-badge variant="primary" [outlined]="true">Primary</app-badge>
+              <app-badge variant="success" [outlined]="true">Success</app-badge>
+              <app-badge variant="danger" [outlined]="true">Danger</app-badge>
+            </div>
+          </div>
+
+          <div class="component-group">
+            <h3>Rounded & Dots</h3>
+            <div class="badge-row">
+              <app-badge variant="primary" [rounded]="true">99+</app-badge>
+              <app-badge variant="danger" [dot]="true"></app-badge>
+              <app-badge variant="success" [dot]="true"></app-badge>
+            </div>
+          </div>
+        </div>
+      </app-card>
+    </section>
+
+    <!-- Modal Section -->
+    <section class="showcase-section">
+      <h2>🪟 Floating Modal</h2>
+      <app-card variant="bordered">
+        <div class="button-row">
+          <app-button (click)="openModal()">Open Modal</app-button>
+        </div>
+      </app-card>
+
+      <app-modal 
+        [isOpen]="isModalOpen()"
+        (isOpenChange)="isModalOpen.set($event)"
+        size="md"
+      >
+        <div header>Modal Title</div>
+        <div>
+          <p>This is a modal dialog component with customizable size and behavior.</p>
+          <p>You can close it by clicking the close button, pressing ESC, or clicking outside.</p>
+        </div>
+        <div footer>
+          <app-button variant="outline" (click)="closeModal()">Cancel</app-button>
+          <app-button (click)="closeModal()">Confirm</app-button>
+        </div>
+      </app-modal>
+    </section>
+
+    <!-- Spinner Section -->
+    <section class="showcase-section">
+      <h2>⭕ Glow Spinners</h2>
+      <app-card variant="bordered">
+        <div class="spinner-showcase">
+          <div class="component-group">
+            <h3>Sizes</h3>
+            <div class="spinner-row">
+              <app-spinner size="sm"></app-spinner>
+              <app-spinner size="md"></app-spinner>
+              <app-spinner size="lg"></app-spinner>
+              <app-spinner size="xl"></app-spinner>
+            </div>
+          </div>
+
+          <div class="component-group">
+            <h3>With Labels</h3>
+            <div class="spinner-row">
+              <app-spinner [showLabel]="true" label="Loading..."></app-spinner>
+              <app-spinner variant="secondary" [showLabel]="true" label="Processing..."></app-spinner>
+            </div>
+          </div>
+        </div>
+      </app-card>
+    </section>
+
+    <!-- Toggle Section -->
+    <section class="showcase-section">
+      <h2>🎚️ Gradient Toggles</h2>
+      <app-card variant="bordered">
+        <div class="toggle-showcase">
+          <div class="component-group">
+            <h3>Sizes</h3>
+            <div class="toggle-column">
+              <app-toggle label="Small Toggle" size="sm" [checked]="true"></app-toggle>
+              <app-toggle label="Medium Toggle" size="md" [checked]="false"></app-toggle>
+              <app-toggle label="Large Toggle" size="lg" [checked]="true"></app-toggle>
+            </div>
+          </div>
+
+          <div class="component-group">
+            <h3>States</h3>
+            <div class="toggle-column">
+              <app-toggle label="Enabled Toggle" [checked]="true"></app-toggle>
+              <app-toggle label="Disabled Toggle" [disabled]="true" [checked]="false"></app-toggle>
+              <app-toggle label="Dark Mode" [checked]="isDarkMode()" (checkedChange)="toggleTheme()"></app-toggle>
+            </div>
+          </div>
+        </div>
+      </app-card>
+    </section>
+  </main>
+
+  <footer class="showcase-footer">
+    <p>✨ Built with Glassmorphism, Gradients & Neon Effects • Angular + SCSS ✨</p>
+  </footer>
+</div>
+
 <router-outlet />

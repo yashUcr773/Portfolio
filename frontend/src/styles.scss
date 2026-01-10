@@ -1,4 +1,10 @@
 /* =========================
+   DESIGN SYSTEM IMPORTS
+   ========================= */
+@import './styles/variables';
+@import './styles/mixins';
+
+/* =========================
    CUSTOM FONT HANDLING
    ========================= */
 @font-face {
@@ -29,7 +35,10 @@ html {
 
 html,
 body {
-    font-family: $v2_font_family_general !important;
+    font-family: var(--font-family-base);
     margin: 0;
     padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    transition: background-color var(--transition-base), color var(--transition-base);
 }

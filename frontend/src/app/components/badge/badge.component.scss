@@ -1,0 +1,124 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+  white-space: nowrap;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  @include transition(background-color, border-color, color);
+
+  // Sizes
+  &-sm {
+    padding: 0.125rem 0.375rem;
+    font-size: var(--font-size-xs);
+  }
+
+  &-md {
+    padding: 0.25rem 0.5rem;
+    font-size: var(--font-size-sm);
+  }
+
+  &-lg {
+    padding: 0.375rem 0.75rem;
+    font-size: var(--font-size-base);
+  }
+
+  // Variants - Filled with gradients
+  &-primary {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
+  }
+
+  &-secondary {
+    background: var(--gradient-secondary);
+    color: white;
+    box-shadow: 0 0 10px rgba(217, 70, 239, 0.4);
+  }
+
+  &-success {
+    background: var(--gradient-success);
+    color: white;
+    box-shadow: 0 0 10px rgba(79, 172, 254, 0.4);
+  }
+
+  &-warning {
+    background: var(--gradient-neon);
+    color: white;
+    box-shadow: 0 0 10px rgba(250, 112, 154, 0.4);
+  }
+
+  &-danger {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    box-shadow: 0 0 10px rgba(245, 87, 108, 0.4);
+  }
+
+  &-neutral {
+    background-color: var(--color-gray-600);
+    color: #ffffff;
+  }
+
+  // Outlined variant
+  &-outlined {
+    background-color: transparent;
+
+    &.badge-primary {
+      color: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+
+    &.badge-secondary {
+      color: var(--color-secondary);
+      border-color: var(--color-secondary);
+    }
+
+    &.badge-success {
+      color: var(--color-success);
+      border-color: var(--color-success);
+    }
+
+    &.badge-warning {
+      color: var(--color-warning);
+      border-color: var(--color-warning);
+    }
+
+    &.badge-danger {
+      color: var(--color-danger);
+      border-color: var(--color-danger);
+    }
+
+    &.badge-neutral {
+      color: var(--color-text-primary);
+      border-color: var(--color-border);
+    }
+  }
+
+  // Rounded
+  &-rounded {
+    border-radius: var(--radius-full);
+  }
+
+  // Dot badge (notification indicator)
+  &-dot {
+    padding: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: var(--radius-full);
+
+    &.badge-md {
+      width: 0.625rem;
+      height: 0.625rem;
+    }
+
+    &.badge-lg {
+      width: 0.75rem;
+      height: 0.75rem;
+    }
+  }
+}
