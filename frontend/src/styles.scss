@@ -32,46 +32,4 @@ body {
     font-family: $v2_font_family_general !important;
     margin: 0;
     padding: 0;
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-}
-
-/* =========================
-   THEME COLOR TOKENS
-   ========================= */
-body {
-
-    /* Core backgrounds */
-    --bg-primary: #0e1b2b; // Main app background 
-    --surface-1: #13263d; // Cards, panels 
-    --surface-2: #1a3554; // Elevated surfaces 
-    --border-subtle: #244766; // Dividers & outlines 
-
-    /* Accent system */
-    --accent-strong: #27debf;
-    /* CTAs only */
-    --accent-soft: #1a4e47;
-    /* Backgrounds, badges */
-    --accent-dim: #1fb9a0;
-    /* Secondary actions */
-
-    /* Typography */
-    --text-primary: #e6f1ff; // Main readable text 
-    --text-secondary: #a8bed8; // Subtitles, labels 
-    --text-muted: #6f8ba8; // Meta / disabled text 
-    --text-on-accent: #0b2a26; // Text on accent backgrounds 
-
-    /* Status colors */
-    --success: #3ee6a8;
-    --warning: #f5c16c;
-    --error: #f26d6d;
-    --info: #4da3ff;
-
-    /* Common Styles */
-    /* third party icon colors */
-    --twitter_blue: #03A9F4;
-    --linkedin_blue: #378fe9;
-    --gmail_wheat: #E7E4D7;
-    --heart_red: #ff6e6e;
-
 }
